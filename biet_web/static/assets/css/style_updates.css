@@ -1,0 +1,38 @@
+p,td{
+    font-size: 1.4rem;
+    letter-spacing: 0.07em;
+}
+#tab2>li,#tab4>li{
+    font-size: 1.4rem;
+    letter-spacing: 0.07em;
+}
+li>a>strong{
+    font-size: 1.8rem;
+    /* letter-spacing: 0.1em; */
+}
+.ug{
+    font-size: 1.9rem;
+    letter-spacing: 0.07em;
+}
+th{
+    font-size: 1.7rem;
+    letter-spacing: 0.04em;
+}
+li>strong,em{
+    font-size: 1.7rem;
+}
+h1{
+    font-size: 4rem;
+}
+.canteen{
+    font-size: 1.6rem;
+}
+.medical{
+    font-size: 1.4rem;
+    letter-spacing: 0.07em;
+} 
+
+
+.content-text{
+    text-align: justify;
+}

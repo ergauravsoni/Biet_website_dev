@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+        
+        <!-- ******CONTENT****** --> 
+        <div class="content container content-text">
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Training & Placement Cell</h1>
+                </header> 
+                <div class="page-content">
+                    <div class="row page-row">
+                        
+                        <div class="content-wrapper col-md-12 col-sm-8">  
+                            <div class="page-row">
+                                <!--<h1 class="no-margin-top has-divider text-highlight">Descriptions</h1>-->
+                                <div class="row">
+
+                                    {% for invitation in invitations %}
+                                    
+                                    <div class="col-md-6">
+                                        <h1 class="has-divider text-highlight">Open Invitation For Companies</h1>
+                                        <dl class="dl-horizontal">                                          
+                                            <h3 class="title">Download Invitation</h3>
+                                            <a class="btn btn-theme" href="{{invitation.invitation.url}}"><i class="fa fa-download"></i>View PDF</a>
+                                        </dl>
+                                    </div>  
+
+                                    {% endfor %}
+                                    
+                                    
+
+                                </div><!--//content-wrapper-->                    
+                    </div><!--//page-row-->
+                </div><!--//page-content-->
+            </div><!--//page--> 
+        </div><!--//content-->
+    </div><!--//wrapper-->
+</div>  
+
+{% endblock %}

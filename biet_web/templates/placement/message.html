@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+        <!-- ******CONTENT****** --> 
+        <div class="content container">
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Message</h1>
+                    <div class="breadcrumbs pull-right">
+                    </div><!--//breadcrumbs-->
+                </header> 
+                <div class="page-content">
+                    <div class="row page-row">
+                        <div class="news-wrapper col-md-8 col-sm-7">
+                            <div id="myNav" class="overlay">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <div class="overlay-content">
+                                    <figure class="thumb col-md-3 col-sm-4 col-xs-5">
+                                        <img class="img-responsive" src="{% static 'assets/images/message/ac.jpg' %}" alt="" style="margin-top:100px;" />
+                                    </figure>
+                                    <div class="details col-md-8 col-sm-7 col-xs-6">
+                                        <h3 class="title"><a href="#">Chairman</a></h3>
+                                        <h3 class="title"><a href="#">Sri A C Jayanna</a></h3>
+                                        <p>All colleges under the Bapuji Educational Trust are the product of a vision, of a dream of Excellence in affordable Education. Our colleges are given only the best of infrastructure and Bapuji Institute of Engineering and Technology college is a most integrated multidisciplinary institution providing a wide and varied arena for the staff and student communities to showcase their academic and extracurricular talents.</p>
+                                        <p>Students are encouraged to build character through sports and other physical and spiritual development activities and also given ample opportunities to hone their talents in cultural fields. Students are expected to broaden their horizons academically and the pursuit of knowledge over and above the prescribed syllabus is a given. Our staffs are adequately equipped to guide students in the right direction in all fields of study and co-curricular activities too.</p>
+                                        <p>I am proud to say that once our students step in they step out with the self-confidence and knowledge to face all endeavors with complete practical knowledge.</p>    
+                                           
+                                        </div>
+                                </div>
+                            </div>                         
+                            <article class="news-item page-row has-divider clearfix row">       
+                                <figure class="thumb col-md-3 col-sm-4 col-xs-5">
+                                    <img class="img-responsive" src="{% static 'assets/images/message/ac.jpg' %}" alt="" />
+                                </figure>
+                                <div class="details col-md-9 col-sm-8 col-xs-7">
+                                    <h3 class="title"><a href="news-single.html">Chairman</a></h3>
+                                    <p>Sri A C Jayanna</p>
+                                    <p>I am proud to say that once our students step in they step out with the self-confidence and knowledge to face all endeavors with complete practical knowledge</p>
+                                    <a class="btn btn-theme read-more" onclick="openNav()">Read more<i class="fa fa-chevron-right"></i></a>
+                                </div>
+                            </article><!--//news-item-->
+                            <div id="myNav1" class="overlay">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+                                <div class="overlay-content">
+                                    <figure class="thumb col-md-3 col-sm-4 col-xs-5">
+                                        <img class="img-responsive" src="{% static 'assets/images/message/dir.jpg' %}" alt="" style="margin-top: 100px; margin-left: 20px;" />
+                                    </figure>
+                                <div class="details col-md-8 col-sm-7 col-xs-6">
+                                    <h3 class="title"><a href="#">Director</a></h3>
+                                    <h3 class="title"><a href="#">Y. VRUSHABHENDRAPPA.</a></h3>
+                                    <p>Education itself is a Billion crore Industry and is very important to the development of a country and society. Technical Education plays a vital role in human resource development of the country by creating skilled manpower enhancing Industrial productivity and improving the overall quality of life.</p>
+                                    <p>The changing economic scenario throughout the world has made several developing countries including India to give utmost importance to Technical Education.</p>
+                                    <p>In this direction our Institute make special efforts to inculcate competitiveness and quality in technically qualified human recourses to make it globally acceptable to all those who join our Institute as there destination to persue Engineering education.</p>                   
+                                </div>
+                                </div>
+                            </div>  
+                            <article class="news-item page-row has-divider clearfix row">       
+                                <figure class="thumb col-md-3 col-sm-4 col-xs-5">
+                                    <img class="img-responsive" src="{% static 'assets/images/message/dir.jpg' %}" alt="" />
+                                </figure>
+                                <div class="details col-md-9 col-sm-8 col-xs-7">
+                                    <h3 class="title"><a href="news-single.html">Director</a></h3>
+                                    <p>Y. VRUSHABHENDRAPPA.</p>
+                                    <p>The changing economic scenario throughout the world has made several developing countries including India to give utmost importance to Technical Education.</p>
+                                    <a class="btn btn-theme read-more" onclick="openNav1()">Read more<i class="fa fa-chevron-right"></i></a>
+                                </div>
+                            </article><!--//news-item-->
+                            <div id="myNav2" class="overlay">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+                                <div class="overlay-content">
+                                    <figure class="thumb col-md-3 col-sm-4 col-xs-5">
+                                        <img class="img-responsive" src="{% static 'assets/images/message/ME112.png' %}" alt="" style="margin-top: 200px; margin-left: 20px;" />
+                                    </figure>
+                                <div class="details col-md-8 col-sm-7 col-xs-6">
+                                    <h3 class="title"><a href="#">Principal</a></h3>
+                                    <h3 class="title"><a href="#">Dr.S.Subrahmanya Swamy</a></h3>
+                                    <p>"Make in India" is a major national program designed to facilitate investment, foster innovation, enhance skill development, protect intellectual properties and build best-in-class manufacturing infrastructure. The major objective behind the initiative is to focus on 25 sectors of the economy for job creation and skill enhancement. Some of these sectors include automobiles, chemicals, renewable energy, miners, biotechnology, design and manufacture, IT, pharmaceuticals, railways, electronics etc. This initiative hopes to attract capital and technological investment in India.</p>
+                                    <p>To make "Make in India" a reality, an extremely crucial factor of providing skilled man power will be paramount importance. The onus, of course, lies on the Institutions engaged providing technical manpower related to various domains. A general feeling in the industrial circles is that, only 15 to 20% of engineering graduates are employable and are "industry –ready". There is a big gap between what is expected in the industry and what is actually being delivered by the institutes. To counter this, there is a growing feeling and necessity that there should be a higher level of interaction between the industries and the institutes.</p>
+                                    <p>We at BIET, realized the fact that we can contribute to our country's growth by providing competent and skilled engineering graduates. We have been following a 'learner-centric' methodology rather than a 'teacher-centric' methodology. We have always been trying to model creative ways of thinking in students. Everyone is creative, but not all get opportunities to develop or taught how to be creative. BIET provides a highly conductive atmosphere to foster student’s creativity.</p>
+                                    <p>BIET has been in the forefront of activities bringing both corporate and companies close to the campus and encouraging them to establish facilities to cater to the needs of both students and faculty. The industry –institute interface at BIET is quite strong and as a result, the students are exposed to live problems of the industry and are aware of the ‘culture’ of the industry. A holistic Training module is adapted to enable the students to meet the requirements of ever changing demands of the industry.</p>
+                                    <p>I, along with my team of dedicated faculty, would be striving hard to make this institute one of the highly respected technology focused learning centres and enhance its reputation in undertaking research activities related to industry and the society at large. We shall inculcate innovative thinking and entrepreneurial qualities in students in addition to building a strong ethical base in them.</p>
+                                <br><br><br><br><br><br>
+                                </div>
+                                </div>
+                            </div> 
+                            <article class="news-item page-row has-divider clearfix row">       
+                                <figure class="thumb col-md-3 col-sm-4 col-xs-5">
+                                    <img class="img-responsive" src="{% static 'assets/images/message/ME112.png' %}" alt="" />
+                                </figure>
+                                <div class="details col-md-9 col-sm-8 col-xs-7">
+                                    <h3 class="title"><a href="news-single.html">Principal</a></h3>
+                                    <p>Dr.S.Subrahmanya Swamy</p>
+                                    <p>I, along with my team of dedicated faculty, would be striving hard to make this institute one of the highly respected technology focused learning centres and enhance its reputation in undertaking research activities related to industry and the society at large. We shall inculcate innovative thinking and entrepreneurial qualities in students in addition to building a strong ethical base in them.</p>
+                                    <a class="btn btn-theme read-more" onclick="openNav2()">Read more<i class="fa fa-chevron-right"></i></a>
+                                </div>
+                            </article><!--//news-item-->
+                        </div><!--//news-wrapper-->
+                        
+                    </div><!--//page-row-->
+                </div><!--//page-content-->
+            </div><!--//page--> 
+        </div><!--//content-->
+    </div><!--//wrapper-->
+    <!-- <script src="{% static 'assets/js/message_1.js' %}"></script> -->
+    {% endblock %}

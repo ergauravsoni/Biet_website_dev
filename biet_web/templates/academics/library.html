@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<!-- ******CONTENT****** --> 
+<div class="content container">
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Library</h1>
+                    <div class="breadcrumbs pull-right">
+                        <ul class="breadcrumbs-list">
+                            <li class="breadcrumbs-label">You are here:</li>
+                            <li><a href="../index.html">Home</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="home.php">Academics</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="home.php">Library</a><i class="fa fa-angle-right"></i></li>
+                            <li class="current">Library Home</li>
+                        </ul>
+                    </div><!--//breadcrumbs-->
+                </header> 
+                <div class="page-content">
+                    <div class="row page-row">
+                        <aside class="page-sidebar col-md-3 col-sm-4 affix-top">                    
+                            <section class="widget">
+                                <ul class="nav">
+                                    <li class="active" ><a href="#">Library Home</a></li>
+                                    <li><a href="/library/layout">Layout of Library</a></li>
+                                    <li><a href="/library/staff">Library Staff</a></li>
+                                    <li><a href="/library/resources">Library Resources</a></li>
+                                    <li><a href="/library/membership">Membership</a></li>
+                                    <li><a href="/library/rules">Library Rules</a></li>
+                                    <li><a href="/library/services">Library Services</a></li>
+                                    <li><a href="/library/e_resources">E-Resources</a></li>
+                                    <li><a href="http://www.knimbus.com/user/auth.do" target="_blank">Knimbus(Federal search)</a></li>
+                                    <li ><a href="/library/committee">Library Committee</a></li>
+                                    <li><a href="/library/question_papers">VTU Question papers</a></li>
+                                    <li><a href="http://10.201.4.11:1234/easylib/index.php">Library OPAC</a></li>
+                                    <li><a href="https://ndl.iitkgp.ac.in/">National Digital Library</a></li>
+                                    <li><a href="http://www.nptel.ac.in/">NPTEL</a></li>
+                                    <li><a href="/library/online_courses">Online Courses</a></li>
+                                    <li><a href="/library/gallery">Library Gallery</a></li>
+                                    <li><a href="/library/user_manual">Library User Manual</a></li>     
+                                </ul>                   
+                            </section><!--//widget-->
+                        </aside><!--//page-sidebar-->
+                        <div class="content-wrapper col-md-8 col-sm-7">  
+                            
+                            <div class="page-row content-text">
+                                <h1 class="no-margin-top has-divider text-highlight">Library Home</h1>
+                                <p>The Library & Information Centre is housed in the Administrative Block & having three floors including ground floor with a two mezzanine floors, measuring an area of 2661 sq.m. There are 10 staff members including qualified Librarian working in the library, having 600 seating capacity. To cater to the needs of the staff/ students, to have easy and speedy access to the library collection, the house keeping operations of library have been automated using EasyLib software package. It has adopted open access system and maintains Online Public Access catalogue (OPAC) to provide easy access to the stacks. The library subscribes to 184 print journals and subscribing e-journals through VTU-Consortium. It has also has a collection of nearly 3775 back volumes of periodicals.</p>
+                                <p>Library is an essential part of every institution which helps staff and students to enhance the knowledge through various resources such as books, Newspapers, Journals, Magazines and Electronic Library. Our institution library provides Borrowing, Book Bank, OPAC, Reference services, digital library with high speed internet facilities , Reprographic, Wi-Fi etc,.</p>
+                                <p>In addition to the general library, the Engineering departments have exclusive department libraries also for quick and easy access of books by staff and students</p>
+                                
+                            </div><!--//page-row--> 
+
+                            <br><br>
+
+                            <h3 class="has-divider text-highlight">Working Hour(s)</h3>   
+                            
+                                        <div class="table-responsive">                      
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Borrowing</th>
+                                                        <th>Reference</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Monday to Friday</td>
+                                                        <td>09:00 AM - 01:00 PM <br>02:00 PM - 05:30 PM</td>
+                                                        <td>09:00 AM - 09:00 PM</td>                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Saturday</td>
+                                                        <td>09:00 AM - 01:30 PM	</td>
+                                                        <td>09:00 AM - 09:00 PM </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sunday, Holidays</td>
+                                                        <td>*********</td>
+                                                        <td>09:00 AM - 01:00 PM <br>During Examination: 09:00 AM - 9:00 PM</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table><!--//table-->
+                                        </div><!--//table-responsive--> 
+                                                           
+                        </div><!--//content-wrapper-->                    
+                    </div><!--//page-row-->
+                </div><!--//page-content-->
+            </div><!--//page--> 
+        </div><!--//content-->
+    </div><!--//wrapper-->
+
+    {% endblock %}

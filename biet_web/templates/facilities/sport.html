@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="content container">
+    {% for report in result %}
+    
+    <div class="col-md-6">
+        <h2 class="has-divider text-highlight"> {{report.title}}</h2>
+        <dl class="dl-horizontal">                                          
+            <h3 class="title">Download Prospectus</h3>
+            <p>Donec pulvinar arcu lacus, vel aliquam libero scelerisque a. Cras mi tellus, vulputate eu eleifend at, consectetur fringilla lacus. Nulla ut purus.</p>
+            <a class="btn btn-theme" href="../media/{{report.url}}"><i class="fa fa-download"></i>View PDF</a>
+        </dl>
+    </div>
+
+    {% endfor %}
+
+</div>
+    
+
+
+
+
+{% endblock %}

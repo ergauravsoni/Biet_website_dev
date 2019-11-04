@@ -1,0 +1,322 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>BIET</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="{% static 'assets/images/logo/BIET_logo.png' %}">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>   
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="{% static 'assets/plugins/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/flexslider/flexslider.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/pretty-photo/css/prettyPhoto.css' %}"> 
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="{% static 'assets/css/styles_5.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style_updates.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/dept_profile.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/update.css' %}"> -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Montserrat|Oswald" rel="stylesheet">
+    <script src="{% static 'assets/js/message_1.js' %}"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head> 
+
+<body class="home-page">
+    <div class="">
+        <!-- ******HEADER****** --> 
+        <header class="header">  
+            <div class="top-bar">
+                <div class="container">              
+                    <!-- <ul class="social-icons col-md-6 col-sm-6 col-xs-12 hidden-xs">
+                        <li><a href="#" ><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-google-plus"></i></a></li>         
+                        <li class="row-end"><a href="#" ><i class="fa fa-rss"></i></a></li>             
+                    </ul> -->
+                    <!--//social-icons-->       
+                </div>      
+            </div><!--//to-bar-->
+            <div class="header-main container">
+                <h1 class="logo col-md-2 col-sm-2">
+                    <a href="/"><img id="logo" src="{% static 'assets/images/logo/BIET_logo.png' %}" alt="Logo" height="100px;" width="100px;"></a>
+                </h1><!--//logo--> 
+                <div class="col-md-7" style="text-align:center">
+                    <p style="font-family: 'Montserrat', sans-serif;">Bapuji Education Assocition (Regd.)</p>
+                    <h2 style="font-family: 'Bree Serif', serif; font-size: 31px;">Bapuji Institute of Engineering and Technology</h2>
+                    <p style="font-family: 'Oswald', sans-serif;">Affiliated to VTU, Belgaum, Accredited by NBA,New Delhi</p>
+                </div>          
+                <div class="info col-md-3 col-sm-3">
+                    <div class="contact pull-right">
+                        <p class="phone"><i class="fa fa-phone"></i>Tel: 08192 221461 </p> <br>
+                        <p class="email"><i class="fa fa-envelope"></i><a href="#">webmaster@bietdvg.edu</a></p>
+                    </div><!--//contact-->
+                </div><!--//info-->
+            </div><!--//header-main-->
+        </header><!--//header-->
+        
+        <!-- ******NAV****** -->
+        <nav class="main-nav" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->            
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- <li class="active nav-item"><a href="index.html">ABOUT US</a></li> -->
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">About BIET <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Bapuji_educational_association" class="text-uppercase">Bapuji Educational Association</a></li>
+                                <li><a href="/Vision_Mission_Quality_Policies" class="text-uppercase" >Vision Mission</a></li> 
+                                <li><a href="/academic_calender">ACADEMIC CALENDAR</a></li>
+                                <li><a href="/governing_body">GOVERNING BODY</a></li>
+                                <li><a href="/major_events">MAJOR EVENTS</a></li>      
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">ACADEMICS <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <!-- <li><a href="#">DEPARTMENT</a></li>  -->
+                                 <li class="dropdown-submenu">
+                                    <a class="trigger" tabindex="-1" href="#">DEPARTMENT<i class="fa fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+
+                                        <li class="dropdown-submenu">
+                                            <a class="trigger" href="#"> UNDERGRADUATE <i class="fa fa-angle-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="/department/UG/CV/home">Civil Engineering (CV)</a></li>
+                                                <li><a href="/department/UG/ME/home">Mechanical Engineering (ME)</a></li>
+                                                <li><a href="">Electrical & Electronics Engineering (EE)</a></li>
+                                                <li><a href="/department/UG/EC/home">Electronics & Communication Engineering (EC)</a></li>
+                                                <li><a href="/department/UG/CH/home">Chemical Engineering (CH)</a></li>
+                                                <li><a href="/department/UG/EI/home">Electronics & Instrumentation Engineering (E&IE)</a></li>
+                                                <li><a href="/department/UG/CS/home">Computer Science & Engineering (CS)</a></li>
+                                                <li><a href="/department/UG/IS/home">Information Science & Engineering (IS)</a></li>
+                                                <li><a href="/department/UG/TX/home">Textile Technology (TX)</a></li>
+                                                <li><a href="/department/UG/BT/home">Bio Technology (BT)</a></li>
+                                                <li><a href="/department/UG/PHY/home">Department of Physics</a></li>
+                                                <li><a href="/department/UG/CHE/home">Department of Chemistry</a></li>
+                                                <li><a href="/department/UG/MAT/home">Department of Mathematics</a></li>
+                                                <li><a href="/department/UG/BM/home">Bio Medical Engineering (BM)</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                        
+                                        <li class="dropdown-submenu">
+                                            <a class="trigger" href="#"> POSTGRADUATE <i class="fa fa-angle-right"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="/department/PG/MCA/home">Master of Computer Applications (MCA)</a></li>
+                                                <li><a href="/department/PG/ENV/home">Environmental Engineering</a></li>
+                                                <li><a href="/department/PG//home">Master of Business Administration (MBA)</a></li>
+                                                <li><a href="/department/PG//home">Computer Science Engineering (CS)</a></li>
+                                                <li><a href="/department/PG//home">Machine Design</a></li>
+                                                <li><a href="/department/PG//home">Textile Technology</a></li>
+                                                <li><a href="/department/PG//home">Structural Engineering</a></li>
+                                            	<li><a href="/department/PG//home">Thermal Power & Engineering</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li> 
+                                <li><a href="/library">LIBRARY</a></li> 
+                                <li><a href="/academic_calender">ACADEMIC CALENDAR</a></li>
+                                <li><a href="/ranks">RANKS</a></li>
+                                <li><a href="#">RULES AND REGULATIONS</a></li>  
+                                
+                                   
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">ADMISSIONS <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ug_addmission">UNDER GRADUATE</a></li>
+                                <li><a href="/pg_addmission">POST GRADUATE</a></li>   
+                                <li><a href="/reserach">RESEARCH</a></li>          
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">FACILITIES <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/facilities/sport">SPORTS</a></li>
+                                <li><a href="/facilities/hostel">HOSTEL</a></li>
+                                <li><a href="/facilities/canteen">CANTEEN/CAFETERIA</a></li>
+                                <li><a href="/facilities/scholarship">SCHOLARSHIPS</a></li>
+                                <li><a href="/facilities/medical">MEDICAL</a></li>
+                                <li><a href="/facilities/perography" class="text-upper">Reprography</a></li>
+                                <li><a href="/facilities/internet">INTERNET</a></li>
+                                <li><a href="/facilities/transportation">TRANSPORTATION</a></li>
+                                <li><a href="/facilities/edusat">EDUSAT</a></li>
+                                <li><a href="/facilities/language_lab">LANGUAGE LAB</a></li>
+                                                   
+                            </ul>
+                        </li><!--//dropdown-->
+                        <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">PLACEMENTS <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/placement/objectives">OBJECTIVES</a></li>
+                                    <li><a href="/placement/placement">PLACEMENT PROCESS</a></li>   
+                                    <li><a href="/placement/training_program">TRAINING PROGRAMS</a></li>    
+                                    <!-- <li><a href="/placement/message">DEAN MESSAGE</a></li> -->
+                                    <li><a href="/placement/visitingCompanies">VISITING COMPANIES</a></li>      
+                                    <li><a href="/placement/invitationForCompanies">OPEN INVITATION FOR COMPANIES</a></li>
+                                    <li><a href="/placement/placementBrochure">PLACEMENT BROUCHERS</a></li>
+                                    <li><a href="/placement/recruit">WHY TO RECRUIT BIET STUDENTS?</a></li>
+
+                                </ul>
+                            </li>
+                       <!-- <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">PLACEMENTS <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="typography.html"><i class="fa fa-file-text"></i> Typography</a></li>
+                                <li><a href="tables.html"><i class="fa fa-table"></i> Tables</a></li>
+                                <li><a href="buttons.html"><i class="fa fa-star"></i> Buttons</a></li>
+                                <li><a href="components.html"><i class="fa fa-rocket"></i> Components</a></li> 
+                                <li><a href="icons.html"><i class="fa fa-heart"></i> Icons</a></li>                                                 
+                            </ul>
+                        </li>
+                        dropdown-->
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Campus Life <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/campus_life/naac">NAAC</a></li>
+                                <li><a href="/campus_life/nirf">NIRF</a></li>
+                                <li><a href="/campus_life/nain">NAIN</a></li>
+                                <li><a href="/campus_life/graduation_day">Graduands' Day</a></li>
+                                <!-- <li><a href="news-single-2.html">IBM COE</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Alumini <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/alumini/alumni_association" class="text-uppercase">Alumini Association</a></li>
+                                <li><a href="/alumini/associationmember" class="text-uppercase">association member</a></li>
+                                <li><a href="/alumini/alumni_registration" class="text-uppercase">alumni registration</a></li>
+                                <li><a href="/alumini/alumnilogin" class="text-uppercase">alumni login</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="/gallery">GALLERY</a></li>
+                        <li class="nav-item"><a href="/to_be_updated">CONTACT</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </div><!--//container-->
+        </nav>
+        <!--//main-nav--> 
+    <!-- </div> -->
+    <!--//wrapper-->
+
+<div>
+
+
+    {% block content %}
+    
+    
+    
+    {% endblock %}
+</div>
+
+
+
+
+
+
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                <div class="footer-col col-md-3 col-sm-4 about">
+                    <div class="footer-col-inner">
+                        <h3>About</h3>
+                        <ul>
+                            <!-- <li><a href="about.html"><i class="fa fa-caret-right"></i>About us</a></li>
+                            <li><a href="contact.html"><i class="fa fa-caret-right"></i>Contact us</a></li>
+                            <li><a href="privacy.html"><i class="fa fa-caret-right"></i>Privacy policy</a></li>
+                            <li><a href="terms-and-conditions.html"><i class="fa fa-caret-right"></i>Terms & Conditions</a></li> -->
+                        </ul>
+                    </div><!--//footer-col-inner-->
+                </div><!--//foooter-col-->
+                <div class="footer-col col-md-5 col-sm-8 newsletter">
+                    <div class="footer-col-inner">
+                        
+                        
+                    </div><!--//footer-col-inner-->
+                </div><!--//foooter-col--> 
+                <div class="footer-col col-md-4 col-sm-12 contact">
+                    <div class="footer-col-inner">
+                        <h3>Contact us</h3>
+                        <div class="row">
+                            <p class="adr clearfix col-md-12 col-sm-4">
+                                <!-- <i class="fa fa-map-marker pull-left"></i>         -->
+                                <span class="adr-group pull-left">      
+                                    <span class="street-address">Bapuji Institute Of Engineering & Technology</span><br>
+                                    <span class="region">P.O.Box No. 325, Shamanur Road</span><br>
+                                    <span class="postal-code">Davangere</span><br>
+                                    <span class="country-name">Karnataka</span><br>
+                                    <samp >577004</samp>
+                                </span>
+                            </p>
+                            <p class="tel col-md-12 col-sm-4"><i class="fa fa-phone"></i>Tel: 08192 221461</p>
+                            <p class="email col-md-12 col-sm-4"><i class="fa fa-envelope"></i><a href="#">Email: webmaster@bietdvg.edu</a></p>  
+                        </div> 
+                    </div><!--//footer-col-inner-->            
+                </div><!--//foooter-col-->   
+                </div>   
+            </div>        
+        </div><!--//footer-content-->
+        <div class="bottom-bar">
+            <div class="container">
+                <div class="row">
+                    <small class="copyright col-md-6 col-sm-12 col-xs-12">Copyright © 2013 - All Rights Reserved - <a href="#">webmaster@bietdvg.edu</a></small>
+                    <ul class="social pull-right col-md-6 col-sm-12 col-xs-12">
+                        <li><a href="#" ><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-skype"></i></a></li> 
+                        <li class="row-end"><a href="#" ><i class="fa fa-rss"></i></a></li>
+                    </ul><!--//social-->
+                </div><!--//row-->
+            </div><!--//container-->
+        </div><!--//bottom-bar-->
+    </footer><!--//footer-->
+    
+   
+ 
+    <!-- Javascript -->     
+         
+    <script type="text/javascript" src="{% static 'assets/plugins/jquery-1.12.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'assets/plugins/bootstrap-hover-dropdown.min.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'assets/plugins/back-to-top.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/plugins/jquery-placeholder/jquery.placeholder.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/plugins/pretty-photo/js/jquery.prettyPhoto.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/plugins/flexslider/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/plugins/jflickrfeed/jflickrfeed.min.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>            
+    <script type="text/javascript" src="{% static 'assets/js/dept_profile.js' %}"></script>        
+</body>
+</html> 
+

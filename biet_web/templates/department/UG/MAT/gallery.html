@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<!-- ******CONTENT****** --> 
+<div class="content container">
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Department of Mathematics</h1>
+                   
+                </header> 
+                <div class="page-content">
+                    <div class="row page-row">
+                        <aside class="page-sidebar col-md-2 col-sm-4 affix-top">                    
+                            <section class="widget">
+                                <ul class="nav">
+                                    <li><a href="/department/UG/MAT/home">Home</a></li>
+                                    <li><a href="/department/UG/MAT/profile">Vision and Mission</a></li>
+                                    <li><a href="/department/UG/MAT/infrastructure">Infrastructure</a></li>
+                                    <li><a href="/department/UG/MAT/faculty">Faculty Profile</a></li>
+                                    <li><a href="/department/UG/MAT/activities">Activities</a></li>
+                                    <li class="active"><a href="/department/UG/MAT/gallery">Photo Gallery</a></li>
+                                </ul>                    
+                            </section><!--//widget-->
+                        </aside><!--//page-sidebar-->
+                         
+                        <div class="content-wrapper col-md-10 col-sm-8">
+
+                           <!-- ******CONTENT****** --> 
+                            <div class="content container">
+                                <div class="page-wrapper">
+                                    <header class="page-heading clearfix">
+                                        <h1 class="heading-title pull-left">Album</h1>
+                                        
+                                    </header> 
+                                    <div class="page-content">     
+                                        <div class="row page-row">
+                                            {% for image in images %}
+                        
+                                                <a class="prettyphoto col-md-3 col-sm-3 col-xs-6" rel="prettyPhoto[gallery]" title="" href="{{image.image.url}}"><img class="img-responsive img-thumbnail" src="{{image.image.url}}" alt="" /></a>
+                                            
+                                            {% endfor %}
+                                        </div><!--//page-row-->
+                                    </div><!--//page-content--> 
+                                </div><!--//page--> 
+                            </div><!--//content-->
+                        </div><!--//wrapper-->
+
+                        </div><!--//content-wrapper-->                    
+                    </div><!--//page-row-->
+                </div><!--//page-content-->
+            </div><!--//page--> 
+        </div><!--//content-->
+    </div><!--//wrapper-->
+    {% endblock %}

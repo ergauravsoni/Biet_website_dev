@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="">
+       
+        <div class="content container content-text">
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Training & Placement Cell</h1>
+                    <!-- <div class="breadcrumbs pull-right">
+                        <ul class="breadcrumbs-list">
+                            <li class="breadcrumbs-label">You are here:</li>
+                            <li><a href="index.html">Home</a><i class="fa fa-angle-right"></i></li>
+                            <li class="current">Training & Placement Cell</li>
+                        </ul>
+                    </div> -->
+                </header> 
+                <div class="page-content">
+                    <div class="row page-row">
+                        <article class="welcome col-md-12 col-sm-7">                         
+                            <h3 class="title" style="font-weight: 600">Why to recruit BIET students?</h3>
+                            <p>Fresh talent is the lifeblood of any organisation, and the Bapuji Institute of Engineering & Technology is an excellent source of highly trained, ambitious and business-focused skills based students and graduates. We have a reputation for producing high calibre, employable students and graduates who are amongst the most satisfied in the country. As one of the top Engineering Colleges in the state, B.I.E.T is the best place for recruiters to find employees with experience, initiative, passion and leadership potential. Our students are bright, industrious, knowledgeable and enthusiastic about hospitality. They know about the industry, have real-world experience and a strong academic foundation. They're team players and natural leaders, comfortable with diversity and eager to learn. In short, it's smart to hire a B.I.E.T student or graduate.</p>
+                            
+                            
+                            <p>The Training and Placement Cell works to help you find the best and the brightest of our current students, recent graduates and also our alumni.</p>
+                        </article><!--//page-content-->
+                        
+                    </div><!--//page-row-->
+                </div><!--//page-content-->
+            </div><!--//page--> 
+        </div><!--//content-->
+
+        <div class="content container">
+            <div class="page-wrapper">
+                <div class="page-content">     
+                    <div class="row">
+                        {% for image in images %}
+                            
+                            <a class="prettyphoto col-md-3 col-sm-3 col-xs-6" rel="prettyPhoto[gallery]" title="" href="{{image.image.url}}"><img class=" img-thumbnail" src="{{image.image.url}}" alt="" /></a>
+                        
+                        {% endfor %} 
+                       
+                    </div><!--//page-row-->
+                </div><!--//page-content--> 
+            </div><!--//page--> 
+        </div>
+
+
+
+    </div><!--//wrapper-->
+    
+    <!-- ******FOOTER****** --> 
+
+    
+
+    {% endblock %}
+
+
+
+
+

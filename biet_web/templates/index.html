@@ -1,0 +1,222 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<div id="promo-slider" class="slider flexslider">
+    <ul class="slides">
+        <li>
+            <img src="{% static 'assets/images/home/111.jpeg' %}"  alt="" />
+            <p class="flex-caption">
+                <span class="main">B.E Addmissions (BIET 2019) - Apply Now</span>
+                <br />
+                <!-- <span class="secondary clearfix" >Choose from over 100 online and offline courses</span> -->
+            </p>
+        </li>
+        <li>
+            <img src="{% static 'assets/images/home/222.jpeg' %}"  alt="" />
+            <p class="flex-caption">
+                <span class="main" >B.E Addmissions (BIET 2019) - Apply Now</span>
+                <br />
+                <!-- <span class="secondary clearfix" >Donec accumsan nunc sed ipsum dapibus consectetur</span> -->
+            </p>
+        </li>
+        <li>
+            <img src="{% static 'assets/images/home/333.jpeg' %}"  alt="" />
+            <p class="flex-caption">
+                <span class="main" >B.E Addmissions (BIET 2019) - Apply Now</span>
+                <br />
+                <!-- <span class="secondary clearfix" >Lorem ipsum dolor sit amet, consectetur adipiscing elit</span> -->
+            </p>
+        </li>
+        <li>
+            <img src="{% static 'assets/images/home/44.jpeg' %}"  alt="" />
+            <p class="flex-caption">
+                <span class="main" >B.E Addmissions (BIET 2019) - Apply Now</span>
+                <br />
+                <!-- <span class="secondary clearfix" >In justo orci, ornare vitae nulla sed, suscipit suscipit augue</span> -->
+            </p>
+        </li>
+    </ul><!--//slides-->
+</div><!--//flexslider-->
+<!-- <section class="promo box box-dark" style="text-align:center">        
+   <div class="col-md-3">
+        <h1>NAIN</h1>
+   </div>
+   <div class="col-md-3">
+        <h1>NAAC</h1>
+   </div>
+   <div class="col-md-3">
+        <h1>NIRF</h1>
+   </div>
+   <div class="col-md-3">
+        <h1>Graduate's Day</h1>
+   </div>
+</section> -->
+<div class="content container">
+
+<!--//promo-->
+<section class="news">
+    <h1 class="section-heading text-highlight"><span class="line">Latest News</span></h1>     
+    <div class="carousel-controls">
+        <a class="prev" href="#news-carousel" data-slide="prev"><i class="fa fa-caret-left"></i></a>
+        <a class="next" href="#news-carousel" data-slide="next"><i class="fa fa-caret-right"></i></a>
+    </div><!--//carousel-controls--> 
+    <div class="section-content clearfix">
+        <div id="news-carousel" class="news-carousel carousel slide">
+            <div class="carousel-inner">
+                <div class="item active">
+                        <div class="col-md-12">
+                            <h2 class="title"><a href="news-single.html">Phasellus scelerisque metus</a></h2>
+                            <!-- <img class="thumb" src="{% static 'assets/images/news/news-thumb-4.jpg' %}"  alt="" /> -->
+                            <p>Suspendisse purus felis, porttitor quis sollicitudin sit amet, elementum et tortor. Praesent lacinia magna in malesuada vestibulum. Pellentesque urna libero.</p>
+                            <a class="read-more" href="news-single.html">Read more<i class="fa fa-chevron-right"></i></a>                
+                        </div>
+                </div>
+                    
+                    
+                    {% for news in result_news %}
+                    <div class="item">
+                    <div class="col-md-12">
+                        <h2 class="title"><a href="news-single.html">{{news.title}}</a></h2>
+                        <!-- <img class="thumb" src="{% static 'assets/images/news/news-thumb-1.jpg' %}"  alt="" /> -->
+                        <p>{{news.description}}</p>
+                        <a class="read-more" href="{{news.detail.url}}">Read more<i class="fa fa-chevron-right"></i></a>                
+                    </div><!--//news-item-->
+                    </div>
+                    {% endfor %}
+                    
+                  
+            
+            </div><!--//carousel-inner-->
+        </div><!--//news-carousel-->  
+    </div><!--//section-content-->     
+</section><!--//news-->
+<div class="row cols-wrapper">
+    <div class="col-md-3">
+        <section class="events">
+            <h1 class="section-heading text-highlight"><span class="line"><strong>Upcoming Events</strong></span></h1>
+            <div class="section-content">
+                {% for date in dates %}
+
+                <div class="event-item">
+                    <p class="date-label">
+                        <span class="month">{{date.month}}</span>
+                        <span class="date-number">{{date.date}}</span>
+                    </p>
+                    <div class="details">
+                        <h2 class="title">{{date.event}}</h2>
+                        <p class="time"><i class="fa fa-clock-o"></i>{{date.start}} - {{date.end}}</p>
+                        <p class="location"><i class="fa fa-map-marker"></i>{{date.venue}}</p>                            
+                    </div><!--//details-->
+                </div><!--event-item-->  
+
+                {% endfor %} 
+               
+                <a class="read-more" href="events.html">All events<i class="fa fa-chevron-right"></i></a>
+            </div><!--//section-content-->
+        </section><!--//events-->
+    </div><!--//col-md-3-->
+    <div class="col-md-6">
+        <section class="course-finder">
+            <h1 class="section-heading text-highlight"><span class="line"><b>About BIET</b></span></h1>
+            <div class="section-content">
+                <p>
+                    Bapuji Institute of Engineering and Technology <b>(BIET)</b> is one among the top ten self-financing Engineering Institutions in the state of Karnataka, providing high quality education to bring out skilled engineers and technocrats.
+                </p>
+                <p>
+                    The greenery campus spread over an area of 63 acres provides the state of art infrastructure and facilities. The institute provides an ideal ambience for teaching-learning process, co-curricular and extra-curricular activities to achieve excellence in technical education, <b>research</b> and promotion of <b>entrepreneurship</b>.
+                </p>
+                <p>
+                    The institute has consistently produced skilled and outstanding engineers who have excelled in their career and occupied responsible positions in some of the best known enterprises in India and across the globe.
+                </p>
+                <p>
+                    The institute has got recognition by UGC under <b>section 2F of UGC</b> act.
+                </p>
+                <!-- <a class="read-more" href="courses.html">View all our courses<i class="fa fa-chevron-right"></i></a> -->
+            </div><!--//section-content-->
+        </section><!--//course-finder-->
+        <section class="video">
+            <h1 class="section-heading text-highlight"><span class="line">Video Tour</span></h1>
+            <div class="carousel-controls">
+            </div><!--//carousel-controls-->
+            <div class="section-content">    
+               <div id="videos-carousel" class="videos-carousel carousel slide">
+                    <div class="carousel-inner">
+                        <div class="item active">            
+                            <iframe class="video-iframe" src="https://www.bietdvg.edu/video.mp4" frameborder="0" allowfullscreen=""></iframe>
+                        </div><!--//item-->
+                    </div><!--//carousel-inner-->
+               </div><!--//videos-carousel-->                            
+                <p class="description">Aenean feugiat a diam tempus sodales. Quisque lorem nulla, ultrices imperdiet malesuada at, suscipit vel lorem. Nulla dignissim nisi ac aliquet semper.</p>
+            </div><!--//section-content-->
+        </section><!--//video-->
+    </div>
+    <div class="col-md-3">
+        <section class="links">
+            <h1 class="section-heading text-highlight"><span class="line">Quick Links</span></h1>
+            <div class="section-content">
+                <p><a href="#"><i class="fa fa-caret-right"></i>E-learning Portal</a></p>
+                <p><a href="#"><i class="fa fa-caret-right"></i>Gallery</a></p>
+                <p><a href="#"><i class="fa fa-caret-right"></i>Job Vacancies</a></p>
+                <p><a href="#"><i class="fa fa-caret-right"></i>Contact</a></p>
+            </div><!--//section-content-->
+        </section><!--//links-->
+        <section class="testimonials">
+            <h1 class="section-heading text-highlight"><span class="line"> Testimonials</span></h1>
+            <div class="carousel-controls">
+                <a class="prev" href="#testimonials-carousel" data-slide="prev"><i class="fa fa-caret-left"></i></a>
+                <a class="next" href="#testimonials-carousel" data-slide="next"><i class="fa fa-caret-right"></i></a>
+            </div><!--//carousel-controls-->
+            <div class="section-content">
+                <div id="testimonials-carousel" class="testimonials-carousel carousel slide">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <blockquote class="quote">                                  
+                                <p><i class="fa fa-quote-left"></i>I’m very happy interdum eget ipsum. Nunc pulvinar ut nulla eget sollicitudin. In hac habitasse platea dictumst. Integer mattis varius ipsum, posuere posuere est porta vel. Integer metus ligula, blandit ut fermentum a, rhoncus in ligula. Duis luctus.</p>
+                            </blockquote>                
+                            <div class="row">
+                                <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">Marissa Spencer</span><br /><span class="title">Curabitur commodo</span></p>
+                                <img class="profile col-md-4 pull-right" src="{% static 'assets/images/testimonials/profile-1.png' %}"  alt="" />
+                            </div>                               
+                        </div><!--//item-->
+                        <div class="item">
+                            <blockquote class="quote">
+                                <p><i class="fa fa-quote-left"></i>
+                                I'm very pleased commodo gravida ultrices. Sed massa leo, aliquet non velit eu, volutpat vulputate odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse porttitor metus eros, ut fringilla nulla auctor a.</p>
+                            </blockquote>
+                            <div class="row">
+                                <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">Marco Antonio</span><br /><span class="title"> Gravida ultrices</span></p>
+                                <img class="profile col-md-4 pull-right" src="{% static 'assets/images/testimonials/profile-2.png' %}"  alt="" />
+                            </div>                 
+                        </div><!--//item-->
+                        <div class="item">
+                            <blockquote class="quote">
+                                <p><i class="fa fa-quote-left"></i>
+                                I'm delighted commodo gravida ultrices. Sed massa leo, aliquet non velit eu, volutpat vulputate odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse porttitor metus eros, ut fringilla nulla auctor a.</p>
+                            </blockquote>
+                            <div class="row">
+                                <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">Kate White</span><br /><span class="title"> Gravida ultrices</span></p>
+                                <img class="profile col-md-4 pull-right" src="{% static 'assets/images/testimonials/profile-3.png' %}"  alt="" />
+                            </div>                 
+                        </div><!--//item-->
+                        
+                    </div><!--//carousel-inner-->
+                </div><!--//testimonials-carousel-->
+            </div><!--//section-content-->
+        </section><!--//testimonials-->
+    </div><!--//col-md-3-->
+</div><!--//cols-wrapper-->
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

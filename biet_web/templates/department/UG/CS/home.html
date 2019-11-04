@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<!-- ******CONTENT****** --> 
+<div class="content container">
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Department of Computer Science and Engineering</h1>
+                   
+                </header> 
+                <div class="page-content">
+                    <div class="row page-row">
+                        <aside class="page-sidebar col-md-2 col-sm-4 affix-top">                    
+                            <section class="widget">
+                                <ul class="nav">
+                                    <li class="active"><a href="/department/UG/CS/home">Home</a></li>
+                                    <li><a href="/department/UG/CS/profile">Vision and Mission</a></li>
+                                    <li><a href="/department/UG/CS/infrastructure">Infrastructure</a></li>
+                                    <li><a href="/department/UG/CS/faculty">Faculty Profile</a></li>
+                                    <li><a href="/department/UG/CS/activities">Activities</a></li>
+                                    <li><a href="/department/UG/CS/achievements">Achievements</a></li>
+                                    <li><a href="/department/UG/CS/gallery">Photo Gallery</a></li>
+                                </ul>                    
+                            </section><!--//widget-->
+                        </aside><!--//page-sidebar-->
+                        <div class="content-wrapper col-md-10 col-sm-8">  
+                              
+                            <article class="welcome col-md-10 col-sm-8">                         
+                                        <p><img class="img-responsive" src="{% static 'assets/images/cse/cs.JPG' %}" alt="" height="350px;" /></p>
+                                       <br>
+                                        <div class="" style="  text-align: justify;">
+                                                <p>Department of Computer Science and Engineering was established in <b>1984</b> as an academic center for undergraduate
+                                                    studies in engineering. Department offers Undergraduate, Post graduate and research programs in Computer
+                                                     Science and Engineering field and is affiliated to Visvesvaraya Technological University, Belagavi,
+                                                      Karnataka. Undergraduate program is accredited two times by <b>NBA</b>.
+                                                       It is supported by well qualified faculty, non - teaching staff and best - in - class Infrastructure.
+                                                        The faculty members are actively involved in research and development. The staff members have also won
+                                                         the awards from reputed IT organizations like <b>Infosys, IBM and Wipro</b> and achieved academic excellence.
+                                                          <b>12</b> faculty members are pursuing research at reputed universities. Department has applied for one US
+                                                           patent in the field of Cluster head election Strategy. One of the faculty members has got best
+                                                    paper award in the <b>URENG</b> conference held at <b>Dubai</b>. Department has produced <b>5 doctorates</b> in last <b>10 years</b>.</p>
+                                               
+                                               
+                                              <p>
+                                                   The Department of Computer Science and Engineering of BIET has been at the forefront of churning out software engineers with a high caliber of technical expertise. It continues to foster and engender the innovation and breadth of vision necessary to excel in the blooming software industry.
+                                              </p>
+                                        </div>
+                                    </article>      
+                        
+                        </div><!--//content-wrapper-->                    
+                    </div><!--//page-row-->
+                </div><!--//page-content-->
+            </div><!--//page--> 
+        </div><!--//content-->
+    </div><!--//wrapper-->
+
+    {% endblock %}

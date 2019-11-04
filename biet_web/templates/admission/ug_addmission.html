@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+        <!-- ******CONTENT****** --> 
+    <div class="content container">
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Under Graduate Admission</h1>
+                </header> 
+                <div class="page-content">
+                    <div class="row page-row">
+                        <aside class="page-sidebar col-md-2 col-sm-4 affix-top">                    
+                            <section class="widget">
+                                <ul class="nav ug">
+                                    <li class="active "><a href="/ug_addmission">Under graduate</a></li>
+                                    <li><a href="/pg_addmission">Post Graduate</a></li>
+                                    <li><a href="/reserach">Research</a></li>
+                                    
+                                </ul>                    
+                            </section><!--//widget-->
+                        </aside><!--//page-sidebar-->
+                        <div class="content-wrapper col-md-10 col-sm-8">  
+                            <div class="page-row content-text">
+                                <h1 class="no-margin-top has-divider text-highlight">Eligibility for Admission to B.E.Course(2019-2020):</h1>                       
+                                <p>A pass in <b>II PUC/Intermediate/10+2</b> or any other equivalent examination with Physics and
+                                 Mathematics as compulsory subjects along with <i>Chemistry/Bio-Technology/Computer Science/Biology/Electronics</i>
+                                  as optional subjects with English as one of the languages of study with an minimum aggregate of <b>45%</b> marks
+                                   in the optional subjects (<b>40%</b> of marks for <b>SC.ST.CAT-1</b> and <b>OBC</b> category).</p>
+                            </div><!--//page-row--> 
+
+
+                            <div class="page-row">
+                                <h1 class="no-margin-top has-divider text-highlight">Under Graduate Intake:</h1>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <!--<h3 class="has-divider text-highlight">Basic Table</h3>-->   
+                                        <div class="table-responsive">                    
+                                            <table class="table table-boxed">
+                                                <thead>
+                                                    <tr>
+                                                        <th>S.No.</th>
+                                                        <th>Name of the Course</th>
+                                                        <th>Year started</th>
+                                                        <th>Intake</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><b>1.</b></td>
+                                                        <td>Civil Engineering</td>
+                                                        <td>1979</td>
+                                                        <td>120</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>2.</b></td>
+                                                        <td>Mechanical Engineering</td>
+                                                        <td>1979</td>
+                                                        <td>120</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>3.</b></td>
+                                                        <td>Electronics & Communication Engineering</td>
+                                                        <td>1979</td>
+                                                        <td>120</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>4.</b></td>
+                                                        <td>Computer Science & Engineering</td>
+                                                        <td>1984</td>
+                                                        <td>120</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>5.</b></td>
+                                                        <td>Information Science & Engineering</td>
+                                                        <td>2000</td>
+                                                        <td>120</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>6.</b></td>
+                                                        <td>Electrical & Electronics Engineering</td>
+                                                        <td>1979</td>
+                                                        <td>60</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>7.</b></td>
+                                                        <td>Textile Technology</td>
+                                                        <td>1982</td>
+                                                        <td>40</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>8.</b></td>
+                                                        <td>Electronics & Instrumentation Engg</td>
+                                                        <td>1991</td>
+                                                        <td>30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>9.</b></td>
+                                                        <td>Chemical Engineering</td>
+                                                        <td>1996</td>
+                                                        <td>30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>10.</b></td>
+                                                        <td>Bio-Technology</td>
+                                                        <td>2002</td>
+                                                        <td>30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b></b></td>
+                                                        <td>Total</td>
+                                                        <td></td>
+                                                        <td>790</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table><!--//table-->
+                                        </div><!--//table-responsive-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="page-row">
+                                <!--<h1 class="no-margin-top has-divider text-highlight">Descriptions</h1>-->
+                                <div class="row">
+                                    {% for addmission in addmissions %}
+                                    
+                                    <div class="col-md-6">
+                                        <h1 class="has-divider text-highlight">Fee Structure for B.E Course </h1>
+                                        <dl class="dl-horizontal">                                          
+                                            <h3 class="title">Download Prospectus</h3>
+                                            <p>Donec pulvinar arcu lacus, vel aliquam libero scelerisque a. Cras mi tellus, vulputate eu eleifend at, consectetur fringilla lacus. Nulla ut purus.</p>
+                                            <a class="btn btn-theme" href="{{addmission.addmission_fee.url}}"><i class="fa fa-download"></i>View PDF</a>
+                                        </dl>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="has-divider text-highlight">Course wise seat matrix</h1>
+                                        <dl class="dl-horizontal">                                          
+                                            <h3 class="title">Download Prospectus</h3>
+                                            <p>Donec pulvinar arcu lacus, vel aliquam libero scelerisque a. Cras mi tellus, vulputate eu eleifend at, consectetur fringilla lacus. Nulla ut purus.</p>
+                                            <a class="btn btn-theme" href="{{addmission.CourseWiseSeatMatrix.url}}"><i class="fa fa-download"></i>View PDF</a>
+                                        </dl>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <h1 class="has-divider text-highlight">Notification 2019-2020</h1>
+                                        <dl class="dl-horizontal">
+                                            <h3 class="title">Download Prospectus</h3>
+                                            <p>Donec pulvinar arcu lacus, vel aliquam libero scelerisque a. Cras mi tellus, vulputate eu eleifend at, consectetur fringilla lacus. Nulla ut purus.</p>
+                                            <a class="btn btn-theme" href="{{addmission.notification.url}}"><i class="fa fa-download"></i>View PDF</a>
+                                        </dl>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="has-divider text-highlight">Application Form</h1>
+                                        <dl class="dl-horizontal">                                          
+                                            <h3 class="title">Download Prospectus</h3>
+                                            <p>Donec pulvinar arcu lacus, vel aliquam libero scelerisque a. Cras mi tellus, vulputate eu eleifend at, consectetur fringilla lacus. Nulla ut purus.</p>
+                                            <a class="btn btn-theme" href="{{addmission.application_form.url}}"><i class="fa fa-download"></i>View PDF</a>
+                                        </dl>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="has-divider text-highlight">CET Cut off Rank 2019-2020</h1>
+                                        <dl class="dl-horizontal">                                          
+                                            <h3 class="title">Download Prospectus</h3>
+                                            <p>Donec pulvinar arcu lacus, vel aliquam libero scelerisque a. Cras mi tellus, vulputate eu eleifend at, consectetur fringilla lacus. Nulla ut purus.</p>
+                                            <a class="btn btn-theme" href="{{calender.cut_off.url}}"><i class="fa fa-download"></i>View PDF</a>
+                                        </dl>
+                                    </div>
+
+                                    {% endfor %}
+
+                                </div>               
+                        </div><!--//content-wrapper-->                    
+                    </div><!--//page-row-->
+                </div><!--//page-content-->
+            </div><!--//page--> 
+        </div><!--//content-->
+    </div><!--//wrapper-->
+
+
+{% endblock %}
+   

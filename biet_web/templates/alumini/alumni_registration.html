@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="content container content-text">
+            <div class="page-wrapper">
+                <!-- <title>Alumni Association</title> -->
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Alumni Association of BIET - Alumni Registration</h1>
+                </header>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                        <aside class="page-sidebar affix-top">                    
+                            <section class="widget">
+                                <ul class="nav">
+                                    <li class="active"><a href="/alumini/alumni_association">Alumni Association</a></li>
+                                    <li><a href="/alumini/alumnilogin">Alumni Login</a></li>
+                                    <li><a href="/alumini/associationmember">Association Members</a></li>
+                                    <li><a href="#">Photo Gallery</a></li>
+                                        
+                                </ul>                    
+                            </section><!--//widget-->
+                        </aside>
+                           
+                            
+                        </div>
+                        <div class="col-md-8">
+
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Name</label>
+                                <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" >
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">USN</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="USN" >
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Email</label>
+                                <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Phone Number</label>
+                                <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Year Of Passing</label>
+                                <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Year Of Passing">
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group mb-8">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="inputGroupSelect01">Department-UG</label>
+                                     </div>
+                                    <select class="custom-select form-control" id="inputGroupSelect01">
+
+                                            <option selected value="0">Civil Engineering</option>
+                                            <option value="1">Information Science & Engineering</option>
+                                            <option value="2">Mechanical Enginnering</option>
+                                            <option value="3">Industrial Production & Engineering</option>
+                                            <option value="4">Electrical & Electronics Engineering</option>
+                                            <option value="5">Electronics & Instrumentation Engineering</option>
+                                            <option value="6">Textile Technology</option>
+                                            <option value="7">Computer Science & Engineering</option>
+                                            <option value="8">Electronics & Communication Enginnering</option>
+                                            <option value="9">Chemical Engineering</option>
+                                            <option value="10">Bio Medical Engineering</option>
+                                            <option value="11">Bio Technology Engineering</option>
+                                            <option value="12">Not Applicable</option>
+                                            <option value="13">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                <div class="input-group mb-8">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="inputGroupSelect01">Department-PG</label>
+                                     </div>
+                                    <select class="custom-select form-control" id="inputGroupSelect01">
+
+                                            
+                                            <option selected value="1">Master of Computer Application</option>
+                                            <option value="2">M.Tech (Machine Design)</option>
+                                            <option value="3">Masters Of Bussiness Administration (MBA)</option>
+                                            <option value="4">M.Tech (CS&E)</option>
+                                            <option value="5">M.tech (Textile Technology)</option>
+                                            <option value="6">M.tech (Environmental Engineering)</option>
+                                            <option value="7">M.Tech (Thermal Power Engineering)</option>
+                                            <option value="8">Not Applicable</option>
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                <label for="currentlyworking">Currently Working </label>
+                                <input type="text" class="form-control" id="currentlyworking" placeholder="Company Name"></div>
+                                <div class="form-group">
+                                <label for="positionworking">Current Position </label>
+                                <input type="text" class="form-control" id="positionworking" placeholder="Position"></div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn btn-theme btn-lg">Submit</button>
+                            
+</form>
+
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
+    </div>
+<br>
+
+{% endblock %}
