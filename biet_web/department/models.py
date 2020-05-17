@@ -218,5 +218,13 @@ class environmental_dept_gallery(models.Model):
     def __str__(self):
         return '{}'.format(self.image)
 
-
+class computer_science_dept_lab_facilities(models.Model):
+    sno = models.IntegerField()
+    name =  models.CharField(max_length=200)
+    qty = models.IntegerField()
+    config_specs = models.TextField()
+    softwares = models.TextField()
+    
+    def __str__(self):
+        return self.name
 
