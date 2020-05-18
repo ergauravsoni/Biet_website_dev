@@ -22,3 +22,6 @@ def graduation_day(request):
 
 def to_be_updated(request):
     return render(request, 'to_be_updated.html')
+
+def redcross(request):
+    return render(request, 'campus_life/redcross.html')

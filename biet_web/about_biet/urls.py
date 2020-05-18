@@ -8,4 +8,8 @@ urlpatterns = [
     path('academic_calender',views.academic_calender, name='academic_calender'),
     path('governing_body',views.governing_body, name='governing_body'),
     path('major_events',views.major_events, name='major_events'),
+    path('nirf',views.nirf, name='nirf'),
+    path('nain',views.nain, name='nain'),
+    path('naac',views.naac, name='naac'),
+    path('nba',views.nba, name='nba'),
 ]

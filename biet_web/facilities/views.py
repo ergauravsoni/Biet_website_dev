@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Sport
+from .models import Sport, auditoriumGallary
 
 # Create your views here.
 
@@ -26,8 +26,8 @@ def canteen(request):
 def scholarship(request):
     return render(request,'facilities/scholarship.html')
 
-def medical(request):
-    return render(request,'facilities/medical.html')
+def dispensary(request):
+    return render(request,'facilities/dispensary.html')
 
 def perography(request):
     return render(request,'facilities/perography.html')
@@ -38,11 +38,18 @@ def internet(request):
 def transportation(request):
     return render(request,'facilities/transportation.html')
 
-def edusat(request):
-    return render(request,'facilities/edusat.html')
+def elearning(request):
+    return render(request,'facilities/elearning.html')
 
 def language_lab(request):
     return render(request,'facilities/language_lab.html')
+
+def ladies_rest_room(request):
+    return render(request,'facilities/ladies_rest_room.html')
+
+def auditorium(request):
+    images = auditoriumGallary.objects.all()
+    return render(request,'facilities/auditorium.html',{'images' : images})
 
 
 

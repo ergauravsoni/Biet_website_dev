@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="container">
+	<div class="row cols-wrapper">
+		<div class="col-md-6">
+			<section class="events">
+				<h1 class="section-heading text-highlight">
+					<span class=""
+						><strong><h1>Upcoming Events</h1></strong></span
+					>
+				</h1>
+				<hr />
+				<div class="section-content">
+					{% for date in dates %}
+
+					<div class="event-item">
+						<p class="date-label">
+							<span class="month">{{date.month}}</span>
+							<span class="date-number">{{date.date}}</span>
+						</p>
+						<div class="details">
+							<h2 class="title">{{date.event}}</h2>
+							<p class="time">
+								<i class="fa fa-clock-o"></i>{{date.start}} -
+								{{date.end}}
+							</p>
+							<p class="location">
+								<i class="fa fa-map-marker"></i>{{date.venue}}
+							</p>
+						</div>
+						<!--//details-->
+					</div>
+					<!--event-item-->
+
+					{% endfor %}
+				</div>
+				<!--//section-content-->
+			</section>
+			<!--//events-->
+		</div>
+	</div>
+</div>
+
+{% endblock %}

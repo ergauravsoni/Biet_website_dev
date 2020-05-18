@@ -26,7 +26,33 @@
     <link rel="stylesheet" href="{% static 'assets/css/dept_profile.css' %}">
     <!-- <link rel="stylesheet" href="{% static 'assets/css/update.css' %}"> -->
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Montserrat|Oswald" rel="stylesheet">
+
+
+
+    <!--Fonts Form Google Web Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,900,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+    <!--Responsive Mobile Menu-->
+    <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/rs-plugin/css/settings.css' %} " />
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/style_1.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/fmenu.css' %}" />
+    <!--Revolation Slider-->
+    <!-- <link href="rs-plugin/css/settings.css" rel="stylesheet"> -->
+    <!--Carousel Slider-->
+    <!-- <link href="css/owl.carousel.css" rel="stylesheet"> -->
+    <!--Main Style Css-->
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <!--Responsive-->
+    <!-- <link href="css/responsive.css" rel="stylesheet"> -->
+    
+    <!-- <link href="css/fmenu.css" rel="stylesheet"> -->
     <script src="{% static 'assets/js/message_1.js' %}"></script>
+    <script src="{% static 'assets/javascript/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/indexpopup.js' %}"></script>
+    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -56,7 +82,7 @@
                     <a href="/"><img id="logo" src="{% static 'assets/images/logo/BIET_logo.png' %}" alt="Logo" height="100px;" width="100px;"></a>
                 </h1><!--//logo--> 
                 <div class="col-md-7" style="text-align:center">
-                    <p style="font-family: 'Montserrat', sans-serif;">Bapuji Education Assocition (Regd.)</p>
+                    <p style="font-family: 'Montserrat', sans-serif;">Bapuji Educational Association (Regd.)</p>
                     <h2 style="font-family: 'Bree Serif', serif; font-size: 31px;">Bapuji Institute of Engineering and Technology</h2>
                     <p style="font-family: 'Oswald', sans-serif;">Affiliated to VTU, Belgaum, Accredited by NBA,New Delhi</p>
                 </div>          
@@ -90,7 +116,11 @@
                                 <li><a href="/Vision_Mission_Quality_Policies" class="text-uppercase" >Vision Mission</a></li> 
                                 <li><a href="/academic_calender">ACADEMIC CALENDAR</a></li>
                                 <li><a href="/governing_body">GOVERNING BODY</a></li>
-                                <li><a href="/major_events">MAJOR EVENTS</a></li>      
+                                <li><a href="/major_events">MAJOR EVENTS</a></li>
+                                <li><a href="/naac">NAAC</a></li>
+                                <li><a href="/nirf">NIRF</a></li>
+                                <li><a href="/nain">NAIN</a></li>        
+                                <li><a href="/nba">NBA</a></li>     
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -137,14 +167,17 @@
                                         </li>
                                     </ul>
                                 </li> 
-                                <li><a href="/library">LIBRARY</a></li> 
+                                <!-- <li><a href="/library">LIBRARY</a></li>  -->
                                 <li><a href="/academic_calender">ACADEMIC CALENDAR</a></li>
                                 <li><a href="/ranks">RANKS</a></li>
                                 <li><a href="#">RULES AND REGULATIONS</a></li>  
+                                <li><a href="#">CIRCULAR / NOTIFICATION</a></li>  
+                                <li><a href="#">MOU</a></li>  
                                 
                                    
                             </ul>
                         </li>
+                        <li class="nav-item"><a href="/library">LIBRARY</a></li>
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">ADMISSIONS <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
@@ -153,20 +186,38 @@
                                 <li><a href="/reserach">RESEARCH</a></li>          
                             </ul>
                         </li>
+
+                       
                         
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">FACILITIES <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
+                                <li><a href="/facilities/auditorium">AUDITORIUM</a></li>
                                 <li><a href="/facilities/sport">SPORTS</a></li>
                                 <li><a href="/facilities/hostel">HOSTEL</a></li>
-                                <li><a href="/facilities/canteen">CANTEEN/CAFETERIA</a></li>
+                                <li><a href="/facilities/ladies_rest_room">LADIES REST ROOM</a></li>
+                                <li><a href="/facilities/canteen">CANTEEN / CAFETERIA</a></li>
                                 <li><a href="/facilities/scholarship">SCHOLARSHIPS</a></li>
-                                <li><a href="/facilities/medical">MEDICAL</a></li>
+                                <li><a href="/facilities/dispensary">DISPENSARY</a></li>
                                 <li><a href="/facilities/perography" class="text-upper">Reprography</a></li>
                                 <li><a href="/facilities/internet">INTERNET</a></li>
-                                <li><a href="/facilities/transportation">TRANSPORTATION</a></li>
-                                <li><a href="/facilities/edusat">EDUSAT</a></li>
+                                <!-- <li><a href="/facilities/transportation">TRANSPORTATION</a></li> -->
+                                <li><a href="/facilities/elearning">ELEARNING</a></li>
                                 <li><a href="/facilities/language_lab">LANGUAGE LAB</a></li>
+                                <li class="dropdown-submenu">
+                                    <a class="trigger" tabindex="-1" href="#">OTHERS<i class="fa fa-angle-right"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu">
+                                            <a class="trigger" href="#"> DRINKING WATER</i></a>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a class="trigger" href="#"> GARBAGE MANAGEMENT </i></a>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a class="trigger" href="#"> SOLID WASTE MANAGEMENT </i></a>
+                                        </li>
+                                    </ul>
+                                </li> 
                                                    
                             </ul>
                         </li><!--//dropdown-->
@@ -198,9 +249,11 @@
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Campus Life <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/campus_life/naac">NAAC</a></li>
+                                <!-- <li><a href="/campus_life/naac">NAAC</a></li>
                                 <li><a href="/campus_life/nirf">NIRF</a></li>
-                                <li><a href="/campus_life/nain">NAIN</a></li>
+                                <li><a href="/campus_life/nain">NAIN</a></li> -->
+                                <li><a href="/campus_life/redcross">RED CROSS</a></li>
+                                <li><a href="#">STUDENT ACADEMIC COUNCIL</a></li>
                                 <li><a href="/campus_life/graduation_day">Graduands' Day</a></li>
                                 <!-- <li><a href="news-single-2.html">IBM COE</a></li> -->
                             </ul>
@@ -215,7 +268,7 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a href="/gallery">GALLERY</a></li>
-                        <li class="nav-item"><a href="/to_be_updated">CONTACT</a></li>
+                        <li class="nav-item"><a href="https://www.bietdvg.edu/feedback/" target="_blank">FEEDBACK</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </div><!--//container-->
@@ -316,7 +369,15 @@
     <script type="text/javascript" src="{% static 'assets/plugins/flexslider/jquery.flexslider-min.js' %}"></script>
     <script type="text/javascript" src="{% static 'assets/plugins/jflickrfeed/jflickrfeed.min.js' %}"></script> 
     <script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>            
-    <script type="text/javascript" src="{% static 'assets/js/dept_profile.js' %}"></script>        
+    <script type="text/javascript" src="{% static 'assets/js/dept_profile.js' %}"></script>    
+    <script type="text/javascript" src="{% static 'assets/rs-plugin/js/jquery.themepunch.plugins.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <!--Carousel Slider-->
+    <script type="text/javascript" src="{% static 'assets/javascript/owl.carousel.min.js' %}"></script>
+    <!--Mobile Menu Js-->
+    <script type="text/javascript" src="{% static 'assets/javascript/jquery.slicknav.min.js' %}"></script>
+    <!--Active jQuery-->
+    <script type="text/javascript" src="{% static 'assets/javascript/main.js' %}"></script>    
 </body>
 </html> 
 

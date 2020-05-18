@@ -17,3 +17,15 @@ def governing_body(request):
 
 def major_events(request):
     return render(request,'about_biet/major_events.html')
+
+def nba(request):
+    return render(request,'about_biet/nba.html')
+
+def nain(request):
+    return render(request,'about_biet/nain.html')
+
+def naac(request):
+    return render(request,'about_biet/naac.html')
+
+def nirf(request):
+    return render(request,'about_biet/nirf.html')

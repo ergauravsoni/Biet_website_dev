@@ -7,4 +7,5 @@ class Sport(models.Model):
     def __str__(self):
         return '{}'.format(self.reports)
 
-
+class auditoriumGallary(models.Model):
+    images = models.ImageField(upload_to='facilities/auditoriumGallary')
