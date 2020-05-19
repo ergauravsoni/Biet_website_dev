@@ -239,3 +239,36 @@ class environmental_dept_gallery(models.Model):
 
     def __str__(self):
         return '{}'.format(self.image)
+
+
+class computer_science_dept_lab_facilities(models.Model):
+    sno = models.IntegerField()
+    name =  models.CharField(max_length=200)
+    qty = models.IntegerField()
+    config_specs = models.TextField()
+    softwares = models.TextField()
+    
+    def __str__(self):
+        return self.name
+        
+class computer_science_dept_major_equipments(models.Model):
+    equipment_description = models.TextField()
+
+    def __str__(self):
+        return self.equipment_description[:50] + "..."
+
+class computer_science_dept_activities(models.Model):
+    sno = models.IntegerField()
+    activity_name = models.CharField(max_length=200)
+    activity_description = models.TextField()
+    activity_type = models.CharField(max_length=500,choices=(('RE','Regular Event'),('STC','Short-term Course')),default='RE')
+    
+    def __str__(self):
+        return self.activity_name
+        
+class computer_science_dept_achievements(models.Model):
+    achievement_description = models.TextField()
+    achievement_type = models.CharField(max_length=500,choices=(('STUDENT','Student Achievement'),('STAFF','Staff Achievement')),default='STAFF')
+    
+    def __str__(self):
+        return self.achievement_description[:50] + "..."
