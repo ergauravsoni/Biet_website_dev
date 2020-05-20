@@ -112,12 +112,14 @@ def home(request, course, dept):
         activities_data = computer_science_dept_activities.objects.all().order_by('sno')
         lab_facilities_data = computer_science_dept_lab_facilities.objects.all().order_by('sno')
         major_equipments_data = computer_science_dept_major_equipments.objects.all()
+        images = computer_science_dept_gallery.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
                     'activities_data': activities_data,
                     'lab_facilities_data': lab_facilities_data,
-                    'major_equipments_data': major_equipments_data
+                    'major_equipments_data': major_equipments_data,
+                    'images': images
                 }
         
     elif course == 'UG' and dept == 'EC':

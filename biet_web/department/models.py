@@ -99,7 +99,7 @@ class computer_science_dept(models.Model):
 
 
 class computer_science_dept_gallery(models.Model):
-    image = models.ImageField(upload_to='department/gallery/CV/')
+    image = models.ImageField(upload_to='department/gallery/PhotoGallery/')
 
     def __str__(self):
         return '{}'.format(self.image)

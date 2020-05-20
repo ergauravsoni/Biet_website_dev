@@ -614,21 +614,30 @@
                                                     </div><!--//pane-heading-->
                                                     <div id="collapse-9" class="panel-collapse collapse">
                                                         <div class="panel-body">
-                                                        Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis. Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus.
+                                                            <h3 class="no-margin-top has-divider text-highlight">Welcome to the Computer Science Department - Newsletter section. Computer Science branch is delighted to start it's Newsletter covering broader perspectives of the departmental activities.</h3>
+                                                            <ul class="custom-list-style medical">
+                                                                <li><a>Demo link 1</a></li>
+                                                                <li><a>Demo link 2</a></li>
+                                                                <li><a>Demo link 3</a></li>
+                                                            </ul>
                                                         </div><!--//panel-body-->
                                                     </div><!--//panel-colapse-->
                                                 </div><!--//panel-->
                                                 <div class="panel panel-default">
                                                     <div class="panel-heading">
                                                         <h4 class="panel-title">
-                                                            <a data-toggle="collapse" data-parent="#accordion" class="collapsed" href="#collapse-9">
+                                                            <a data-toggle="collapse" data-parent="#accordion" class="collapsed" href="#collapse-10">
                                                             Photo Gallery
                                                             </a>
                                                         </h4>
                                                     </div><!--//pane-heading-->
-                                                    <div id="collapse-9" class="panel-collapse collapse">
+                                                    <div id="collapse-10" class="panel-collapse collapse">
                                                         <div class="panel-body">
-                                                        Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis. Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus.
+                                                            {% for image in images %}
+                        
+                                                                <a class="prettyphoto col-md-3 col-sm-3 col-xs-6" rel="prettyPhoto[gallery]" title="" href="{{image.image.url}}"><img class="img-responsive img-thumbnail" src="{{image.image.url}}" alt="" /></a>
+                                                        
+                                                            {% endfor %}
                                                         </div><!--//panel-body-->
                                                     </div><!--//panel-colapse-->
                                                 </div><!--//panel-->
