@@ -54,6 +54,10 @@ def index(request):
 
     return render(request,'index.html',{'dates' : dates, 'result_news' : result_news})
 
+def home(request):
+    print("comes here")
+    return render(request,'bietHome.html')
+
 
 def gallery(request):
     images = Gallary.objects.all()

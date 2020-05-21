@@ -1,0 +1,402 @@
+h1.quick-facts {
+	color: #fff;
+	margin-top: 14%;
+	font-size: 32px;
+	line-height: 16px;
+	font-family: 'Montserrat', sans-serif;
+}
+tr:nth-child(even) {
+	background: #ffffff
+}
+tr:nth-child(odd) {
+	background: #f2f2f2
+}
+
+h5.quick-facts {
+	color: #fff;
+	font-size: 14px;
+	line-height: 15px;
+	font-family: 'Montserrat', sans-serif;
+}
+section.evolution-bg {
+	margin-top: 20px;
+	background-color: #f5f5f5;
+}
+.ban-head {
+	font: italic normal 300 normal 33px /49.5px Georgia, sans-serif;
+}
+.arc-right {
+	background: #eee;
+}
+.arc-title {
+	margin-bottom: 0px !important;
+	background: linear-gradient(#a83b65, #814c76);
+	width: 100%;
+	color: #fff;
+	padding: 5px 10px;
+	font-size: 14px;
+}
+.more-right {
+	background: #eee;
+	padding: 5px 10px;
+	text-align: right;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+.timeline-body li, .wel-div-2 {
+	font-family: "Montserrat", Gotham-Thin_0, Gotham-Medium_5, Gotham-Medium, Roboto, Source Sans Pro, sans-serif;
+	font-size: 14px;
+}
+.timeline > li > .timeline-panel {
+	box-shadow: 3px 3px 4px 0px rgba(197, 197, 197, 1);
+	border: none;
+	border-radius: 0px;
+	opacity: 0.8642;
+	margin-top: -5px;
+	transition: all 0.25s linear;
+}
+.text-muted {
+	font-family: 'Georgia', sans-serif;
+	font-style: italic;
+}
+
+.timeline-badge.info {
+	background-color: #da893e !important;
+}
+.timeline-badge.tb-green {
+	background-color: #718a5e !important;
+}
+.timeline-badge.tb-purple {
+	background-color: #957494 !important;
+}
+.timeline-badge.tb-lightblue {
+	background-color: #7394a9 !important;
+}
+.timeline-badge.tb-red {
+	background-color: #d4747e !important;
+}
+.timeline-badge.tb-lightbrown {
+	background-color: #c49d80 !important;
+}
+.mod-jour {
+	font-size: 14px !important;
+}
+.main-ban-title a {
+	font-weight: 400;
+	font-size: 32px;
+	font-family: 'Montserrat', sans-serif;
+}
+a.name {
+	margin: 10px 0 2px;
+	font-weight: 400;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+}
+span.trustee-pos {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px !important;
+	line-height: 12px;
+	font-weight: 300;
+	margin: 0;
+}
+.trustee-title {
+	border-bottom: 1px dashed #c8c6cf;
+	line-height: 46px;
+	padding: 25px 0;
+}
+.other-bg {
+	background: -webkit-linear-gradient(top left, #AB3B66 0%, #E66E25 180%);
+}
+
+.other-bg h5 a {
+	padding-left: 28px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 22px;
+	line-height: 33px;
+	font-size: 18px;
+	color: #fff;
+}
+.other-content {
+	padding: 20px 20px 20px 0 !important;
+}
+.other-title:hover {
+
+}
+.other-title a:hover {
+	color: #fff;
+}
+
+.other-more {
+	background: #ab3b66 !important;
+	margin: 0px;
+	line-height: 73px;
+	top: 0;
+	padding: 20px 14px !important;
+}
+.other-bg:hover {
+	background: -webkit-linear-gradient(top left, #AB3B66 0%, #E66E25 150%) !important;
+}
+.founder-title, .founder-desc p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 600;
+	color: #1d1d1b;
+	padding-bottom: 15px;
+	margin: 0;
+}
+.exam-content {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 300;
+	color: #1d1d1b;
+	padding-bottom: 15px;
+	margin: 0;
+}
+.founder-desc {
+	padding: 30px 0px;
+}
+.founder-desc p {
+	font-weight: 300;
+}
+.contact-address {
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: 400;
+	line-height: 18px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+	padding: 10px;
+}
+.contact-ad {
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: 300;
+	line-height: 18px;
+	border-color: rgba(255, 255, 255, 0.09);
+}
+.contact-phone, .contact-mail {
+	padding: 10px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+.contact-phone i, .contact-mail i {
+	color: #fff;
+}
+.contact-phone a:hover, .contact-mail a:hover {
+	color: #f2f2f2 !important;
+}
+/* different techniques for iPad screening */
+@media screen and (max-width: 400px) and (min-width: 205px) {
+	/* For portrait layouts only */
+	.row {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	.other-bg h5 a {
+		font-size: 16px;
+		display: block;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.other-content {
+		padding: 10px 20px 10px 0 !important;
+	}
+	.other-more {
+		line-height: 15px !important;
+	}
+	ul.timeline > li > .timeline-panel {
+		width: calc(100% - 90px);
+		width: -moz-calc(100% - 90px);
+		width: -webkit-calc(100% - 60px);
+	}
+	.timeline > li > .timeline-badge {
+		width: 40px;
+		height: 40px;
+	}
+
+	ul.timeline:before {
+		left: 26px;
+	}
+	.timeline:before {
+		margin-top: 220px;
+	}
+	ul.timeline > li > .timeline-badge {
+		left: 5px;
+	}
+	.admissions {
+		padding: 5px;
+	}
+}
+@media screen and (max-width: 568px) and (min-width: 320px) {
+	/* For portrait layouts only */
+	.row {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	.other-bg h5 a {
+		font-size: 16px;
+		display: block;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.other-content {
+		padding: 10px 20px 10px 0 !important;
+	}
+	.other-more {
+		line-height: 15px !important;
+	}
+	ul.timeline > li > .timeline-panel {
+		width: calc(100% - 90px);
+		width: -moz-calc(100% - 90px);
+		width: -webkit-calc(100% - 60px);
+	}
+
+	ul.timeline:before {
+		left: 26px;
+	}
+	.timeline:before {
+		margin-top: 220px;
+	}
+	ul.timeline > li > .timeline-badge {
+		left: 5px;
+	}
+	.timeline > li > .timeline-badge {
+		width: 40px;
+		height: 40px;
+	}
+	.admissions {
+		padding: 5px;
+	}
+}
+@media screen and (max-width: 683px) and (min-width: 400px) {
+	/* For portrait layouts only */
+	.row {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	.other-bg h5 a {
+		font-size: 16px;
+		display: block;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.other-content {
+		padding: 10px 20px 10px 0 !important;
+	}
+	.other-more {
+		line-height: 15px !important;
+	}
+	ul.timeline > li > .timeline-panel {
+		width: calc(100% - 90px);
+		width: -moz-calc(100% - 90px);
+		width: -webkit-calc(100% - 60px);
+	}
+
+	ul.timeline:before {
+		left: 26px;
+	}
+	.timeline:before {
+		margin-top: 220px;
+	}
+	ul.timeline > li > .timeline-badge {
+		left: 5px;
+	}
+	.timeline > li > .timeline-badge {
+		width: 40px;
+		height: 40px;
+	}
+	.admissions {
+		padding: 5px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.timeline-body > p, .timeline-body li {
+		line-height: 20px;
+		font-weight: 300;
+		font-size: 12px;
+	}
+
+}
+.admissions {
+	text-align: center;
+}
+@media screen and (min-width: 801px) {
+	.admissions-image {
+		float: right;
+	}
+	.admissions-image img {
+		width: initial;
+	}
+}
+.admissions {
+	background: #ab3b66;
+	background: -webkit-linear-gradient(#ab3b66, #814c76);
+	background: -o-linear-gradient(#ab3b66, #814c76);
+	background: -moz-linear-gradient(#ab3b66, #814c76);
+	background: linear-gradient(#ab3b66, #814c76);
+	padding: 33px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.admissions-image img {
+	width: 100%;
+	display: flex;
+}
+ul li, .entry-box .entry-content > p {
+	margin-bottom: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 300;
+	color: #1d1d1b;
+	margin: 0;
+}
+h5, h4, h3, .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td, .table > thead > tr > th p, .table > tbody > tr > th p, .table > tfoot > tr > th p, .table > thead > tr > td p, .table > tbody > tr > td p, .table > tfoot > tr > td p {
+	font: Georgia, sans-serif;
+	font-weight: 300;
+}
+tr.tr-title {
+	background: #fff;
+}
+tr.tr-title p {
+	color: #e46a16;
+}
+.wel-area .widget_nav_menu ul {
+	text-align: left;
+}
+.widget_archive ul li a:hover, .widget_nav_menu ul li a:hover {
+	color: #e46a16;
+}
+.jour-title {
+	text-align: left;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #e46a16;
+}
+
+//
+Style for Virtual Tour
+div#tourDIV {
+	height: 100%;
+	
+	
+}
+div#panoDIV {
+	
+	height: 100%;
+	
+	
+}
+
+div#panoDIV.cursorMoveMode {
+	cursor: move;
+	cursor: url(MSRITdata/graphics/cursors_move_html5.html), move;
+}
+div#panoDIV.cursorDragMode {
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+	cursor: url(MSRITdata/graphics/cursors_drag_html5.html), default;
+}
