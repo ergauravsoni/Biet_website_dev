@@ -585,7 +585,7 @@ Search Bar
 	overflow: hidden;
 }
 .single_work img:hover {
-	background: #fc5a1a;
+	/* background: ; */
 	transition: all 0.5s ease 0s;
 }
 .single_work h4 {
@@ -856,7 +856,7 @@ Search Bar
 3.3 Newsletter Area. 
 ------------------------------*/
 .newsletter_area {
-	background: rgba(0, 0, 0, 0) url("img/newsletter_area_bg_two.png") no-repeat
+	background: rgba(0, 0, 0, 0) url("img/student_banner.png") no-repeat
 		scroll 0 0 / cover;
 	height: 320px;
 	margin-top: 47px;
