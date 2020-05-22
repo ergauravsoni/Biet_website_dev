@@ -99,7 +99,7 @@ class computer_science_dept(models.Model):
 
 
 class computer_science_dept_gallery(models.Model):
-    image = models.ImageField(upload_to='department/gallery/CV/')
+    image = models.ImageField(upload_to='department/gallery/PhotoGallery/')
 
     def __str__(self):
         return '{}'.format(self.image)
@@ -272,3 +272,12 @@ class computer_science_dept_achievements(models.Model):
     
     def __str__(self):
         return self.achievement_description[:50] + "..."
+        
+class computer_science_dept_timetable(models.Model):
+    course = models.CharField(max_length=100,choices=(('BE','B.E.'),('MT','M.Tech')),default='BE')
+    semester = models.IntegerField()
+    section = models.CharField(max_length=1)
+    timetable = models.FileField(upload_to='department/CS/data/timetable/')
+    
+    def __str__(self):
+        return self.course + ": " + str(self.semester) + "-" + self.section

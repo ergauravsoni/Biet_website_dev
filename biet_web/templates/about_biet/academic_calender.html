@@ -2,34 +2,45 @@
 
 {% load static %}
 {% block content %}
-  
 
-    <!-- ******CONTENT****** --> 
-    <div class="content container">
-            <div class="page-wrapper">
-                <header class="page-heading clearfix">
-                    <strong><h1 style="font-weight: 600">Academic Calender</h1></strong>
-                    
-                </header> 
-                <div class="page-content">
-                    <div class="row page-row">
-                        <article class="welcome col-md-12 col-sm-11">                         
-                            {% for calender in academic_calender %}
-                            
-                            <section class="widget has-divider">
-                                <h3 class="title">Download Academic Calender</h3>
-                                <p>Click the link below to download the Academic Calender</p>
-                                <a class="btn btn-theme" href="{{calender.calender.url}}" target="_blank"><i class="fa fa-download"></i>Download now</a>
-                            </section>
-                            
-                            {% endfor %}
-                            
-                        </article><!--//page-content-->
-                        
-                    </div><!--//page-row-->
-                </div><!--//page-content-->
-            </div><!--//page--> 
-        </div><!--//content-->
-    </div><!--//wrapper-->
+
+<!-- ******CONTENT****** -->
+<div class="content container">
+    <div class="page-wrapper">
+        <header class="page-heading clearfix">
+            <strong>
+                <h1 style="font-weight: 600">Academic Calender</h1>
+            </strong>
+
+        </header>
+        <div class="page-content">
+            <div class="row page-row">
+                <article class="welcome col-md-12 col-sm-11">
+                    {% for calender in academic_calender %}
+
+                    <section class="widget has-divider">
+                        <h3 class="title">Download Academic Calender</h3>
+                        <p>Click the link below to download the Academic Calender</p>
+                        <a class="btn btn-theme" href="{{calender.calender.url}}" target="_blank"><i
+                                class="fa fa-download"></i>Download now</a>
+                        <a href="{{calender.calender.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
+                            now</a>
+                    </section>
+
+                    {% endfor %}
+
+                </article>
+                <!--//page-content-->
+
+            </div>
+            <!--//page-row-->
+        </div>
+        <!--//page-content-->
+    </div>
+    <!--//page-->
+</div>
+<!--//content-->
+</div>
+<!--//wrapper-->
 
 {% endblock %}
