@@ -6,7 +6,7 @@ def Bapuji_educational_association(request):
     return render(request,'about_biet/Bapuji_educational_association.html')
 
 def Vision_Mission_Quality_Policies(request):
-    return render(request,'about_biet/Vision_Mission_Quality_Policies.html')
+    return render(request,'about_biet/bietHome.html')
 
 def academic_calender(request):
     academic_calender = Academic_Calender.objects.all()

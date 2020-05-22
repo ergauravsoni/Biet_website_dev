@@ -16,9 +16,84 @@
                         <div class="content-wrapper col-md-12 col-sm-8">  
                               
                             <article class="welcome col-md-12 col-sm-8">                         
-                                        <p><img class="img-responsive" src="{% static 'assets/images/cse/cs.JPG' %}" alt="" height="350px;" /></p>
-                                       <br>
-                                        <div class="" style="  text-align: justify;">
+                                <p class="col-md-8"><img class="img-responsive" src="{% static 'assets/images/cse/cs.JPG' %}" alt="" /></p>
+                                <div class="col-md-4">
+                                    <section class="events">
+                                        <h1 class="section-heading text-highlight">
+                                            <span class="line"><strong>Upcoming Events</strong></span>
+                                        </h1>
+                                        <div class="section-content">
+                                            
+                        
+                                            <div class="event-item">
+                                                <p class="date-label">
+                                                    <span class="month">APR</span>
+                                                    <span class="date-number">09</span>
+                                                </p>
+                                                <div class="details">
+                                                    <h2 class="title">Campus Test</h2>
+                                                    <p class="time">
+                                                        <i class="fa fa-clock-o"></i>10:30 AM -
+                                                        04:30 PM
+                                                    </p>
+                                                    <p class="location">
+                                                        <i class="fa fa-map-marker"></i>Chemical Dept
+                                                    </p>
+                                                </div>
+                                                <!--//details-->
+                                            </div>
+                                            <!--  -->
+                                            <!-- <div> -->
+                                                <br>
+                                            <!-- </div> -->
+                                            <div class="event-item">
+                                                <p class="date-label">
+                                                    <span class="month">APR</span>
+                                                    <span class="date-number">09</span>
+                                                </p>
+                                                <div class="details">
+                                                    <h2 class="title">Campus Test</h2>
+                                                    <p class="time">
+                                                        <i class="fa fa-clock-o"></i>10:30 AM -
+                                                        04:30 PM
+                                                    </p>
+                                                    <p class="location">
+                                                        <i class="fa fa-map-marker"></i>Chemical Dept
+                                                    </p>
+                                                </div>
+                                                <!--//details-->
+                                            </div>
+                                            <br>
+                                            <div class="event-item">
+                                                <p class="date-label">
+                                                    <span class="month">APR</span>
+                                                    <span class="date-number">09</span>
+                                                </p>
+                                                <div class="details">
+                                                    <h2 class="title">Campus Test</h2>
+                                                    <p class="time">
+                                                        <i class="fa fa-clock-o"></i>10:30 AM -
+                                                        04:30 PM
+                                                    </p>
+                                                    <p class="location">
+                                                        <i class="fa fa-map-marker"></i>Chemical Dept
+                                                    </p>
+                                                </div>
+                                                <!--//details-->
+                                            </div>
+                                            <!--event-item-->
+                        
+                                           
+                        
+                                            <a class="read-more" href="/allevent"
+                                                >All events<i class="fa fa-chevron-right"></i
+                                            ></a>
+                                        </div>
+                                        <!--//section-content-->
+                                    </section>
+                                    <!--//events-->
+                                </div>
+                                        <div  style="  text-align: justify;">
                                                 <p>Department of Computer Science and Engineering was established in <b>1984</b> as an academic center for undergraduate
                                                     studies in engineering. Department offers Undergraduate, Post graduate and research programs in Computer
                                                      Science and Engineering field and is affiliated to Visvesvaraya Technological University, Belagavi,
@@ -668,8 +743,13 @@
                                                     </div><!--//pane-heading-->
                                                     <div id="collapse-12" class="panel-collapse collapse">
                                                         <div class="panel-body">
-                                                        Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis. Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus.
-                                                        </div><!--//panel-body-->
+                                                        <!-- Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis. Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus. -->
+                                                        {% for image in images %}
+                        
+                                                        <a class="prettyphoto col-md-3 col-sm-3 col-xs-6" rel="prettyPhoto[gallery]" title="" href="{{image.image.url}}"><img class="img-responsive img-thumbnail" src="{{image.image.url}}" alt="" /></a>
+                                                
+                                                    {% endfor %}   
+                                                    </div><!--//panel-body-->
                                                     </div><!--//panel-colapse-->
                                                 </div><!--//panel-->
                                             </div><!--//panel-group-->                                                
