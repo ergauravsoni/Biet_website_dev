@@ -1,28 +1,33 @@
 .card {
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
 	transition: 0.3s;
 	width: 100%;
-  }
-  
-  .card:hover {
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  .contain {
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.contain {
 	padding: 10px 30px;
-  }
+}
 
-  .textcolor{
-    color : #444;
-  }
+.textcolor {
+	color: #444;
+}
 
-  .textcolor-header {
-    color : #ffffff;
-    padding : inherit;
-    padding: 10px 30px;
-    font : italic  35px/50px georgia;
-  }
+.textcolor-header {
+	color: #ffffff;
+	padding: inherit;
+	padding: 10px 30px;
+	font: italic 35px/50px georgia;
+}
 
-  .bgcolor {
-    background-color : #4678a1;
-  }
+.bgcolor {
+	background-color: #4678a1;
+}
+
+.textcolor-announcements {
+	color: #ffffff;
+	font: italic georgia;
+}
