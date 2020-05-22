@@ -214,23 +214,72 @@
                                             <div id="collapse-2" class="panel-collapse collapse">
                                                 <div class="panel-body">
                                                     <div class="row page-row">
-                                                        {% for faculty_data in faculties_data %}                                                    
-                                                            <div class="col-md-3 col-sm-3 text-center">
+
+                                               
+
+
+                                                        {% for faculty_data in faculties_data %}
+
+                                                        {%  if faculty_data.designation == 'Professor and Head'  %}
+
+
+                                                        <div class="col-md-12">
+                                                            <div class="col-md-4">
+
+                                                            </div>
+                                                            <div class="col-md-4 text-center">
                                                                 <div class="album-cover">
                                                                     <!-- <a href="#"> -->
-                                                                        <img class="img-thumbnail" src="{{faculty_data.image.url}}" alt="" style="width:360px;height:270px;">
+                                                                    <img class="img-thumbnail"
+                                                                        src="{{faculty_data.image.url}}" alt=""
+                                                                        style="width:360px;height:270px;">
                                                                     <!-- </a> -->
                                                                     <div class="desc">
                                                                         <h5>{{faculty_data.name}}</h5>
-                                                                        <h4><small><a href="#">{{faculty_data.designation}}</a></small></h4>
-                                                                        
-                                                                        
+                                                                        <h4><small><a
+                                                                                    href="#">{{faculty_data.designation}}</a></small>
+                                                                        </h4>
+
+
                                                                         <!-- <button type="button" class="btn btn-theme">Theme Button</button> -->
-                                                                        <a href="{{faculty_data.detail.url}}" class="btn btn-theme view-pdf">Details</a>
+                                                                        <a href="{{faculty_data.detail.url}}"
+                                                                            class="btn btn-theme view-pdf">Details</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        {% endfor %} 
+                                                            <div class="col-md-4">
+
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        {% else %}
+
+                                                        <div class="col-md-3 col-sm-3 text-center">
+                                                            <div class="album-cover">
+                                                                <!-- <a href="#"> -->
+                                                                <img class="img-thumbnail"
+                                                                    src="{{faculty_data.image.url}}" alt=""
+                                                                    style="width:360px;height:270px;">
+                                                                <!-- </a> -->
+                                                                <div class="desc">
+                                                                    <h5>{{faculty_data.name}}</h5>
+                                                                    <h4><small><a
+                                                                                href="#">{{faculty_data.designation}}</a></small>
+                                                                    </h4>
+
+
+                                                                    <!-- <button type="button" class="btn btn-theme">Theme Button</button> -->
+                                                                    <a href="{{faculty_data.detail.url}}"
+                                                                        class="btn btn-theme view-pdf">Details</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+
                                                     </div>
                                                 </div><!--//panel-body-->
                                             </div><!--//panel-colapse-->
@@ -837,9 +886,37 @@
                                             </div><!--//pane-heading-->
                                             <div id="collapse-10" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <h3 class="no-margin-top has-divider text-highlight">Timetable</h3> 
+
+
+                                                    <h3 class="no-margin-top has-divider text-highlight">B.E. Time Table</h3>
+                                                    {% for timetable in timetable_data %}
+                                                        {% if timetable.course == "BE" %}
+                                                            <h3>Semester: {{timetable.semester}} Section: {{timetable.section}}</h3>
+                                                            <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
+                                                                class="fa fa-download"></i>Download</a>
+                                                            <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
+                                                            </a>
+                                                            <br>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </div>
+                                                <div class="panel-body">
+                                                    <h3 class="no-margin-top has-divider text-highlight">M.Tech Time Table</h3>
+                                                    {% for timetable in timetable_data %}
+                                                        {% if timetable.course == 'MT' %}
+                                                            <h3>Semester: {{timetable.semester}}</h3>
+                                                            <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
+                                                                class="fa fa-download"></i>Download</a>
+                                                            <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
+                                                            </a>
+                                                            <br>
+                                                        {% endif %}                                                      
+                                                    {% endfor %}
+                                                </div>
+                                                    
                                                     <!-- <p>Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis. Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus.</p> -->
-                                                </div><!--//panel-body-->
+                                                <!--//panel-body-->
+
                                                 <div class="panel-body">
                                                     <h3 class="no-margin-top has-divider text-highlight">Calender of Events</h3> 
                                                     <p>The library at department level is for the Students and Faculty of Computer Science & Engg. which houses good number of textbooks, reference books, and project & seminar reports. At present over 3564 books with <b>250 titles, project reports, seminar reports & CD'S</b> are available in the Department library. The National and International conference proceedings, workshop and seminar reports, product & textbook catalogues are kept for student's reference. Apart from the departmental library facility we have Central Library and Information Center. At Central Library, along with the standard books we have the facility of accessing various International & National Journals.</p>
