@@ -297,7 +297,46 @@
                                             <div id="collapse-2" class="panel-collapse collapse">
                                                 <div class="panel-body">
                                                     <div class="row page-row">
+
                                                         {% for faculty_data in faculties_data %}
+
+                                                        {%  if faculty_data.designation == 'Professor and Head'  %}
+
+
+                                                        <div class="col-md-12">
+                                                            <div class="col-md-4">
+
+                                                            </div>
+                                                            <div class="col-md-4 text-center">
+                                                                <div class="album-cover">
+                                                                    <!-- <a href="#"> -->
+                                                                    <img class="img-thumbnail"
+                                                                        src="{{faculty_data.image.url}}" alt=""
+                                                                        style="width:360px;height:270px;">
+                                                                    <!-- </a> -->
+                                                                    <div class="desc">
+                                                                        <h5>{{faculty_data.name}}</h5>
+                                                                        <h4><small><a
+                                                                                    href="#">{{faculty_data.designation}}</a></small>
+                                                                        </h4>
+
+
+                                                                        <!-- <button type="button" class="btn btn-theme">Theme Button</button> -->
+                                                                        <a href="{{faculty_data.detail.url}}"
+                                                                            class="btn btn-theme view-pdf">Details</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        {% else %}
+
                                                         <div class="col-md-3 col-sm-3 text-center">
                                                             <div class="album-cover">
                                                                 <!-- <a href="#"> -->
@@ -318,6 +357,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        {% endif %}
                                                         {% endfor %}
                                                     </div>
                                                 </div>
