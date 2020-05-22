@@ -1040,12 +1040,13 @@
                                                     <h3 class="no-margin-top has-divider text-highlight">B.E. Time Table</h3>
                                                     {% for timetable in timetable_data %}
                                                         {% if timetable.course == "BE" %}
-                                                            <h3>Semester: {{timetable.semester}} Section: {{timetable.section}}</h3>
-                                                            <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
-                                                                class="fa fa-download"></i>Download</a>
-                                                            <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
-                                                            </a>
-                                                            <br>
+                                                            <div class="welcome col-md-3 col-sm-2" style="display: inline-block; margin-top: 15px;">
+                                                                <h3>Semester: {{timetable.semester}} Section: {{timetable.section}}</h3>
+                                                                <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
+                                                                    class="fa fa-download"></i>Download</a>
+                                                                <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
+                                                                </a>
+                                                            </div>
                                                         {% endif %}
                                                     {% endfor %}
                                                 </div>
@@ -1053,12 +1054,13 @@
                                                     <h3 class="no-margin-top has-divider text-highlight">M.Tech Time Table</h3>
                                                     {% for timetable in timetable_data %}
                                                         {% if timetable.course == 'MT' %}
-                                                            <h3>Semester: {{timetable.semester}}</h3>
-                                                            <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
-                                                                class="fa fa-download"></i>Download</a>
-                                                            <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
-                                                            </a>
-                                                            <br>
+                                                            <div class="welcome col-md-3 col-sm-2" style="display: inline-block; margin-top: 15px;">
+                                                                <h3>Semester: {{timetable.semester}}</h3>
+                                                                <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
+                                                                    class="fa fa-download"></i>Download</a>
+                                                                <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
+                                                                </a>
+                                                            </div>
                                                         {% endif %}                                                      
                                                     {% endfor %}
                                                 </div>
