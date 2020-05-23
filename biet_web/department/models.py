@@ -281,3 +281,30 @@ class computer_science_dept_timetable(models.Model):
     
     def __str__(self):
         return self.course + ": " + str(self.semester) + "-" + self.section
+
+class computer_science_dept_research_guide(models.Model):
+    sno = models.IntegerField(primary_key=True)
+    guide_name = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.guide_name
+    
+class computer_science_dept_research_scholars(models.Model):
+    
+    year_choices_array=[]
+    for year in range(1979,2021):
+        year_choices_array.append((year,year))
+    year_choices_array.append((0,'NA'))
+    year_choices = tuple(year_choices_array)
+    research_scholar_name = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
+    year_of_regn = models.IntegerField(choices=year_choices,default=2020)
+    phD= models.CharField(max_length=10,choices=(('PHD','Ph.D.'),('(PHD)','(Ph.D.)')),default='(PHD)')
+    course_work_completed = models.CharField(max_length=1,choices=(('Y','Yes'),('N','No')),default='Y')
+    pre_phD_viva_voce = models.CharField(max_length=1,choices=(('Y','Yes'),('N','No')),default='Y')
+    submitted_final_thesis = models.CharField(max_length=1,choices=(('Y','Yes'),('N','No')),default='Y')
+    phD_awarded_year = models.IntegerField(choices=year_choices,default=2020)
+    guide = models.ForeignKey(computer_science_dept_research_guide, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.research_scholar_name
