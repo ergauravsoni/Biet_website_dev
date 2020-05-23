@@ -7,7 +7,7 @@ from .models import chemistry_dept_gallery, computer_science_dept_gallery, elect
 from .models import electrical_and_electronics_gallery, information_science_dept_gallery, mathematics_dept_gallery
 from .models import physics_dept_gallery, textile_dept_gallery, mca_dept_gallery, environmental_dept_gallery
 from .models import computer_science_dept_lab_facilities, computer_science_dept_major_equipments, computer_science_dept_activities
-from .models import computer_science_dept_classroom
+from .models import computer_science_dept_classroom,computer_science_dept_events
 from .models import computer_science_dept_achievements, computer_science_dept_timetable
 from .models import computer_science_dept_research_scholars, computer_science_dept_research_guide
 
@@ -45,11 +45,8 @@ admin.site.register(computer_science_dept_major_equipments)
 admin.site.register(computer_science_dept_activities)
 admin.site.register(computer_science_dept_achievements)
 admin.site.register(computer_science_dept_timetable)
-<< << << < HEAD
 admin.site.register(computer_science_dept_events)
 admin.site.register(computer_science_dept_classroom)
-== == == =
 admin.site.register(computer_science_dept_research_scholars)
 admin.site.register(computer_science_dept_research_guide)
->>>>>> > db7e45c44bae471034328bbdeb7d8011fdbbd7c8
 
