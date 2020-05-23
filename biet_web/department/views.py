@@ -7,8 +7,9 @@ from .models import chemistry_dept_gallery, computer_science_dept_gallery, elect
 from .models import electrical_and_electronics_gallery, information_science_dept_gallery, mathematics_dept_gallery
 from .models import physics_dept_gallery, textile_dept_gallery, mca_dept_gallery, environmental_dept_gallery
 from .models import computer_science_dept_lab_facilities, computer_science_dept_major_equipments, computer_science_dept_activities
-from .models import computer_science_dept_achievements, computer_science_dept_timetable, computer_science_dept_events
 from .models import computer_science_dept_classroom
+from .models import computer_science_dept_achievements, computer_science_dept_timetable
+from .models import computer_science_dept_research_scholars, computer_science_dept_research_guide
 
 # Create your views here.
 
@@ -107,19 +108,34 @@ def home(request, course, dept):
     elif course == 'UG' and dept == 'CHE':
         faculties_data = chemistry_dept.objects.all().order_by('image')
     elif course == 'UG' and dept == 'CS':
-        
+
         faculties_data = computer_science_dept.objects.all().order_by('image')
         achievements_data = computer_science_dept_achievements.objects.all()
         activities_data = computer_science_dept_activities.objects.all().order_by('sno')
         lab_facilities_data = computer_science_dept_lab_facilities.objects.all().order_by('sno')
         major_equipments_data = computer_science_dept_major_equipments.objects.all()
         images = computer_science_dept_gallery.objects.all()
-        timetable_data = computer_science_dept_timetable.objects.order_by('semester','section')
+        timetable_data = computer_science_dept_timetable.objects.order_by(
+            'semester', 'section')
+
+
+<< << << < HEAD
         events = computer_science_dept_events.objects.all()
         classrooms = computer_science_dept_classroom.objects.all()
 
         print(classrooms)
-        
+== == == =
+        research_scholar_data = computer_science_dept_research_scholars.objects.all().order_by('guide')
+        research_guide_data = computer_science_dept_research_guide.objects.all().order_by('sno')
+
+        research_data = []
+        guide_count = research_guide_data.count()
+
+        for i in range(guide_count):
+            research_data.append(research_scholar_data.filter(guide_id=i+1))
+
+>>>>>> > db7e45c44bae471034328bbdeb7d8011fdbbd7c8
+
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
                     'activities_data': activities_data,
@@ -127,10 +143,14 @@ def home(request, course, dept):
                     'major_equipments_data': major_equipments_data,
                     'images': images,
                     'timetable_data': timetable_data,
-                     'events' : events,
-                     'classrooms' : classrooms
+<< << << < HEAD
+                     'events': events,
+                     'classrooms': classrooms
+== == == =
+                    'research_data': research_data
+>> >>>> > db7e45c44bae471034328bbdeb7d8011fdbbd7c8
                 }
-        
+
     elif course == 'UG' and dept == 'EC':
         faculties_data = electronics_and_communication_dept.objects.all().order_by('image')
     elif course == 'UG' and dept == 'EEE':

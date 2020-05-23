@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'academics',
     'admission',
     'facilities',
-    'placement'
+    'placement',
+    'multiforloop'
 ]
 
 MIDDLEWARE = [

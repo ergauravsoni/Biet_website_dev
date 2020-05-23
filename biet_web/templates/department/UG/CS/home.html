@@ -430,8 +430,8 @@
                                             <!--//pane-heading-->
                                             <div id="collapse-3" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <h3 class="no-margin-top text-highlight">Ph.D. Guided /Ph.D. Awarded
-                                                        during the assessment period while working in the Institute</h1>
+                                                    <h2 class="no-margin-top text-highlight">Ph.D. Guided /Ph.D. Awarded
+                                                        during the assessment period while working in the Institute</h2>
                                                         <div class="table-responsive">
                                                             <table class="table table-boxed">
                                                                 <thead>
@@ -460,7 +460,34 @@
                                                                         <td style = "white-space: pre-wrap;">{{lab_facility.softwares}}</td>
                                                                     </tr>
                                                                 {% endfor %} -->
-                                                                    <tr>
+                                                                    {% for guide_scholars in research_data %}                                                               
+                                                                        {% for scholar in guide_scholars %}
+                                                                            {% if forloop.first %}    
+                                                                                <tr>
+                                                                                    <td rowspan={{guide_scholars|length}}>{{scholar.guide.sno}}.</td>
+                                                                                    <td rowspan={{guide_scholars|length}}>{{scholar.guide.guide_name}}</td>
+                                                                            {% else %}
+                                                                                <tr>
+                                                                            {% endif %}
+                                                                                <td>{{scholar.research_scholar_name}}</td>
+                                                                                <td>{{scholar.department}}</td>
+                                                                                <td>{{scholar.year_of_regn}}</td>
+                                                                                <td>{{scholar.phD}}</td>
+                                                                                <td style="text-align: center;">{{scholar.course_work_completed}}</td>
+                                                                                <td style="text-align: center;">{{scholar.pre_phD_viva_voce}}</td>
+                                                                                <td style="text-align: center;">{{scholar.submitted_final_thesis}}</td>
+                                                                                {% if scholar.course_work_completed == 'Y' and scholar.pre_phD_viva_voce == 'Y' and scholar.submitted_final_thesis == 'Y' %}
+                                                                                    <td style="text-align: center;">Y, {{scholar.phD_awarded_year}}</td>
+                                                                                {% else %}
+                                                                                    <td style="text-align: center;">---</td>
+                                                                                {% endif %}
+                                                                            </tr>
+                                                                        {% endfor %}
+                                                                        <tr class="blank_row">
+                                                                            <td colspan="3"></td>
+                                                                        </tr>
+                                                                    {% endfor %}
+                                                                    <!-- <tr>
                                                                         <td rowspan="7">1</td>
                                                                         <td rowspan="7">Dr. Nirmala C R</td>
                                                                         <td>Anoop Kumar B</td>
@@ -531,7 +558,7 @@
                                                                         <td>Y</td>
                                                                         <td>N</td>
                                                                         <td>---</td>
-                                                                    </tr>
+                                                                    </tr> -->
 
                                                                 </tbody>
                                                             </table>
