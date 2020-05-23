@@ -31,3 +31,9 @@
 	color: #ffffff;
 	font: italic georgia;
 }
+
+@media (min-width: 1200px) {
+  nav .container{
+    width: 1200px;
+  }
+}

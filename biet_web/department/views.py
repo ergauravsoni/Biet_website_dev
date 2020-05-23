@@ -7,7 +7,8 @@ from .models import chemistry_dept_gallery, computer_science_dept_gallery, elect
 from .models import electrical_and_electronics_gallery, information_science_dept_gallery, mathematics_dept_gallery
 from .models import physics_dept_gallery, textile_dept_gallery, mca_dept_gallery, environmental_dept_gallery
 from .models import computer_science_dept_lab_facilities, computer_science_dept_major_equipments, computer_science_dept_activities
-from .models import computer_science_dept_achievements, computer_science_dept_timetable
+from .models import computer_science_dept_achievements, computer_science_dept_timetable, computer_science_dept_events
+from .models import computer_science_dept_classroom
 
 # Create your views here.
 
@@ -114,6 +115,10 @@ def home(request, course, dept):
         major_equipments_data = computer_science_dept_major_equipments.objects.all()
         images = computer_science_dept_gallery.objects.all()
         timetable_data = computer_science_dept_timetable.objects.order_by('semester','section')
+        events = computer_science_dept_events.objects.all()
+        classrooms = computer_science_dept_classroom.objects.all()
+
+        print(classrooms)
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -121,7 +126,9 @@ def home(request, course, dept):
                     'lab_facilities_data': lab_facilities_data,
                     'major_equipments_data': major_equipments_data,
                     'images': images,
-                    'timetable_data': timetable_data
+                    'timetable_data': timetable_data,
+                     'events' : events,
+                     'classrooms' : classrooms
                 }
         
     elif course == 'UG' and dept == 'EC':

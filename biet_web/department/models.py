@@ -281,3 +281,18 @@ class computer_science_dept_timetable(models.Model):
     
     def __str__(self):
         return self.course + ": " + str(self.semester) + "-" + self.section
+
+class computer_science_dept_events(models.Model):
+    events = models.FileField(upload_to='department/CS/data/events/')
+    semester = models.CharField(max_length=10)
+    name = models.CharField(max_length=30)
+     
+    def __str__(self):
+        return '{}'.format(self.events)
+
+
+class computer_science_dept_classroom(models.Model):
+    classroom = models.FileField(upload_to='department/CS/data/classroom/')
+    
+    def __str__(self):
+        return '{}'.format(self.classroom)

@@ -303,9 +303,9 @@
                                                         {%  if faculty_data.designation == 'Professor and Head'  %}
 
 
-                                                       
+
                                                         <div class="col-md-12">
-                                                            
+
                                                             <div class="col-md-4 text-center">
                                                                 <div class="album-cover">
                                                                     <!-- <a href="#"> -->
@@ -323,19 +323,62 @@
 
 
                                                                         <!-- <button type="button" class="btn btn-theme">Theme Button</button> -->
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            
+
                                                             <div class="col-md-8 text-center">
                                                                 <div class="" style="  text-align: justify;">
                                                                     <p>
-                                                                        Dr. Nirmala C R,  working as professor and head ,  department of Computer Science and Engineering of BIET , Davangere has got 25 years of teaching experience in teaching, mentoring and guiding the   students  of UG, PG  and research programs of  CS & E department.  She received her doctorate degree from Visvesvaray Technological University, Belgaum  and carried out her  research at BIET.   She has  completed her  master’s  degree from National Institute of Technology Karnataka, Surthkal  in the year 2001 and  specialization in Computer Engineering and   B.E in Electronics and Communication from Bapuji Institute of Engineering and Technology, Davangere in the year 1992.  She started her career at Bharath Electronics Ltd, Bangalore as Trainee Engineer, then  joined Bapuji Institute of Engineering and Technology as  a lecturer in the department of E & C  from 1995 and in CS and E dept from 2001. Acting as a single point of contact for Infosys Campus Connect,  IBM Academic Activities, VMWARE IT Academy and ICT Academy India activities . IBM India Ltd, Awarded her with prestigious “Drona” award, for  5 times for mentoring award winning student projects in the annual  national level software development contest- “The Great Mind Challenge” and for showing  outstanding performance in the IBM academic initiative Activities in the institute. Infosys has felicitated with certificate of appreciation for outstanding performance in the Infosys campus Connect activities. Wipro Mission 10X team has recognized “Champion Trainer”. And from the institute she obtained the best teacher award for 10 times.   Published and presented more than 30 papers in the International Conferences and  SCI journals .  2 research scholars have been awarded with PhD Degree and 5 research scholars are carrying out research under her guidance.  1 Indian patent has been filed in the area of wireless sensor networks and waiting for publishing. She has recieved 40 lakhs Grant's from VGST, Govt. Of Karnataka for the proposal on precision agriculture.
+                                                                        Dr. Nirmala C R, working as professor and head ,
+                                                                        department of Computer Science and Engineering
+                                                                        of BIET , Davangere has got 25 years of teaching
+                                                                        experience in teaching, mentoring and guiding
+                                                                        the students of UG, PG and research programs of
+                                                                        CS & E department. She received her doctorate
+                                                                        degree from Visvesvaray Technological
+                                                                        University, Belgaum and carried out her research
+                                                                        at BIET. She has completed her master’s degree
+                                                                        from National Institute of Technology Karnataka,
+                                                                        Surthkal in the year 2001 and specialization in
+                                                                        Computer Engineering and B.E in Electronics and
+                                                                        Communication from Bapuji Institute of
+                                                                        Engineering and Technology, Davangere in the
+                                                                        year 1992. She started her career at Bharath
+                                                                        Electronics Ltd, Bangalore as Trainee Engineer,
+                                                                        then joined Bapuji Institute of Engineering and
+                                                                        Technology as a lecturer in the department of E
+                                                                        & C from 1995 and in CS and E dept from 2001.
+                                                                        Acting as a single point of contact for Infosys
+                                                                        Campus Connect, IBM Academic Activities, VMWARE
+                                                                        IT Academy and ICT Academy India activities .
+                                                                        IBM India Ltd, Awarded her with prestigious
+                                                                        “Drona” award, for 5 times for mentoring award
+                                                                        winning student projects in the annual national
+                                                                        level software development contest- “The Great
+                                                                        Mind Challenge” and for showing outstanding
+                                                                        performance in the IBM academic initiative
+                                                                        Activities in the institute. Infosys has
+                                                                        felicitated with certificate of appreciation for
+                                                                        outstanding performance in the Infosys campus
+                                                                        Connect activities. Wipro Mission 10X team has
+                                                                        recognized “Champion Trainer”. And from the
+                                                                        institute she obtained the best teacher award
+                                                                        for 10 times. Published and presented more than
+                                                                        30 papers in the International Conferences and
+                                                                        SCI journals . 2 research scholars have been
+                                                                        awarded with PhD Degree and 5 research scholars
+                                                                        are carrying out research under her guidance. 1
+                                                                        Indian patent has been filed in the area of
+                                                                        wireless sensor networks and waiting for
+                                                                        publishing. She has recieved 40 lakhs Grant's
+                                                                        from VGST, Govt. Of Karnataka for the proposal
+                                                                        on precision agriculture.
                                                                     </p>
                                                                 </div>
                                                                 <a href="{{faculty_data.detail.url}}"
-                                                                            class="btn btn-theme view-pdf">Read More</a>
+                                                                    class="btn btn-theme view-pdf">Read More</a>
                                                             </div>
                                                         </div>
 
@@ -348,7 +391,6 @@
                                                                 <!-- <a href="#"> -->
                                                                 <img class="img-thumbnail"
                                                                     src="{{faculty_data.image.url}}" alt=""
-
                                                                     style="width:360px;height:300px;">
 
 
@@ -662,6 +704,20 @@
                                                         aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis.
                                                         Nulla a varius velit. Phasellus at lectus ut felis posuere
                                                         lacinia in id purus.</p>
+
+
+
+                                                    {% for classroom in classrooms %}
+
+                                                    <a class="prettyphoto col-md-3 col-sm-3 col-xs-6"
+                                                        rel="prettyPhoto[gallery]" title=""
+                                                        href="{{classroom.classroom.url}}"><img
+                                                            class="img-responsive img-thumbnail"
+                                                            src="{{classroom.classroom.url}}" alt="" /></a>
+
+                                                    {% endfor %}
+
+
                                                 </div>
                                                 <!--//panel-body-->
                                                 <div class="panel-body">
@@ -697,23 +753,24 @@
                                             <!--//pane-heading-->
                                             <div id="collapse-5" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <h3 class="no-margin-top text-highlight">Students placed in various IT Companies</h1>
-                                                    <div class="table-responsive">                    
-                                                        <table class="table table-boxed">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Sl.No.</th>
-                                                                    <th>Company</th>
-                                                                    <th>2019</th>
-                                                                    <th>2018</th>
-                                                                    <th>2017</th>
-                                                                    <th>2016</th>
-                                                                    <th>2015</th>
-                                                                </tr>
-                                                                
-                                                            </thead>
-                                                            <tbody>
-                                                                <!-- {% for lab_facility in lab_facilities_data %}
+                                                    <h3 class="no-margin-top text-highlight">Students placed in various
+                                                        IT Companies</h1>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-boxed">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Sl.No.</th>
+                                                                        <th>Company</th>
+                                                                        <th>2019</th>
+                                                                        <th>2018</th>
+                                                                        <th>2017</th>
+                                                                        <th>2016</th>
+                                                                        <th>2015</th>
+                                                                    </tr>
+
+                                                                </thead>
+                                                                <tbody>
+                                                                    <!-- {% for lab_facility in lab_facilities_data %}
                                                                     <tr>
                                                                         <td><b>{{lab_facility.sno}}.</b></td>
                                                                         <td>{{lab_facility.name}}</td>
@@ -722,28 +779,30 @@
                                                                         <td style = "white-space: pre-wrap;">{{lab_facility.softwares}}</td>
                                                                     </tr>
                                                                 {% endfor %} -->
-                                                                <tr>
-                                                                    <td>1</td>
-                                                                    <td>TCS</td>
-                                                                    <td>22</td>
-                                                                    <td>56</td>
-                                                                    <td>47</td>
-                                                                    <td>28</td>
-                                                                    <td>29</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td>Mindtree</td>
-                                                                    <td>-</td>
-                                                                    <td>-</td>
-                                                                    <td>-</td>
-                                                                    <td>1</td>
-                                                                    <td>6</td>
-                                                                </tr>
-                                                                                                                            
-                                                            </tbody>
-                                                        </table><!--//table-->
-                                                    </div><!--//table-responsive-->
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>TCS</td>
+                                                                        <td>22</td>
+                                                                        <td>56</td>
+                                                                        <td>47</td>
+                                                                        <td>28</td>
+                                                                        <td>29</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td>Mindtree</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>1</td>
+                                                                        <td>6</td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                            <!--//table-->
+                                                        </div>
+                                                        <!--//table-responsive-->
                                                 </div>
                                                 <!--//panel-body-->
                                             </div>
@@ -754,57 +813,105 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordion" class="collapsed" href="#collapse-6">
+                                                    <a data-toggle="collapse" data-parent="#accordion" class="collapsed"
+                                                        href="#collapse-6">
                                                         Distinguished Alumni
                                                     </a>
                                                 </h4>
-                                            </div><!--//pane-heading-->
+                                            </div>
+                                            <!--//pane-heading-->
                                             <div id="collapse-6" class="panel-collapse collapse">
                                                 <div class="panel-body">
                                                     <!-- <div class="team-wrapper col-md-8 col-sm-7">         -->
-                                                        <div class="row page-row" >
-                                                            <figure class="thumb col-md-3 col-sm-4 col-xs-6">
-                                                                <img class="img-responsive" src="{% static 'assets/images/team/team-1.jpg' %}" alt="" />
-                                                            </figure>
-                                                            <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                                <h3 class="title">Alumni 1</h3>
-                                                                <h4>Designation</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam, tellus id pellentesque viverra, metus lacus lobortis augue, sed malesuada urna sapien id orci. Maecenas pharetra mauris quis tincidunt egestas. Sed condimentum felis quis nulla varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam diam, porttitor quis mollis non, suscipit id tellus. Nullam a ultrices sem, vel tincidunt felis. Sed eu suscipit erat. Nam malesuada, leo porta rhoncus blandit, ipsum tellus fringilla mi, ac pretium nisl turpis sit amet purus. Mauris pellentesque tincidunt lacus commodo lobortis. Nulla consectetur scelerisque molestie.</p>                                 
-                                                            </div>                               
+                                                    <div class="row page-row">
+                                                        <figure class="thumb col-md-3 col-sm-4 col-xs-6">
+                                                            <img class="img-responsive"
+                                                                src="{% static 'assets/images/team/team-1.jpg' %}"
+                                                                alt="" />
+                                                        </figure>
+                                                        <div class="details col-md-9 col-sm-8 col-xs-6">
+                                                            <h3 class="title">Alumni 1</h3>
+                                                            <h4>Designation</h4>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Suspendisse aliquam, tellus id pellentesque viverra,
+                                                                metus lacus lobortis augue, sed malesuada urna sapien id
+                                                                orci. Maecenas pharetra mauris quis tincidunt egestas.
+                                                                Sed condimentum felis quis nulla varius. Lorem ipsum
+                                                                dolor sit amet, consectetur adipiscing elit. Etiam diam
+                                                                diam, porttitor quis mollis non, suscipit id tellus.
+                                                                Nullam a ultrices sem, vel tincidunt felis. Sed eu
+                                                                suscipit erat. Nam malesuada, leo porta rhoncus blandit,
+                                                                ipsum tellus fringilla mi, ac pretium nisl turpis sit
+                                                                amet purus. Mauris pellentesque tincidunt lacus commodo
+                                                                lobortis. Nulla consectetur scelerisque molestie.</p>
                                                         </div>
-                                                        <div class="row page-row" >
-                                                            <figure class="thumb col-md-3 col-sm-4 col-xs-6">
-                                                                <img class="img-responsive" src="{% static 'assets/images/team/team-2.jpg' %}" alt="" />
-                                                            </figure>
-                                                            <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                                <h3 class="title">Alumni 2</h3>
-                                                                <h4>Designation</h4>
-                                                                <p>Pellentesque eu bibendum massa. Morbi et metus adipiscing libero lobortis accumsan ac eget turpis. Duis vehicula, velit sit amet vehicula gravida, nibh dui cursus risus, eget tristique tortor dolor id ligula. Integer id iaculis ante. In massa dolor, consequat quis sodales vel, cursus sed ligula. Sed neque est, pharetra ac enim ut, dignissim molestie tellus. Cras luctus est sit amet dui condimentum, eu varius tellus molestie. Curabitur eleifend faucibus pharetra. Mauris non elit dui.</p>                                    
-                                                            </div>                               
+                                                    </div>
+                                                    <div class="row page-row">
+                                                        <figure class="thumb col-md-3 col-sm-4 col-xs-6">
+                                                            <img class="img-responsive"
+                                                                src="{% static 'assets/images/team/team-2.jpg' %}"
+                                                                alt="" />
+                                                        </figure>
+                                                        <div class="details col-md-9 col-sm-8 col-xs-6">
+                                                            <h3 class="title">Alumni 2</h3>
+                                                            <h4>Designation</h4>
+                                                            <p>Pellentesque eu bibendum massa. Morbi et metus adipiscing
+                                                                libero lobortis accumsan ac eget turpis. Duis vehicula,
+                                                                velit sit amet vehicula gravida, nibh dui cursus risus,
+                                                                eget tristique tortor dolor id ligula. Integer id
+                                                                iaculis ante. In massa dolor, consequat quis sodales
+                                                                vel, cursus sed ligula. Sed neque est, pharetra ac enim
+                                                                ut, dignissim molestie tellus. Cras luctus est sit amet
+                                                                dui condimentum, eu varius tellus molestie. Curabitur
+                                                                eleifend faucibus pharetra. Mauris non elit dui.</p>
                                                         </div>
-                                                        <div class="row page-row" >
-                                                            <figure class="thumb col-md-3 col-sm-4 col-xs-6">
-                                                                <img class="img-responsive" src="{% static 'assets/images/team/team-3.jpg' %}" alt="" />
-                                                            </figure>
-                                                            <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                                <h3 class="title">Alumni 3</h3>
-                                                                <h4>Designation</h4>
-                                                                <p>Donec justo magna, mattis a ipsum in, pretium aliquet dolor. Vestibulum rhoncus dolor placerat diam laoreet dictum. Integer auctor augue eget nibh ultrices, vitae fermentum est vehicula. Nullam suscipit metus felis. Ut arcu ante, mollis quis urna in, facilisis placerat leo. Duis auctor diam at quam laoreet, vitae blandit mi fermentum. Fusce mollis pellentesque sem, non eleifend nisl. Suspendisse nisi nulla, consectetur sed pellentesque vitae.</p>                                    
-                                                            </div>                               
+                                                    </div>
+                                                    <div class="row page-row">
+                                                        <figure class="thumb col-md-3 col-sm-4 col-xs-6">
+                                                            <img class="img-responsive"
+                                                                src="{% static 'assets/images/team/team-3.jpg' %}"
+                                                                alt="" />
+                                                        </figure>
+                                                        <div class="details col-md-9 col-sm-8 col-xs-6">
+                                                            <h3 class="title">Alumni 3</h3>
+                                                            <h4>Designation</h4>
+                                                            <p>Donec justo magna, mattis a ipsum in, pretium aliquet
+                                                                dolor. Vestibulum rhoncus dolor placerat diam laoreet
+                                                                dictum. Integer auctor augue eget nibh ultrices, vitae
+                                                                fermentum est vehicula. Nullam suscipit metus felis. Ut
+                                                                arcu ante, mollis quis urna in, facilisis placerat leo.
+                                                                Duis auctor diam at quam laoreet, vitae blandit mi
+                                                                fermentum. Fusce mollis pellentesque sem, non eleifend
+                                                                nisl. Suspendisse nisi nulla, consectetur sed
+                                                                pellentesque vitae.</p>
                                                         </div>
-                                                        <div class="row page-row" >
-                                                            <figure class="thumb col-md-3 col-sm-4 col-xs-6">
-                                                                <img class="img-responsive" src="{% static 'assets/images/team/team-4.jpg' %}" alt="" />
-                                                            </figure>
-                                                            <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                                <h3 class="title">Alumni 4</h3>
-                                                                <h4>Designation</h4>
-                                                                <p>Suspendisse tempus, nibh vel facilisis eleifend, ante lorem ultricies erat, id blandit mauris felis ac elit. Mauris et placerat massa. Duis nec tellus dui. Nullam facilisis lectus a nunc feugiat interdum. Fusce et sem a diam accumsan aliquam. Fusce eu hendrerit massa. Integer eget facilisis metus. Quisque vel lectus sed neque cursus auctor vitae sed nisi. Integer augue mauris, scelerisque sit amet suscipit sit amet, scelerisque in felis. Aenean lacus magna, vestibulum eu pulvinar sed, posuere nec neque.</p>                                    
-                                                            </div>                               
+                                                    </div>
+                                                    <div class="row page-row">
+                                                        <figure class="thumb col-md-3 col-sm-4 col-xs-6">
+                                                            <img class="img-responsive"
+                                                                src="{% static 'assets/images/team/team-4.jpg' %}"
+                                                                alt="" />
+                                                        </figure>
+                                                        <div class="details col-md-9 col-sm-8 col-xs-6">
+                                                            <h3 class="title">Alumni 4</h3>
+                                                            <h4>Designation</h4>
+                                                            <p>Suspendisse tempus, nibh vel facilisis eleifend, ante
+                                                                lorem ultricies erat, id blandit mauris felis ac elit.
+                                                                Mauris et placerat massa. Duis nec tellus dui. Nullam
+                                                                facilisis lectus a nunc feugiat interdum. Fusce et sem a
+                                                                diam accumsan aliquam. Fusce eu hendrerit massa. Integer
+                                                                eget facilisis metus. Quisque vel lectus sed neque
+                                                                cursus auctor vitae sed nisi. Integer augue mauris,
+                                                                scelerisque sit amet suscipit sit amet, scelerisque in
+                                                                felis. Aenean lacus magna, vestibulum eu pulvinar sed,
+                                                                posuere nec neque.</p>
                                                         </div>
+                                                    </div>
                                                     <!-- </div>//team-wrapper -->
-                                                </div><!--//panel-body-->
-                                            </div><!--//panel-colapse-->
+                                                </div>
+                                                <!--//panel-body-->
+                                            </div>
+                                            <!--//panel-colapse-->
                                         </div>
                                         <!--//panel-->
 
@@ -1108,7 +1215,7 @@
                                             </div>
 
 
-                                            
+
 
 
                                             <!--//pane-heading-->
@@ -1127,67 +1234,88 @@
                                                         {% endif %}
                                                     {% endfor %}
                                                 </div> -->
-                                                
+
                                                 <div class="panel-body">
-                                                    <h3 class="no-margin-top has-divider text-highlight">B.Tech Time Table</h3>
+                                                    <h3 class="no-margin-top has-divider text-highlight">B.Tech Time
+                                                        Table</h3>
                                                     <ul class="nav nav-tabs">
-                                                        <li class="active"><a href="#tab1" data-toggle="tab"><strong>B.E. Time Table Even Semester</strong></a></li>
-                                                        <li><a href="#tab2" data-toggle="tab"><strong>B.E. Time Table Odd Semester</strong></a></li>
-                                                        
-                                                      </ul>
-                                                      <div class="tab-content">
-                                                          <div class="tab-pane active" id="tab1">
-                                                              <div class="row medical">
+                                                        <li class="active"><a href="#tab1"
+                                                                data-toggle="tab"><strong>B.E. Time Table Even
+                                                                    Semester</strong></a></li>
+                                                        <li><a href="#tab2" data-toggle="tab"><strong>B.E. Time Table
+                                                                    Odd Semester</strong></a></li>
+
+                                                    </ul>
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="tab1">
+                                                            <div class="row medical">
                                                                 {% for timetable in timetable_data %}
                                                                 {% if timetable.course == "BE" and timetable.semester|divisibleby:2 != 0 %}
-                                                                    <div class="welcome col-md-3 col-sm-2" style="display: inline-block; margin-top: 15px;">
-                                                                        <h3>Semester: {{timetable.semester}} Section: {{timetable.section}}</h3>
-                                                                        <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
+                                                                <div class="welcome col-md-3 col-sm-2"
+                                                                    style="display: inline-block; margin-top: 15px;">
+                                                                    <h3>Semester: {{timetable.semester}} Section:
+                                                                        {{timetable.section}}</h3>
+                                                                    <a class="btn btn-theme"
+                                                                        href="{{timetable.timetable.url}}"
+                                                                        target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                        <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
-                                                                        </a>
-                                                                    </div>
-                                                                {% endif %}
-                                                            {% endfor %}
-                                                              </div><!--//row-->
-                                                          </div>
-                                                          <div class="tab-pane" id="tab2">
-                                                          <div class="row medical">
-                                                            {% for timetable in timetable_data %}
-                                                            {% if timetable.course == "BE" and timetable.semester|divisibleby:2 == 0 %}
-                                                                <div class="welcome col-md-3 col-sm-2" style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>Semester: {{timetable.semester}} Section: {{timetable.section}}</h3>
-                                                                    <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
-                                                                        class="fa fa-download"></i>Download</a>
-                                                                    <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
+                                                                    <a href="{{timetable.timetable.url}}"
+                                                                        class="btn btn-theme view-pdf"><i
+                                                                            class="fa fa-eye"></i>View
                                                                     </a>
                                                                 </div>
-                                                            {% endif %}
-                                                        {% endfor %}
-                                                              </div><!--//row-->
-                                                          </div>
-                                                          
-                                                      </div>
+                                                                {% endif %}
+                                                                {% endfor %}
+                                                            </div>
+                                                            <!--//row-->
+                                                        </div>
+                                                        <div class="tab-pane" id="tab2">
+                                                            <div class="row medical">
+                                                                {% for timetable in timetable_data %}
+                                                                {% if timetable.course == "BE" and timetable.semester|divisibleby:2 == 0 %}
+                                                                <div class="welcome col-md-3 col-sm-2"
+                                                                    style="display: inline-block; margin-top: 15px;">
+                                                                    <h3>Semester: {{timetable.semester}} Section:
+                                                                        {{timetable.section}}</h3>
+                                                                    <a class="btn btn-theme"
+                                                                        href="{{timetable.timetable.url}}"
+                                                                        target="_blank"><i
+                                                                            class="fa fa-download"></i>Download</a>
+                                                                    <a href="{{timetable.timetable.url}}"
+                                                                        class="btn btn-theme view-pdf"><i
+                                                                            class="fa fa-eye"></i>View
+                                                                    </a>
+                                                                </div>
+                                                                {% endif %}
+                                                                {% endfor %}
+                                                            </div>
+                                                            <!--//row-->
+                                                        </div>
+
+                                                    </div>
                                                 </div>
                                                 <div class="panel-body">
-                                                    <h3 class="no-margin-top has-divider text-highlight">M.Tech Time Table</h3>
+                                                    <h3 class="no-margin-top has-divider text-highlight">M.Tech Time
+                                                        Table</h3>
                                                     {% for timetable in timetable_data %}
-                                                        {% if timetable.course == 'MT' %}
-                                                            <div class="welcome col-md-3 col-sm-2" style="display: inline-block; margin-top: 15px;">
-                                                                <h3>Semester: {{timetable.semester}}</h3>
-                                                                <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
-                                                                    class="fa fa-download"></i>Download</a>
-                                                                <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
-                                                                </a>
-                                                            </div>
-                                                        {% endif %}                                                      
+                                                    {% if timetable.course == 'MT' %}
+                                                    <div class="welcome col-md-3 col-sm-2"
+                                                        style="display: inline-block; margin-top: 15px;">
+                                                        <h3>Semester: {{timetable.semester}}</h3>
+                                                        <a class="btn btn-theme" href="{{timetable.timetable.url}}"
+                                                            target="_blank"><i class="fa fa-download"></i>Download</a>
+                                                        <a href="{{timetable.timetable.url}}"
+                                                            class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
+                                                        </a>
+                                                    </div>
+                                                    {% endif %}
                                                     {% endfor %}
                                                 </div>
 
 
 
-                                                    
-                                                    <!-- <p>Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis. Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus.</p> -->
+
+                                                <!-- <p>Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis. Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus.</p> -->
                                                 <!--//panel-body-->
                                                 <div class="panel-body">
                                                     <h3 class="no-margin-top has-divider text-highlight">Calender of
@@ -1204,6 +1332,63 @@
                                                         At Central Library, along with the standard books we have the
                                                         facility of accessing various International & National Journals.
                                                     </p>
+
+
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active"><a href="#tab3" data-toggle="tab"><strong>
+                                                                    Even
+                                                                    Semester Events</strong></a></li>
+                                                        <li><a href="#tab4" data-toggle="tab"><strong>
+                                                                    Odd Semester Events</strong></a></li>
+
+                                                    </ul>
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="tab3">
+                                                            <div class="row medical">
+                                                                {% for event in events %}
+                                                                {% if event.semester == "Even" %}
+                                                                <div class="welcome col-md-3 col-sm-2"
+                                                                    style="display: inline-block; margin-top: 15px;">
+                                                                    <h3>Semester: {{event.name}}
+                                                                    </h3>
+                                                                    <a class="btn btn-theme" href="{{event.events.url}}"
+                                                                        target="_blank"><i
+                                                                            class="fa fa-download"></i>Download</a>
+                                                                    <a href="{{event.events.url}}"
+                                                                        class="btn btn-theme view-pdf"><i
+                                                                            class="fa fa-eye"></i>View
+                                                                    </a>
+                                                                </div>
+                                                                {% endif %}
+                                                                {% endfor %}
+                                                            </div>
+                                                            <!--//row-->
+                                                        </div>
+                                                        <div class="tab-pane" id="tab4">
+                                                            <div class="row medical">
+                                                                {% for event in events %}
+
+                                                                {% if event.semester == "Odd" %}
+                                                                <div class="welcome col-md-3 col-sm-2"
+                                                                    style="display: inline-block; margin-top: 15px;">
+                                                                    <h3>Semester: {{event.name}}
+                                                                    </h3>
+                                                                    <a class="btn btn-theme" href="{{event.events.url}}"
+                                                                        target="_blank"><i
+                                                                            class="fa fa-download"></i>Download</a>
+                                                                    <a href="{{event.events.url}}"
+                                                                        class="btn btn-theme view-pdf"><i
+                                                                            class="fa fa-eye"></i>View
+                                                                    </a>
+                                                                </div>
+                                                                {% endif %}
+                                                                {% endfor %}
+                                                            </div>
+                                                            <!--//row-->
+                                                        </div>
+
+                                                    </div>
+
                                                 </div>
                                                 <!--//panel-body-->
                                                 <div class="panel-body">
@@ -1241,10 +1426,11 @@
                                             <div id="collapse-11" class="panel-collapse collapse">
                                                 <div class="panel-body">
                                                     <div class="panel-body">
-                                                        <h3 class="no-margin-top has-divider text-highlight">B.E Result Analysis-2019</h1>
+                                                        <h3 class="no-margin-top has-divider text-highlight">B.E Result
+                                                            Analysis-2019</h1>
                                                             <!-- <div class="row page-row"> -->
-                                                                <article class="welcome col-md-12 col-sm-11">
-                                                                    <!-- {% for calender in academic_calender %}
+                                                            <article class="welcome col-md-12 col-sm-11">
+                                                                <!-- {% for calender in academic_calender %}
                                                                     <section class="widget has-divider">
                                                                         <h3 class="title">Download Academic Calender</h3>
                                                                         <p>Click the link below to download the Academic Calender</p>
@@ -1254,37 +1440,47 @@
                                                                             now</a>
                                                                     </section>
                                                                     {% endfor %} -->
-                                                                    <section class="widget has-divider">
-                                                                        <h4 class="title">B.E Eighth Semester Result Analysis</h4>
-                                                                        <p>Click the link below to download the Result Analysis</p>
-                                                                        <a class="btn btn-theme" href="#" target="_blank"><i
-                                                                                class="fa fa-download"></i>Download now</a>
-                                                                        <a href="#" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
-                                                                            now</a>
-                                                                    </section>
-                                                                    <section class="widget has-divider">
-                                                                        <h4 class="title">B.E Sixth Semester Result Analysis</h4>
-                                                                        <p>Click the link below to download the Result Analysis</p>
-                                                                        <a class="btn btn-theme" href="#" target="_blank"><i
-                                                                                class="fa fa-download"></i>Download now</a>
-                                                                        <a href="#" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
-                                                                            now</a>
-                                                                    </section>
-                                                                    <section class="widget has-divider">
-                                                                        <h4 class="title">B.E Fourth Semester Result Analysis</h4>
-                                                                        <p>Click the link below to download the Result Analysis</p>
-                                                                        <a class="btn btn-theme" href="#" target="_blank"><i
-                                                                                class="fa fa-download"></i>Download now</a>
-                                                                        <a href="#" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
-                                                                            now</a>
-                                                                    </section>
+                                                                <section class="widget has-divider">
+                                                                    <h4 class="title">B.E Eighth Semester Result
+                                                                        Analysis</h4>
+                                                                    <p>Click the link below to download the Result
+                                                                        Analysis</p>
+                                                                    <a class="btn btn-theme" href="#" target="_blank"><i
+                                                                            class="fa fa-download"></i>Download now</a>
+                                                                    <a href="#" class="btn btn-theme view-pdf"><i
+                                                                            class="fa fa-eye"></i>View
+                                                                        now</a>
+                                                                </section>
+                                                                <section class="widget has-divider">
+                                                                    <h4 class="title">B.E Sixth Semester Result Analysis
+                                                                    </h4>
+                                                                    <p>Click the link below to download the Result
+                                                                        Analysis</p>
+                                                                    <a class="btn btn-theme" href="#" target="_blank"><i
+                                                                            class="fa fa-download"></i>Download now</a>
+                                                                    <a href="#" class="btn btn-theme view-pdf"><i
+                                                                            class="fa fa-eye"></i>View
+                                                                        now</a>
+                                                                </section>
+                                                                <section class="widget has-divider">
+                                                                    <h4 class="title">B.E Fourth Semester Result
+                                                                        Analysis</h4>
+                                                                    <p>Click the link below to download the Result
+                                                                        Analysis</p>
+                                                                    <a class="btn btn-theme" href="#" target="_blank"><i
+                                                                            class="fa fa-download"></i>Download now</a>
+                                                                    <a href="#" class="btn btn-theme view-pdf"><i
+                                                                            class="fa fa-eye"></i>View
+                                                                        now</a>
+                                                                </section>
 
-                                                
-                                                                </article>
-                                                                <!--//page-content-->
-                                                
+
+                                                            </article>
+                                                            <!--//page-content-->
+
                                                             <!-- </div> -->
-                                                    </div><!--//panel-body-->
+                                                    </div>
+                                                    <!--//panel-body-->
                                                 </div>
                                                 <!--//panel-body-->
                                             </div>
