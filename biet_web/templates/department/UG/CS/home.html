@@ -1100,9 +1100,14 @@
                                                     </a>
                                                 </h4>
                                             </div>
+
+
+                                            
+
+
                                             <!--//pane-heading-->
                                             <div id="collapse-10" class="panel-collapse collapse">
-                                                <div class="panel-body">
+                                                <!-- <div class="panel-body">
                                                     <h3 class="no-margin-top has-divider text-highlight">B.E. Time Table</h3>
                                                     {% for timetable in timetable_data %}
                                                         {% if timetable.course == "BE" %}
@@ -1115,6 +1120,48 @@
                                                             </div>
                                                         {% endif %}
                                                     {% endfor %}
+                                                </div> -->
+                                                
+                                                <div class="panel-body">
+                                                    <h3 class="no-margin-top has-divider text-highlight">B.Tech Time Table</h3>
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active"><a href="#tab1" data-toggle="tab"><strong>B.E. Time Table Even Semester</strong></a></li>
+                                                        <li><a href="#tab2" data-toggle="tab"><strong>B.E. Time Table Odd Semester</strong></a></li>
+                                                        
+                                                      </ul>
+                                                      <div class="tab-content">
+                                                          <div class="tab-pane active" id="tab1">
+                                                              <div class="row medical">
+                                                                {% for timetable in timetable_data %}
+                                                                {% if timetable.course == "BE" and timetable.semester|divisibleby:2 != 0 %}
+                                                                    <div class="welcome col-md-3 col-sm-2" style="display: inline-block; margin-top: 15px;">
+                                                                        <h3>Semester: {{timetable.semester}} Section: {{timetable.section}}</h3>
+                                                                        <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
+                                                                            class="fa fa-download"></i>Download</a>
+                                                                        <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
+                                                                        </a>
+                                                                    </div>
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                              </div><!--//row-->
+                                                          </div>
+                                                          <div class="tab-pane" id="tab2">
+                                                          <div class="row medical">
+                                                            {% for timetable in timetable_data %}
+                                                            {% if timetable.course == "BE" and timetable.semester|divisibleby:2 == 0 %}
+                                                                <div class="welcome col-md-3 col-sm-2" style="display: inline-block; margin-top: 15px;">
+                                                                    <h3>Semester: {{timetable.semester}} Section: {{timetable.section}}</h3>
+                                                                    <a class="btn btn-theme" href="{{timetable.timetable.url}}" target="_blank"><i
+                                                                        class="fa fa-download"></i>Download</a>
+                                                                    <a href="{{timetable.timetable.url}}" class="btn btn-theme view-pdf"><i class="fa fa-eye"></i>View
+                                                                    </a>
+                                                                </div>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                              </div><!--//row-->
+                                                          </div>
+                                                          
+                                                      </div>
                                                 </div>
                                                 <div class="panel-body">
                                                     <h3 class="no-margin-top has-divider text-highlight">M.Tech Time Table</h3>
@@ -1130,6 +1177,9 @@
                                                         {% endif %}                                                      
                                                     {% endfor %}
                                                 </div>
+
+
+
                                                     
                                                     <!-- <p>Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis. Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus.</p> -->
                                                 <!--//panel-body-->
