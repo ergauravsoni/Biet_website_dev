@@ -12,4 +12,6 @@ urlpatterns = [
     path('nain',views.nain, name='nain'),
     path('naac',views.naac, name='naac'),
     path('nba',views.nba, name='nba'),
+    path('director_msg',views.director_msg, name='director_msg'),
+    path('principal_msg',views.principal_msg, name='principal_msg'),
 ]

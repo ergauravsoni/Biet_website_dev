@@ -29,3 +29,9 @@ def naac(request):
 
 def nirf(request):
     return render(request,'about_biet/nirf.html')
+
+def director_msg(request):
+    return render(request,'about_biet/director_msg.html')
+
+def principal_msg(request):
+    return render(request,'about_biet/principal_msg.html')
