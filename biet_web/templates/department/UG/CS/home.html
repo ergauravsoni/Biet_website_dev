@@ -757,11 +757,11 @@
 
                                                     {% for classroom in classrooms %}
 
-                                                    <a class="prettyphoto col-md-3 col-sm-3 col-xs-6"
-                                                        rel="prettyPhoto[gallery]" title=""
-                                                        href="{{classroom.classroom.url}}"><img
+                                                    <a class="prettyphoto col-md-3 col-sm-3 " rel="prettyPhoto[gallery]"
+                                                        title="" href="{{classroom.classroom.url}}"><img
                                                             class="img-responsive img-thumbnail"
-                                                            src="{{classroom.classroom.url}}" alt="" /></a>
+                                                            src="{{classroom.classroom.url}}" alt=""
+                                                            style=" height: 170px;" /></a>
 
                                                     {% endfor %}
 
@@ -1832,11 +1832,11 @@
                                                     <!-- Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis. Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus. -->
                                                     {% for image in images %}
 
-                                                    <a class="prettyphoto col-md-3 col-sm-3 col-xs-6"
-                                                        rel="prettyPhoto[gallery]" title=""
-                                                        href="{{image.image.url}}"><img
+                                                    <a class="prettyphoto col-md-3 col-sm-3" rel="prettyPhoto[gallery]"
+                                                        title="" href="{{image.image.url}}"><img
                                                             class="img-responsive img-thumbnail"
-                                                            src="{{image.image.url}}" alt="" /></a>
+                                                            src="{{image.image.url}}" alt=""
+                                                            style=" height: 170px;" /></a>
 
                                                     {% endfor %}
                                                 </div>

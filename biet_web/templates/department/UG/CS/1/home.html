@@ -432,26 +432,26 @@
                                                 <div class="panel-body">
                                                     <h2 class="no-margin-top text-highlight">Ph.D. Guided /Ph.D. Awarded
                                                         during the assessment period while working in the Institute</h2>
-                                                        <div class="table-responsive">
-                                                            <table class="table table-boxed">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <!-- <colgroup span="2"></colgroup> -->
-                                                                        <th>S.No.</th>
-                                                                        <th>Guide</th>
-                                                                        <th>Name of the Research Scholars</th>
-                                                                        <th>Dept.</th>
-                                                                        <th>Year of Regn.</th>
-                                                                        <th>Ph.D.</th>
-                                                                        <th>Course Work Completed Y / N</th>
-                                                                        <th>Pre- PhD Viva-Voce Y / N</th>
-                                                                        <th>Submitted Final Thesis Y / N</th>
-                                                                        <th>Awarded Ph.D./ Year</th>
-                                                                    </tr>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-boxed">
+                                                            <thead>
+                                                                <tr>
+                                                                    <!-- <colgroup span="2"></colgroup> -->
+                                                                    <th>S.No.</th>
+                                                                    <th>Guide</th>
+                                                                    <th>Name of the Research Scholars</th>
+                                                                    <th>Dept.</th>
+                                                                    <th>Year of Regn.</th>
+                                                                    <th>Ph.D.</th>
+                                                                    <th>Course Work Completed Y / N</th>
+                                                                    <th>Pre- PhD Viva-Voce Y / N</th>
+                                                                    <th>Submitted Final Thesis Y / N</th>
+                                                                    <th>Awarded Ph.D./ Year</th>
+                                                                </tr>
 
-                                                                </thead>
-                                                                <tbody>
-                                                                    <!-- {% for lab_facility in lab_facilities_data %}
+                                                            </thead>
+                                                            <tbody>
+                                                                <!-- {% for lab_facility in lab_facilities_data %}
                                                                     <tr>
                                                                         <td><b>{{lab_facility.sno}}.</b></td>
                                                                         <td>{{lab_facility.name}}</td>
@@ -460,34 +460,40 @@
                                                                         <td style = "white-space: pre-wrap;">{{lab_facility.softwares}}</td>
                                                                     </tr>
                                                                 {% endfor %} -->
-                                                                    {% for guide_scholars in research_data %}                                                               
-                                                                        {% for scholar in guide_scholars %}
-                                                                            {% if forloop.first %}    
-                                                                                <tr>
-                                                                                    <td rowspan={{guide_scholars|length}}>{{scholar.guide.sno}}.</td>
-                                                                                    <td rowspan={{guide_scholars|length}}>{{scholar.guide.guide_name}}</td>
-                                                                            {% else %}
-                                                                                <tr>
-                                                                            {% endif %}
-                                                                                <td>{{scholar.research_scholar_name}}</td>
-                                                                                <td>{{scholar.department}}</td>
-                                                                                <td>{{scholar.year_of_regn}}</td>
-                                                                                <td>{{scholar.phD}}</td>
-                                                                                <td style="text-align: center;">{{scholar.course_work_completed}}</td>
-                                                                                <td style="text-align: center;">{{scholar.pre_phD_viva_voce}}</td>
-                                                                                <td style="text-align: center;">{{scholar.submitted_final_thesis}}</td>
-                                                                                {% if scholar.course_work_completed == 'Y' and scholar.pre_phD_viva_voce == 'Y' and scholar.submitted_final_thesis == 'Y' %}
-                                                                                    <td style="text-align: center;">Y, {{scholar.phD_awarded_year}}</td>
-                                                                                {% else %}
-                                                                                    <td style="text-align: center;">---</td>
-                                                                                {% endif %}
-                                                                            </tr>
-                                                                        {% endfor %}
-                                                                        <tr class="blank_row">
-                                                                            <td colspan="3"></td>
-                                                                        </tr>
-                                                                    {% endfor %}
-                                                                    <!-- <tr>
+                                                                {% for guide_scholars in research_data %}
+                                                                {% for scholar in guide_scholars %}
+                                                                {% if forloop.first %}
+                                                                <tr>
+                                                                    <td rowspan={{guide_scholars|length}}>
+                                                                        {{scholar.guide.sno}}.</td>
+                                                                    <td rowspan={{guide_scholars|length}}>
+                                                                        {{scholar.guide.guide_name}}</td>
+                                                                    {% else %}
+                                                                <tr>
+                                                                    {% endif %}
+                                                                    <td>{{scholar.research_scholar_name}}</td>
+                                                                    <td>{{scholar.department}}</td>
+                                                                    <td>{{scholar.year_of_regn}}</td>
+                                                                    <td>{{scholar.phD}}</td>
+                                                                    <td style="text-align: center;">
+                                                                        {{scholar.course_work_completed}}</td>
+                                                                    <td style="text-align: center;">
+                                                                        {{scholar.pre_phD_viva_voce}}</td>
+                                                                    <td style="text-align: center;">
+                                                                        {{scholar.submitted_final_thesis}}</td>
+                                                                    {% if scholar.course_work_completed == 'Y' and scholar.pre_phD_viva_voce == 'Y' and scholar.submitted_final_thesis == 'Y' %}
+                                                                    <td style="text-align: center;">Y,
+                                                                        {{scholar.phD_awarded_year}}</td>
+                                                                    {% else %}
+                                                                    <td style="text-align: center;">---</td>
+                                                                    {% endif %}
+                                                                </tr>
+                                                                {% endfor %}
+                                                                <tr class="blank_row">
+                                                                    <td colspan="3"></td>
+                                                                </tr>
+                                                                {% endfor %}
+                                                                <!-- <tr>
                                                                         <td rowspan="7">1</td>
                                                                         <td rowspan="7">Dr. Nirmala C R</td>
                                                                         <td>Anoop Kumar B</td>
@@ -560,11 +566,11 @@
                                                                         <td>---</td>
                                                                     </tr> -->
 
-                                                                </tbody>
-                                                            </table>
-                                                            <!--//table-->
-                                                        </div>
-                                                        <!--//table-responsive-->
+                                                            </tbody>
+                                                        </table>
+                                                        <!--//table-->
+                                                    </div>
+                                                    <!--//table-responsive-->
                                                 </div>
                                                 <!--//panel-body-->
                                             </div>
