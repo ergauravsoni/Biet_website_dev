@@ -323,7 +323,7 @@ class computer_science_dept_research_scholars(models.Model):
     year_choices = tuple(year_choices_array)
     research_scholar_name = models.CharField(max_length=100)
     department = models.CharField(max_length=100)
-    year_of_regn = models.IntegerField(choices=year_choices, default=2020)
+    year_of_regn = models.IntegerField(choices=year_choices, default=0)
     phD = models.CharField(max_length=10, choices=(
         ('PHD', 'Ph.D.'), ('(PHD)', '(Ph.D.)')), default='(PHD)')
     course_work_completed = models.CharField(
@@ -332,7 +332,7 @@ class computer_science_dept_research_scholars(models.Model):
         max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
     submitted_final_thesis = models.CharField(
         max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
-    phD_awarded_year = models.IntegerField(choices=year_choices, default=2020)
+    phD_awarded_year = models.IntegerField(choices=year_choices, default=0)
     guide = models.ForeignKey(
         computer_science_dept_research_guide, on_delete=models.CASCADE)
 
