@@ -296,6 +296,7 @@
                                             <!--//pane-heading-->
                                             <div id="collapse-2" class="panel-collapse collapse">
                                                 <div class="panel-body">
+                                                    <h3>HOD Profile</h3>
                                                     <div class="row page-row">
 
                                                         {% for faculty_data in faculties_data %}
@@ -303,9 +304,8 @@
                                                         {%  if faculty_data.designation == 'Professor and Head'  %}
 
 
-
                                                         <div class="col-md-12">
-
+                                                            
                                                             <div class="col-md-4 text-center">
                                                                 <div class="album-cover">
                                                                     <!-- <a href="#"> -->
@@ -323,74 +323,47 @@
 
 
                                                                         <!-- <button type="button" class="btn btn-theme">Theme Button</button> -->
-
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
-
+                                                            
                                                             <div class="col-md-8 text-center">
                                                                 <div class="" style="  text-align: justify;">
                                                                     <p>
-                                                                        Dr. Nirmala C R, working as professor and head ,
-                                                                        department of Computer Science and Engineering
-                                                                        of BIET , Davangere has got 25 years of teaching
-                                                                        experience in teaching, mentoring and guiding
-                                                                        the students of UG, PG and research programs of
-                                                                        CS & E department. She received her doctorate
-                                                                        degree from Visvesvaray Technological
-                                                                        University, Belgaum and carried out her research
-                                                                        at BIET. She has completed her master’s degree
-                                                                        from National Institute of Technology Karnataka,
-                                                                        Surthkal in the year 2001 and specialization in
-                                                                        Computer Engineering and B.E in Electronics and
-                                                                        Communication from Bapuji Institute of
-                                                                        Engineering and Technology, Davangere in the
-                                                                        year 1992. She started her career at Bharath
-                                                                        Electronics Ltd, Bangalore as Trainee Engineer,
-                                                                        then joined Bapuji Institute of Engineering and
-                                                                        Technology as a lecturer in the department of E
-                                                                        & C from 1995 and in CS and E dept from 2001.
-                                                                        Acting as a single point of contact for Infosys
-                                                                        Campus Connect, IBM Academic Activities, VMWARE
-                                                                        IT Academy and ICT Academy India activities .
-                                                                        IBM India Ltd, Awarded her with prestigious
-                                                                        “Drona” award, for 5 times for mentoring award
-                                                                        winning student projects in the annual national
-                                                                        level software development contest- “The Great
-                                                                        Mind Challenge” and for showing outstanding
-                                                                        performance in the IBM academic initiative
-                                                                        Activities in the institute. Infosys has
-                                                                        felicitated with certificate of appreciation for
-                                                                        outstanding performance in the Infosys campus
-                                                                        Connect activities. Wipro Mission 10X team has
-                                                                        recognized “Champion Trainer”. And from the
-                                                                        institute she obtained the best teacher award
-                                                                        for 10 times. Published and presented more than
-                                                                        30 papers in the International Conferences and
-                                                                        SCI journals . 2 research scholars have been
-                                                                        awarded with PhD Degree and 5 research scholars
-                                                                        are carrying out research under her guidance. 1
-                                                                        Indian patent has been filed in the area of
-                                                                        wireless sensor networks and waiting for
-                                                                        publishing. She has recieved 40 lakhs Grant's
-                                                                        from VGST, Govt. Of Karnataka for the proposal
-                                                                        on precision agriculture.
+                                                                        Dr. Nirmala C R,  working as professor and head ,  department of Computer Science and Engineering of BIET , Davangere has got 25 years of teaching experience in teaching, mentoring and guiding the   students  of UG, PG  and research programs of  CS & E department.  She received her doctorate degree from Visvesvaray Technological University, Belgaum  and carried out her  research at BIET.   She has  completed her  master’s  degree from National Institute of Technology Karnataka, Surthkal  in the year 2001 and  specialization in Computer Engineering and   B.E in Electronics and Communication from Bapuji Institute of Engineering and Technology, Davangere in the year 1992.  She started her career at Bharath Electronics Ltd, Bangalore as Trainee Engineer, then  joined Bapuji Institute of Engineering and Technology as  a lecturer in the department of E & C  from 1995 and in CS and E dept from 2001. Acting as a single point of contact for Infosys Campus Connect,  IBM Academic Activities, VMWARE IT Academy and ICT Academy India activities . IBM India Ltd, Awarded her with prestigious “Drona” award, for  5 times for mentoring award winning student projects in the annual  national level software development contest- “The Great Mind Challenge” and for showing  outstanding performance in the IBM academic initiative Activities in the institute. Infosys has felicitated with certificate of appreciation for outstanding performance in the Infosys campus Connect activities. Wipro Mission 10X team has recognized “Champion Trainer”. And from the institute she obtained the best teacher award for 10 times.   Published and presented more than 30 papers in the International Conferences and  SCI journals .  2 research scholars have been awarded with PhD Degree and 5 research scholars are carrying out research under her guidance.  1 Indian patent has been filed in the area of wireless sensor networks and waiting for publishing. She has recieved 40 lakhs Grant's from VGST, Govt. Of Karnataka for the proposal on precision agriculture.
                                                                     </p>
                                                                 </div>
                                                                 <a href="{{faculty_data.detail.url}}"
-                                                                    class="btn btn-theme view-pdf">Read More</a>
+                                                                            class="btn btn-theme view-pdf">Read More</a>
                                                             </div>
                                                         </div>
 
 
 
+
                                                         {% else %}
+
+                                                        
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                                <!--//panel-body-->
+                                                <div class="panel-body">
+                                                    <h3>Other Faculty Members</h3>
+                                                    <div class="row page-row">
+                                                        
+                                                        {% for faculty_data in faculties_data %}
+
+                                                        {%  if faculty_data.designation != 'Professor and Head'  %}
 
                                                         <div class="col-md-3 col-sm-3 text-center">
                                                             <div class="album-cover">
                                                                 <!-- <a href="#"> -->
                                                                 <img class="img-thumbnail"
                                                                     src="{{faculty_data.image.url}}" alt=""
+
                                                                     style="width:360px;height:300px;">
 
 
@@ -433,7 +406,7 @@
                                                     <h2 class="no-margin-top text-highlight">Ph.D. Guided /Ph.D. Awarded
                                                         during the assessment period while working in the Institute</h2>
                                                         <div class="table-responsive">
-                                                            <table class="table table-boxed">
+                                                            <table class="table table-striped table-boxed">
                                                                 <thead>
                                                                     <tr>
                                                                         <!-- <colgroup span="2"></colgroup> -->
@@ -589,7 +562,7 @@
                                                             <h3 class="no-margin-top text-highlight">Laboratory
                                                                 Facilities</h3>
                                                             <div class="table-responsive">
-                                                                <table class="table table-boxed">
+                                                                <table class="table table-striped table-boxed">
                                                                     <thead>
                                                                         <tr>
                                                                             <th>S.No.</th>
@@ -780,24 +753,23 @@
                                             <!--//pane-heading-->
                                             <div id="collapse-5" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <h3 class="no-margin-top text-highlight">Students placed in various
-                                                        IT Companies</h1>
-                                                        <div class="table-responsive">
-                                                            <table class="table table-boxed">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>Sl.No.</th>
-                                                                        <th>Company</th>
-                                                                        <th>2019</th>
-                                                                        <th>2018</th>
-                                                                        <th>2017</th>
-                                                                        <th>2016</th>
-                                                                        <th>2015</th>
-                                                                    </tr>
-
-                                                                </thead>
-                                                                <tbody>
-                                                                    <!-- {% for lab_facility in lab_facilities_data %}
+                                                    <h3 class="no-margin-top text-highlight">Students placed in various IT Companies</h1>
+                                                    <div class="table-responsive">                    
+                                                        <table class="table table-striped table-boxed">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Sl.No.</th>
+                                                                    <th>Company</th>
+                                                                    <th>2019</th>
+                                                                    <th>2018</th>
+                                                                    <th>2017</th>
+                                                                    <th>2016</th>
+                                                                    <th>2015</th>
+                                                                </tr>
+                                                                
+                                                            </thead>
+                                                            <tbody>
+                                                                <!-- {% for lab_facility in lab_facilities_data %}
                                                                     <tr>
                                                                         <td><b>{{lab_facility.sno}}.</b></td>
                                                                         <td>{{lab_facility.name}}</td>
@@ -806,30 +778,252 @@
                                                                         <td style = "white-space: pre-wrap;">{{lab_facility.softwares}}</td>
                                                                     </tr>
                                                                 {% endfor %} -->
-                                                                    <tr>
-                                                                        <td>1</td>
-                                                                        <td>TCS</td>
-                                                                        <td>22</td>
-                                                                        <td>56</td>
-                                                                        <td>47</td>
-                                                                        <td>28</td>
-                                                                        <td>29</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>2</td>
-                                                                        <td>Mindtree</td>
-                                                                        <td>-</td>
-                                                                        <td>-</td>
-                                                                        <td>-</td>
-                                                                        <td>1</td>
-                                                                        <td>6</td>
-                                                                    </tr>
-
-                                                                </tbody>
-                                                            </table>
-                                                            <!--//table-->
-                                                        </div>
-                                                        <!--//table-responsive-->
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>TCS</td>
+                                                                    <td>22</td>
+                                                                    <td>56</td>
+                                                                    <td>47</td>
+                                                                    <td>28</td>
+                                                                    <td>29</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2</td>
+                                                                    <td>Mind tree</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>1</td>
+                                                                    <td>6</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3</td>
+                                                                    <td>Tech Mahindra</td>
+                                                                    <td>1</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>2</td>
+                                                                    <td>3</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>4</td>
+                                                                    <td>NTT Data</td>
+                                                                    <td>1</td>
+                                                                    <td>2</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>5</td>
+                                                                    <td>Mphasis</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>6</td>
+                                                                    <td>FACE</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>7</td>
+                                                                    <td>Agies</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>1</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>8</td>
+                                                                    <td>Vee Technologies</td>
+                                                                    <td>2</td>
+                                                                    <td>3</td>
+                                                                    <td>2</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>9</td>
+                                                                    <td>Syscon</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>10</td>
+                                                                    <td>EDS Technologies</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>2</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>11</td>
+                                                                    <td>Global Edge</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>2</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>12</td>
+                                                                    <td>Aries global</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>13</td>
+                                                                    <td>Mistral Solutions</td>
+                                                                    <td>-</td>
+                                                                    <td>1</td>
+                                                                    <td>3</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>14</td>
+                                                                    <td>Sri Ram Transports</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>15</td>
+                                                                    <td>4 developers</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>16</td>
+                                                                    <td>TekSystems</td>
+                                                                    <td>-</td>
+                                                                    <td>1</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>17</td>
+                                                                    <td>BYJU's</td>
+                                                                    <td>-</td>
+                                                                    <td>1</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>18</td>
+                                                                    <td>BEL</td>
+                                                                    <td>-</td>
+                                                                    <td>1</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>19</td>
+                                                                    <td>State Street</td>
+                                                                    <td>-</td>
+                                                                    <td>2</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>20</td>
+                                                                    <td>First American Company</td>
+                                                                    <td>-</td>
+                                                                    <td>1</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>21</td>
+                                                                    <td>App N M</td>
+                                                                    <td>-</td>
+                                                                    <td>1</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22</td>
+                                                                    <td>Infosys</td>
+                                                                    <td>22</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr><tr>
+                                                                    <td>23</td>
+                                                                    <td>Wipro</td>
+                                                                    <td>10</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>24</td>
+                                                                    <td>Digit Insurance </td>
+                                                                    <td>2</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>25</td>
+                                                                    <td>Cleo </td>
+                                                                    <td>2</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>26</td>
+                                                                    <td>iNube Software Solutions</td>
+                                                                    <td>10</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>27</td>
+                                                                    <td>Starmarker </td>
+                                                                    <td>2</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                                                                            
+                                                            </tbody>
+                                                        </table><!--//table-->
+                                                    </div><!--//table-responsive-->
                                                 </div>
                                                 <!--//panel-body-->
                                             </div>
@@ -1105,7 +1299,7 @@
                                                             </div>
 
                                                             <div class="table-responsive">
-                                                                <table class="table table-boxed">
+                                                                <table class="table table-striped table-boxed">
                                                                     <thead>
                                                                         <tr>
                                                                             <th>Sl.No.</th>

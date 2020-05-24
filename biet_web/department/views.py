@@ -109,7 +109,7 @@ def home(request, course, dept):
         faculties_data = chemistry_dept.objects.all().order_by('image')
     elif course == 'UG' and dept == 'CS':
 
-        faculties_data = computer_science_dept.objects.all().order_by('image')
+        faculties_data = computer_science_dept.objects.all().order_by('sno')
         achievements_data = computer_science_dept_achievements.objects.all()
         activities_data = computer_science_dept_activities.objects.all().order_by('sno')
         lab_facilities_data = computer_science_dept_lab_facilities.objects.all().order_by('sno')
@@ -122,7 +122,7 @@ def home(request, course, dept):
         events = computer_science_dept_events.objects.all()
         classrooms = computer_science_dept_classroom.objects.all()
 
-        print(classrooms)
+        print(faculties_data)
         research_scholar_data = computer_science_dept_research_scholars.objects.all().order_by('guide')
         research_guide_data = computer_science_dept_research_guide.objects.all().order_by('sno')
 

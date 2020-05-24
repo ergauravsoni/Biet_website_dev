@@ -93,6 +93,9 @@ class computer_science_dept(models.Model):
     designation = models.CharField(max_length=200)
     image = models.ImageField(upload_to='department/CS/image/')
     detail = models.FileField(upload_to='department/CS/data/')
+    sno = models.IntegerField()
+    
+
 
     def __str__(self):
         return '{}'.format(self.name)
@@ -229,6 +232,7 @@ class environmental_dept(models.Model):
     designation = models.CharField(max_length=200)
     image = models.ImageField(upload_to='department/ENV/image/')
     detail = models.FileField(upload_to='department/ENV/data/')
+    sno = models.IntegerField()
 
     def __str__(self):
         return '{}'.format(self.name)
