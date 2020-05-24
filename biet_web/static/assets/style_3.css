@@ -64,7 +64,7 @@ a:focus {
 	outline: 0 solid;
 }
 a:hover {
-	color: #317cbb;
+	color: #d72323;
 }
 img {
 	max-width: 100%;
@@ -123,7 +123,7 @@ a:hover {
 	margin-bottom: 30px;
 }
 .section_gray {
-	background: #f5f5f5;
+	background: #eeeeee;
 }
 .section_dark {
 	background: #29282e;
@@ -244,7 +244,7 @@ body {
 	border-right: 0 solid;
 }
 .s_header > div {
-	color: #317cbb;
+	color: #d72323;
 	font-size: 30px;
 	left: 0;
 	margin-top: -7px;
@@ -293,7 +293,7 @@ body {
 }
 .mainmenu ul#nav li:hover > a,
 .mainmenu ul#nav li.current {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 }
 /*=================
 DropDown Menu
@@ -315,7 +315,7 @@ DropDown Menu
 	visibility: visible;
 }
 #nav > li ul {
-	background: #f5f5f5 none repeat scroll 0 0;
+	background: #eeeeee none repeat scroll 0 0;
 	opacity: 0;
 	left: -2px;
 	list-style: outside none none;
@@ -414,7 +414,7 @@ Search Bar
 	padding-top: 10px;
 }
 .request_code input[type="submit"] {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	border: medium none;
 	color: #fff;
 	font-size: 17px;
@@ -442,7 +442,7 @@ Search Bar
 	font-size: 16px;
 }
 .quate_text_overlay {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	height: 100%;
 	left: 0;
 	opacity: 0.2;
@@ -452,7 +452,7 @@ Search Bar
 	z-index: -70;
 }
 .top_quate_text > h3 {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	padding: 10px;
 	opacity: 1;
 	text-transform: uppercase;
@@ -479,7 +479,7 @@ Search Bar
 	margin-top: 23px;
 }
 .single_promotions {
-	background: #f5f5f5 none repeat scroll 0 0;
+	background: #eeeeee none repeat scroll 0 0;
 	display: table-cell;
 	height: 270px;
 	padding: 10px;
@@ -537,7 +537,7 @@ Search Bar
 	position: right;
 }
 .singnup_area::before {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	content: "";
 	height: 100%;
 	left: 0;
@@ -572,7 +572,7 @@ Search Bar
 	transition: all 0.5s ease 0s;
 }
 .signup_form button:hover {
-	background: #317cbb;
+	background: #d72323;
 }
 .home-2 .signup_form button:hover {
 	background: #fd581e none repeat scroll 0 0;
@@ -607,7 +607,7 @@ Search Bar
 	width: 100%;
 }
 .service_title {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	color: #fff;
 	height: 60px;
 	padding-left: 60px;
@@ -645,7 +645,7 @@ Search Bar
 	transition: all 0.3s ease 0s;
 }
 .service_title i:hover {
-	background: #317cbb;
+	background: #d72323;
 	color: #fff;
 }
 /*------------------------
@@ -698,7 +698,7 @@ Search Bar
 	background: #fc5a1a;
 }
 .team_discription {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	color: #fff;
 	height: 40px;
 	padding-top: 10px;
@@ -743,7 +743,7 @@ Search Bar
 }
 
 .client_discription .client_address {
-	color: #317cbb;
+	color: #d72323;
 	font-size: 12px;
 	text-transform: uppercase;
 }
@@ -804,7 +804,7 @@ Search Bar
 	padding: 10px;
 }
 .blog_date {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	bottom: -25px;
 	color: #fff;
 	font-weight: bold;
@@ -838,7 +838,7 @@ Search Bar
 	margin: 0 5px;
 	padding: 0 7px;
 	background: #000;
-	background: #317cbb;
+	background: #d72323;
 	color: #fff;
 	transition: all 0.3s ease 0s;
 }
@@ -881,7 +881,7 @@ Search Bar
 	width: 20%;
 	margin-right: -6px;
 	background: #fff;
-	color: #317cbb;
+	color: #d72323;
 }
 .signup_newsletter input[type="submit"]:hover {
 	background: #fc5c1e;
@@ -934,7 +934,7 @@ Search Bar
 	color: #fff;
 }
 .s_footer > div {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	font-size: 30px;
 	height: 42px;
 	left: 19px;
@@ -1010,7 +1010,7 @@ Footer Bottom
 	padding: 10px;
 }
 .slider_area_signup_form h2 {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	display: block;
 	font-size: 18px;
 	margin-bottom: 0;
@@ -1023,7 +1023,7 @@ Footer Bottom
 	border: 1px solid #e6e6e6;
 }
 .slider_area_signup_form button {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	border: medium none;
 	height: 40px;
 	margin-left: 0;
@@ -1042,7 +1042,7 @@ Footer Bottom
 	background: #f95f17;
 }
 .home_two_single_promotions .s_promotion_icon {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	border: medium none;
 	border-radius: 1;
 	height: 80px;
@@ -1067,7 +1067,7 @@ Footer Bottom
 	width: 150px;
 }
 .know_more:hover {
-	background: #317cbb;
+	background: #d72323;
 	color: #fff;
 }
 .home_two_single_promotions > h2 {
@@ -1087,7 +1087,7 @@ Contact Now
 	height: 279px;
 }
 .contact_now_area_overlay {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	height: 100%;
 	position: absolute;
 	right: 0;
@@ -1103,7 +1103,7 @@ Contact Now
 	font-size: 13px;
 	font-style: normal;
 	text-align: center;
-	color: #317cbb;
+	color: #d72323;
 }
 .contact_button:hover {
 	background: #f45b18 none repeat scroll 0 0;
@@ -1132,7 +1132,7 @@ Contact Now
 Service Area
 -------------------*/
 .home_two_service_title {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	color: #fff;
 	height: 60px;
 	position: relative;
@@ -1346,14 +1346,14 @@ Contact Now
 }
 .single_price_list:hover .catagory_price,
 .active_price {
-	background: #317cbb;
+	background: #d72323;
 	padding-top: 80px;
 	transition: 0.5s;
 	margin-top: -60px;
 }
 .single_price_list:hover .signup_button,
 .active_button {
-	background: #317cbb;
+	background: #d72323;
 	border-bottom: 3px solid #00b4e3;
 	transition: 0.5s;
 	color: #fff;
@@ -1402,7 +1402,7 @@ Contact Now
 	overflow: hidden;
 }
 .post_tum span {
-	color: #317cbb;
+	color: #d72323;
 	display: block;
 	margin-top: 5px;
 }
@@ -1456,7 +1456,7 @@ Contact Now
 	padding: 9px;
 }
 .tag_list a:hover {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 }
 
 .social_list li {
@@ -1481,7 +1481,7 @@ Contact Now
 ----------------------*/
 .highlight_text {
 	background: #f6f6f6 none repeat scroll 0 0;
-	border-left: 4px solid #317cbb;
+	border-left: 4px solid #d72323;
 	font-size: 16px;
 	font-style: italic;
 
@@ -1498,10 +1498,10 @@ Contact Now
 
 .highlight_text1 {
 	background: #f6f6f6 none repeat scroll 0 0;
-	border-left: 4px solid #317cbb;
-	border-bottom: 1px solid #317cbb;
-	border-top: 1px solid #317cbb;
-	border-right: 1px solid #317cbb;
+	border-left: 4px solid #d72323;
+	border-bottom: 1px solid #d72323;
+	border-top: 1px solid #d72323;
+	border-right: 1px solid #d72323;
 	font-size: 16px;
 	font-style: regular;
 
@@ -1606,7 +1606,7 @@ Contact Now
 	color: #222;
 }
 .comment_author span {
-	color: #317cbb;
+	color: #d72323;
 	display: block;
 	text-transform: uppercase;
 	font-size: 13px;
@@ -1630,7 +1630,7 @@ Contact Now
 	width: 100%;
 }
 .comment_submit_form button {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	border: medium none;
 	color: #fff;
 	padding: 8px 25px;
@@ -1642,7 +1642,7 @@ Contact Now
 7.2 Location Page
 --------------------------*/
 .location_title {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	color: #fff;
 	height: 60px;
 	padding-top: 18px;
@@ -1672,7 +1672,7 @@ Contact Now
 	text-transform: uppercase;
 }
 .contact_information_form button {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	border: medium none;
 	color: #fff;
 	font-size: 15px;
@@ -1696,7 +1696,7 @@ Contact Now
 	padding: 0;
 }
 .quate_sidebar li {
-	background-color: #f5f5f5;
+	background-color: #eeeeee;
 	border: 1px solid #eeeeee;
 	display: block;
 	margin: 5.5px 0;
@@ -1760,7 +1760,7 @@ Contact Now
 7.4 FAQS.
 --------------*/
 .s_sidebar p a {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	color: #fff;
 	display: block;
 	font-size: 16px;
@@ -1834,7 +1834,7 @@ Contact Now
 	width: 150px;
 }
 .get_in_tuch_form input[type="submit"]:hover {
-	background: #317cbb;
+	background: #d72323;
 }
 .single_contact > h3 {
 	color: #222;
@@ -1890,7 +1890,7 @@ Contact Now
 	width: 60%;
 }
 .not_found_page_page_content button {
-	background: #317cbb none repeat scroll 0 0;
+	background: #d72323 none repeat scroll 0 0;
 	border: medium none;
 	color: #fff;
 	font-size: 15px;
