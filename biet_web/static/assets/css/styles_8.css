@@ -47,6 +47,12 @@ body {
   height: 344px;
   /* must be the same height as footer */
 }
+
+.bgdata {
+  background-color:#fff;
+  padding: 40px;
+}
+
 h1,
 h2,
 h3,

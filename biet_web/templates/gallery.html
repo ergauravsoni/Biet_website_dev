@@ -4,20 +4,25 @@
 {% block content %}
 
 
-<div class="content container">
-        <div class="page-wrapper">
-            <div class="page-content">     
-                <div class="row page-row">
-                    {% for image in images %}
-                        
-                        <a class="prettyphoto col-md-3 col-sm-3 col-xs-6" rel="prettyPhoto[gallery]" title="" href="{{image.images.url}}"><img class="img-responsive img-thumbnail" src="{{image.images.url}}" alt="" /></a>
-                    
-                    {% endfor %} 
-                   
-                </div><!--//page-row-->
-            </div><!--//page-content--> 
-        </div><!--//page--> 
+<div class="content container bgdata">
+    <div class="page-wrapper">
+        <div class="page-content">
+            <div class="row page-row">
+                {% for image in images %}
+
+                <a class="prettyphoto col-md-3 col-sm-3 col-xs-6" rel="prettyPhoto[gallery]" title=""
+                    href="{{image.images.url}}"><img class="img-responsive img-thumbnail" src="{{image.images.url}}"
+                        alt="" /></a>
+
+                {% endfor %}
+
+            </div>
+            <!--//page-row-->
+        </div>
+        <!--//page-content-->
     </div>
+    <!--//page-->
+</div>
 
 
 {% endblock %}
