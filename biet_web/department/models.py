@@ -316,6 +316,7 @@ class computer_science_dept_research_guide(models.Model):
 
     def __str__(self):
         return self.guide_name
+        
 
 
 class computer_science_dept_research_scholars(models.Model):
@@ -342,3 +343,9 @@ class computer_science_dept_research_scholars(models.Model):
 
     def __str__(self):
         return self.research_scholar_name
+
+class computer_science_dept_laboratory_facilities_gallary(models.Model):
+    image = models.ImageField(upload_to='department/gallery/CS/laboratory/')
+
+    def __str__(self):
+        return '{}'.format(self.image)

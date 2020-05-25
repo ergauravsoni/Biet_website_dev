@@ -9,7 +9,7 @@ from .models import physics_dept_gallery, textile_dept_gallery, mca_dept_gallery
 from .models import computer_science_dept_lab_facilities, computer_science_dept_major_equipments, computer_science_dept_activities
 from .models import computer_science_dept_classroom,computer_science_dept_events
 from .models import computer_science_dept_achievements, computer_science_dept_timetable
-from .models import computer_science_dept_research_scholars, computer_science_dept_research_guide
+from .models import computer_science_dept_research_scholars, computer_science_dept_research_guide,computer_science_dept_laboratory_facilities_gallary
 
 # Register your models here.
 admin.site.register(civil_dept)
@@ -49,4 +49,5 @@ admin.site.register(computer_science_dept_events)
 admin.site.register(computer_science_dept_classroom)
 admin.site.register(computer_science_dept_research_scholars)
 admin.site.register(computer_science_dept_research_guide)
+admin.site.register(computer_science_dept_laboratory_facilities_gallary)
 

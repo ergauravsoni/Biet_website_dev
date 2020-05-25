@@ -9,7 +9,7 @@ from .models import physics_dept_gallery, textile_dept_gallery, mca_dept_gallery
 from .models import computer_science_dept_lab_facilities, computer_science_dept_major_equipments, computer_science_dept_activities
 from .models import computer_science_dept_classroom,computer_science_dept_events
 from .models import computer_science_dept_achievements, computer_science_dept_timetable
-from .models import computer_science_dept_research_scholars, computer_science_dept_research_guide
+from .models import computer_science_dept_research_scholars, computer_science_dept_research_guide,computer_science_dept_laboratory_facilities_gallary
 
 # Create your views here.
 
@@ -121,8 +121,9 @@ def home(request, course, dept):
 
         events = computer_science_dept_events.objects.all()
         classrooms = computer_science_dept_classroom.objects.all()
+        laboratory_facilities_gallary = computer_science_dept_laboratory_facilities_gallary.objects.all()
 
-        print(faculties_data)
+        print(laboratory_facilities_gallary)
         research_scholar_data = computer_science_dept_research_scholars.objects.all().order_by('guide')
         research_guide_data = computer_science_dept_research_guide.objects.all().order_by('sno')
 
@@ -140,11 +141,10 @@ def home(request, course, dept):
                     'major_equipments_data': major_equipments_data,
                     'images': images,
                     'timetable_data': timetable_data,
-
                      'events': events,
                      'classrooms': classrooms,
-
-                    'research_data': research_data
+                    'research_data': research_data,
+                    'laboratory_facilities_gallary' : laboratory_facilities_gallary
 
                 }
 

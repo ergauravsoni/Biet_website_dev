@@ -602,9 +602,21 @@
                                                     </a>
                                                 </h4>
                                             </div>
+
+
+
                                             <!--//pane-heading-->
                                             <div id="collapse-4" class="panel-collapse collapse">
                                                 <div class="panel-body">
+                                                    {% for image in laboratory_facilities_gallary %}
+
+                                                    <a class="prettyphoto col-md-3 col-sm-3" rel="prettyPhoto[gallery]"
+                                                        title="" href="{{image.image.url}}"><img
+                                                            class="img-responsive img-thumbnail"
+                                                            src="{{image.image.url}}" alt=""
+                                                            style=" height: 170px;" /></a>
+
+                                                    {% endfor %}
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <h3 class="no-margin-top text-highlight">Laboratory
