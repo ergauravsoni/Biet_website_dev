@@ -17,11 +17,15 @@
   --main-bg-color-10: #faebe3;
 }
 
+.active {
+  background-color:var(--main-bg-color-nav-3)
+}
+
 
 html,
 body {
   height: 100%;
-  background-color:#fafafa
+  background-color:#f2f2f2
 }
 body {
   font-size: 13px;
@@ -1266,10 +1270,10 @@ ul.custom-list-style li {
   color: var(--main-bg-color);
 }
 .page-wrapper .page-sidebar .widget .nav li.active a {
-  background: none;
-  color: var(--main-bg-color);
+  background: var(--main-bg-color);
+  color: var(--main-bg-color-8);
   font-weight: bold;
-  border-left: 5px solid var(--main-bg-color);
+  /* border-left: 5px solid var(--main-bg-color); */
 }
 .page-wrapper .page-sidebar ul {
   padding-left: 0;
