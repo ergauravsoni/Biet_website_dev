@@ -21,6 +21,10 @@
   background-color:var(--main-bg-color-nav-3)
 }
 
+.active-bg {
+  background-color:var(--main-bg-color-8)
+}
+
 
 html,
 body {
@@ -50,7 +54,11 @@ body {
 
 .bgdata {
   background-color:#fff;
-  padding: 40px;
+  padding: 40px 40px 0px 40px;
+}
+
+.textColorCustom{
+  color: var(--main-bg-color-7);
 }
 
 h1,
@@ -63,8 +71,8 @@ h6 {
   font-weight: 300;
 }
 p {
-  color: #444;
-  font-size: 13px;
+  color: #000000;
+  font-size: 14px;
 }
 a {
   color: var(--main-bg-color);
@@ -1064,6 +1072,7 @@ ul.custom-list-style li {
   margin-top: 0;
   display: inline-block;
   font-size: 28px;
+  color : var(--main-bg-color-7);
 }
 .page-wrapper .breadcrumbs {
   display: inline-block;
