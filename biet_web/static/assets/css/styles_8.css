@@ -65,7 +65,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #365d7e;
+  color: var(--main-bg-color-7);
 }
 a:focus {
   text-decoration: none;
@@ -287,7 +287,7 @@ ul.custom-list-style li {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   background-color: #eef3f8;
-  border-color: #a7c2d9;
+  border-color: var(--main-bg-color-nav-4);
 }
 .pagination > li:first-child > a,
 .pagination > li:first-child > span,
@@ -365,8 +365,8 @@ ul.custom-list-style li {
   border-top: 1px solid #ebebeb;
 }
 .table > thead > tr > th {
-  border-bottom: 2px solid #a7c2d9;
-  color: #365d7e;
+  border-bottom: 2px solid var(--main-bg-color-nav-4);
+  color: var(--main-bg-color-7);
 }
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
@@ -1075,7 +1075,7 @@ ul.custom-list-style li {
   color: #aaaaaa;
 }
 .page-wrapper .breadcrumbs ul li a:hover {
-  color: #365d7e;
+  color: var(--main-bg-color-7);
 }
 .page-wrapper .breadcrumbs ul li.breadcrumbs-label {
   padding-right: 0;
@@ -1147,7 +1147,7 @@ ul.custom-list-style li {
   margin-bottom: 30px;
 }
 .page-wrapper .page-content .custom-quote {
-  border-color: #a7c2d9;
+  border-color: var(--main-bg-color-nav-4);
 }
 .page-wrapper .page-content .custom-quote p {
   font-size: 14px;
@@ -1549,7 +1549,7 @@ ul.custom-list-style li {
   color: #444;
 }
 .home-page .news h2.title a:hover {
-  color: #365d7e;
+  color: var(--main-bg-color-7);
 }
 .home-page .news .news-item {
   padding-left: 115px;
