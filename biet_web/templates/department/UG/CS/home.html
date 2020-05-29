@@ -283,20 +283,19 @@
                                             <!--//panel-colapse-->
                                         </div>
                                         <!--//panel-->
-
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" class="collapsed"
                                                         href="#collapse-2">
-                                                        Faculty Profile
+                                                        HOD Profile
                                                     </a>
                                                 </h4>
                                             </div>
                                             <!--//pane-heading-->
                                             <div id="collapse-2" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <h3>HOD Profile</h3>
+                                                    <!-- <h3>HOD Profile</h3> -->
                                                     <div class="row page-row">
 
                                                         {% for faculty_data in faculties_data %}
@@ -393,8 +392,26 @@
                                                     </div>
                                                 </div>
                                                 <!--//panel-body-->
+
+                                                <!--//panel-body-->
+                                            </div>
+                                            <!--//panel-colapse-->
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" class="collapsed"
+                                                        href="#collapse-12">
+                                                        Faculty
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <!--//pane-heading-->
+                                            <div id="collapse-12" class="panel-collapse collapse">
+
+                                                <!--//panel-body-->
                                                 <div class="panel-body">
-                                                    <h3>Other Faculty Members</h3>
+                                                    <h3>Faculty Members</h3>
                                                     <div class="row page-row">
 
                                                         {% for faculty_data in faculties_data %}
@@ -425,6 +442,11 @@
                                                         </div>
                                                         {% endif %}
                                                         {% endfor %}
+                                                    </div>
+                                                    <h3>Non - Teaching Staff</h3>
+                                                    <div class="row page-row">
+
+
                                                     </div>
                                                 </div>
                                                 <!--//panel-body-->
@@ -585,6 +607,10 @@
                                                         </table>
                                                         <!--//table-->
                                                     </div>
+
+
+
+
                                                     <!--//table-responsive-->
                                                     <h2 class="no-margin-top text-highlight">Number of quality publications in refereed/SCI Journals, citations</h2>
                                                     <div class="table-responsive">
@@ -2108,13 +2134,13 @@
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" class="collapsed"
-                                                        href="#collapse-12">
+                                                        href="#collapse-13">
                                                         Photo Gallery
                                                     </a>
                                                 </h4>
                                             </div>
                                             <!--//pane-heading-->
-                                            <div id="collapse-12" class="panel-collapse collapse">
+                                            <div id="collapse-13" class="panel-collapse collapse">
                                                 <div class="panel-body">
                                                     <!-- Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis. Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus. -->
                                                     {% for image in images %}
