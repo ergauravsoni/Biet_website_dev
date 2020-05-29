@@ -586,6 +586,75 @@
                                                         <!--//table-->
                                                     </div>
                                                     <!--//table-responsive-->
+                                                    <h2 class="no-margin-top text-highlight">Number of quality publications in refereed/SCI Journals, citations</h2>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped table-boxed">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th rowspan="2">Name of the faculty</th>
+                                                                    <th colspan="5">Year of publication</th>
+                                                                    <th rowspan="2">National/International</th>
+                                                                    <th rowspan="2">Indexing</th>
+                                                                    <th rowspan="2"># Citations</th>
+                                                                    <th rowspan="2">Impact factor</th>
+                                                                    <th rowspan="2">i10-Index</th>
+                                                                    <th rowspan="2">H-Index</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>2015</th>
+                                                                    <th>2016</th>
+                                                                    <th>2017</th>
+                                                                    <th>2018</th>
+                                                                    <th>2019</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                {% for publication in publications_data %}
+                                                                <tr>
+                                                                    <td>{{publication.name_of_faculty}}</td>
+                                                                    <td style="text-align: center;">{% if publication.y15 %}{{publication.y15}}{% else %}---{% endif %}</td>
+                                                                    <td style="text-align: center;">{% if publication.y16 %}{{publication.y16}}{% else %}---{% endif %}</td>
+                                                                    <td style="text-align: center;">{% if publication.y17 %}{{publication.y17}}{% else %}---{% endif %}</td>
+                                                                    <td style="text-align: center;">{% if publication.y18 %}{{publication.y18}}{% else %}---{% endif %}</td>
+                                                                    <td style="text-align: center;">{% if publication.y19 %}{{publication.y19}}{% else %}---{% endif %}</td>
+                                                                    <td style="text-align: center;">{{publication.national_or_inter}}</td>
+                                                                    <td>{% if publication.indexing %}{{publication.indexing}}{% else %}---{% endif %}</td>
+                                                                    <td style="text-align: center;">{% if publication.citations %}{{publication.citations}}{% else %}---{% endif %}</td>
+                                                                    <td style="text-align: center;">{% if publication.impact_factor %}{{publication.impact_factor}}{% else %}---{% endif %}</td>
+                                                                    <td style="text-align: center;">{% if publication.i10_index %}{{publication.i10_index}}{% else %}---{% endif %}</td>
+                                                                    <td style="text-align: center;">{% if publication.h_index %}{{publication.h_index}}{% else %}---{% endif %}</td>
+                                                                </tr>
+                                                                {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                <h2 class="no-margin-top text-highlight">Books/Book Chapters Published</h2>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped table-boxed">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Sl. No</th>
+                                                                    <th>Title of the Book Chapter</th>
+                                                                    <th>Author/s</th>
+                                                                    <th>Year of Publication</th>
+                                                                    <th>Name of Publisher/s</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                {% for book in book_chapters_data %}
+                                                                <tr>
+                                                                    <td>{{book.sl_no}}</td>
+                                                                    <td>{{book.name_of_book_chapter}}</td>
+                                                                    <td>{{book.names_of_authors}}</td>
+                                                                    <td>{{book.year_of_pub}}</td>
+                                                                    <td>{{book.name_of_pub}}</td>
+                                                                </tr>
+                                                                {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                        <!--//table-->
+                                                    </div>
+                                                    <!--//table-responsive-->
                                                 </div>
                                                 <!--//panel-body-->
                                             </div>
