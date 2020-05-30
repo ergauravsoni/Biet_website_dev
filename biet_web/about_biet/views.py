@@ -42,3 +42,6 @@ def chairman_msg(request):
 def office(request):
     office_member_data = Office_Staff.objects.all().order_by('sno')
     return render(request,'about_biet/office.html',{'office_member_data' : office_member_data})
+def aicte(request):
+    eoas = EOA.objects.all()
+    return render(request,'about_biet/aicte.html')
