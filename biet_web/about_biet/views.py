@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Academic_Calender, Office_Staff
+from .models import Academic_Calender, Office_Staff,EOA
 
 # Create your views here.
 def Bapuji_educational_association(request):
