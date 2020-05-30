@@ -35,3 +35,7 @@ def director_msg(request):
 
 def principal_msg(request):
     return render(request,'about_biet/principal_msg.html')
+
+def aicte(request):
+    # eoas = EOA.objects.all()
+    return render(request,'about_biet/aicte.html')
