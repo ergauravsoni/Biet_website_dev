@@ -10,7 +10,6 @@ from .models import computer_science_dept_lab_facilities, computer_science_dept_
 from .models import computer_science_dept_classroom,computer_science_dept_events
 from .models import computer_science_dept_achievements, computer_science_dept_timetable
 from .models import computer_science_dept_research_scholars, computer_science_dept_research_guide,computer_science_dept_laboratory_facilities_gallary
-from .models import computer_science_dept_book_chapters, computer_science_dept_publications
 
 # Register your models here.
 admin.site.register(civil_dept)
@@ -51,5 +50,4 @@ admin.site.register(computer_science_dept_classroom)
 admin.site.register(computer_science_dept_research_scholars)
 admin.site.register(computer_science_dept_research_guide)
 admin.site.register(computer_science_dept_laboratory_facilities_gallary)
-admin.site.register(computer_science_dept_publications)
-admin.site.register(computer_science_dept_book_chapters)
+

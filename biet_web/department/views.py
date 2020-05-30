@@ -10,7 +10,6 @@ from .models import computer_science_dept_lab_facilities, computer_science_dept_
 from .models import computer_science_dept_classroom,computer_science_dept_events
 from .models import computer_science_dept_achievements, computer_science_dept_timetable
 from .models import computer_science_dept_research_scholars, computer_science_dept_research_guide,computer_science_dept_laboratory_facilities_gallary
-from .models import computer_science_dept_book_chapters, computer_science_dept_publications
 
 # Create your views here.
 
@@ -134,8 +133,6 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
-        book_chapters_data = computer_science_dept_book_chapters.objects.all()
-        publications_data = computer_science_dept_publications.objects.all()
 
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -147,9 +144,8 @@ def home(request, course, dept):
                      'events': events,
                      'classrooms': classrooms,
                     'research_data': research_data,
-                    'laboratory_facilities_gallary' : laboratory_facilities_gallary,
-                    'book_chapters_data': book_chapters_data,
-                    'publications_data': publications_data
+                    'laboratory_facilities_gallary' : laboratory_facilities_gallary
+
                 }
 
     elif course == 'UG' and dept == 'EC':

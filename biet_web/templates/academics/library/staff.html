@@ -3,121 +3,156 @@
 {% load static %}
 {% block content %}
 
-<!-- ******CONTENT****** --> 
+<!-- ******CONTENT****** -->
 <div class="content container bgdata">
-            <div class="page-wrapper">
-                <header class="page-heading clearfix">
-                    <h1 class="heading-title pull-left">Library</h1>
-                    <div class="breadcrumbs pull-right">
-                        <ul class="breadcrumbs-list">
-                            <li class="breadcrumbs-label">You are here:</li>
-                            <li><a href="../index.html">Home</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="home.php">Academics</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="home.php">Library</a><i class="fa fa-angle-right"></i></li>
-                            <li class="current">Staff Profile</li>
+    <div class="page-wrapper">
+        <header class="page-heading clearfix">
+            <h1 class="heading-title pull-left">Library</h1>
+            <div class="breadcrumbs pull-right">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-label">You are here:</li>
+                    <li><a href="../index.html">Home</a><i class="fa fa-angle-right"></i></li>
+                    <li><a href="home.php">Academics</a><i class="fa fa-angle-right"></i></li>
+                    <li><a href="home.php">Library</a><i class="fa fa-angle-right"></i></li>
+                    <li class="current">Staff Profile</li>
+                </ul>
+            </div>
+            <!--//breadcrumbs-->
+        </header>
+        <div class="page-content">
+            <div class="row page-row">
+                <aside class="page-sidebar col-md-3 col-sm-4 affix-top">
+                    <section class="widget">
+                        <ul class="nav">
+                            <li><a href="/library">Library Home</a></li>
+                            <li><a href="/library/layout">Layout of Library</a></li>
+                            <li class="active"><a href="/library/staff">Library Staff</a></li>
+                            <li><a href="/library/resources">Library Resources</a></li>
+                            <li><a href="/library/membership">Membership</a></li>
+                            <li><a href="/library/rules">Library Rules</a></li>
+                            <li><a href="/library/services">Library Services</a></li>
+                            <li><a href="/library/e_resources">E-Resources</a></li>
+                            <li><a href="http://www.knimbus.com/user/auth.do" target="_blank">Knimbus(Federal
+                                    search)</a></li>
+                            <li><a href="/library/committee">Library Committee</a></li>
+                            <li><a href="/library/question_papers">VTU Question papers</a></li>
+                            <li><a href="http://10.201.4.11:1234/easylib/index.php">Library OPAC</a></li>
+                            <li><a href="https://ndl.iitkgp.ac.in/">National Digital Library</a></li>
+                            <li><a href="http://www.nptel.ac.in/">NPTEL</a></li>
+                            <li><a href="/library/online_courses">Online Courses</a></li>
+                            <li><a href="/library/gallery">Library Gallery</a></li>
+                            <li><a href="/library/user_manual">Library User Manual</a></li>
+                            <li><a href="/facilities/perography">Reprography</a></li>
                         </ul>
-                    </div><!--//breadcrumbs-->
-                </header> 
-                <div class="page-content">
-                    <div class="row page-row">
-                        <aside class="page-sidebar col-md-3 col-sm-4 affix-top">                    
-                            <section class="widget">
-                                <ul class="nav">
-                                    <li><a href="#">Library Home</a></li>
-                                    <li><a href="/library/layout">Layout of Library</a></li>
-                                    <li class="active"><a href="/library/staff">Library Staff</a></li>
-                                    <li><a href="/library/resources">Library Resources</a></li>
-                                    <li><a href="/library/membership">Membership</a></li>
-                                    <li><a href="/library/rules">Library Rules</a></li>
-                                    <li><a href="/library/services">Library Services</a></li>
-                                    <li><a href="/library/e_resources">E-Resources</a></li>
-                                    <li><a href="http://www.knimbus.com/user/auth.do" target="_blank">Knimbus(Federal search)</a></li>
-                                    <li><a href="/library/committee">Library Committee</a></li>
-                                    <li><a href="/library/question_papers">VTU Question papers</a></li>
-                                    <li><a href="http://10.201.4.11:1234/easylib/index.php">Library OPAC</a></li>
-                                    <li><a href="https://ndl.iitkgp.ac.in/">National Digital Library</a></li>
-                                    <li><a href="http://www.nptel.ac.in/">NPTEL</a></li>
-                                    <li><a href="/library/online_courses">Online Courses</a></li>
-                                    <li><a href="/library/gallery">Library Gallery</a></li>
-                                    <li><a href="/library/user_manual">Library User Manual</a></li>     
-                                </ul>                        
-                            </section><!--//widget-->
-                        </aside><!--//page-sidebar-->
-                        <div class="content-wrapper col-md-8 col-sm-7">  
-                            
-                            <div class="page-row">
-                                <h1 class="no-margin-top has-divider text-highlight">Staff Profile</h1>
-                                
-                                <div class="table-responsive">                      
-                                            <table class="table table-striped table-boxed">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Photo</th>
-                                                        <th>Name</th>
-                                                        <th>Designation</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                        <tr>
-                                                            <td><a href="../images/lib/1.jpg" rel="prettyPhoto[gallery1]" title="Dr.K.V.Manjunatha"><img src="../images/lib/1.jpg" width=40 height=40 alt="" /></a></td>
-                                                            <td>Dr.K.V.Manjunatha, M.Sc, Ph.D.</td>
-                                                            <td>Librarian <br /> Email: kvmdvg@gmail.com<br />Phone: 9844949956</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="../images/lib/2.jpg" rel="prettyPhoto[gallery1]" title="Smt.Shakunthala G.S"><img src="../images/lib/2.jpg" width=40 height=40 alt="" /></a></td>
-                                                            <td>Smt.Shakunthala G.S, M.Sc,M.Phil,</td>
-                                                            <td>Assistant Librarian <br /> Email: shakuntalags@rediffmail.com<br />Phone: 9964434648</td>
-                                                        </tr>   
-                                                        <tr>
-                                                            <td><a href="../images/lib/3.jpg" rel="prettyPhoto[gallery1]" title="Sri.G.K.Prasanna Kumar"><img src="../images/lib/3.jpg" width=40 height=40 alt="" /></a></td>
-                                                            <td>G.K.Prasanna Kumar, M.L.I.Sc</td>
-                                                            <td>Library Assistant <br />Phone: 9945523118</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="../images/lib/6.jpg" rel="prettyPhoto[gallery1]" title="Smt.Sharadamma"><img src="../images/lib/6.jpg" width=40 height=40 alt="" /></a></td>
-                                                            <td>Sharadamma</td>
-                                                            <td>SDA,<br />Phone: 9844335487</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="../images/lib/basavarajappac.jpg" rel="prettyPhoto[gallery1]" title="Sri.Basavaraj.K.B"><img src="../images/lib/basavarajappac.jpg" width=40 height=40 alt="" /></a></td>
-                                                            <td>Sri.Basavaraj.K.B</td>
-                                                            <td>SDA, BSc.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="../images/lib/basavarajappa c.jpg" rel="prettyPhoto[gallery1]" title="Basavarajappa.C"><img src="../images/lib/basavarajappa c.jpg" width=40 height=40 alt="" /></a></td>
-                                                            <td>Basavarajappa.C</td>
-                                                            <td>Peon</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="../images/lib/shanthaiah T.jpg" rel="prettyPhoto[gallery1]" title="Shanthaiah.T.M"><img src="../images/lib/shanthaiah T.jpg" width=40 height=40 alt="" /></a></td>
-                                                            <td>Shanthaiah.T.M</td>
-                                                            <td>Attender</td>
-                                                        </tr> 
-                                                        <tr>
-                                                            <td><a href="../images/lib/manjunatha.JPG" rel="prettyPhoto[gallery1]" title="Manjunatha"><img src="../images/lib/manjunatha.JPG" width=40 height=40 alt="" /></a></td>
-                                                            <td>Manjunatha</td>
-                                                            <td>Attender</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="../images/lib/Pushpa.jpg" rel="prettyPhoto[gallery1]" title="Smt. Pushpa"><img src="../images/lib/Pushpa.jpg" width=40 height=40 alt="" /></a></td>
-                                                            <td>Smt. Pushpa</td>
-                                                            <td>Attender</td>
-                                                        </tr>            	
-                                                        <tr>
-                                                            <td><a href="../images/lib/shivamurthy.JPG" rel="prettyPhoto[gallery1]" title="Shivamurthy"><img src="../images/lib/shivamurthy.JPG" width=40 height=40 alt="" /></a></td>
-                                                            <td>Shivamurthy</td>
-                                                            <td>Scavenger</td>
-                                                        </tr>
-           
-                                                </tbody>
-                                            </table><!--//table-->
-                                        </div><!--//table-responsive-->
-                            </div><!--//page-row--> 
+                    </section>
+                    <!--//widget-->
+                </aside>
+                <!--//page-sidebar-->
+                <div class="content-wrapper col-md-8 col-sm-7">
 
-                        </div><!--//content-wrapper-->                    
-                    </div><!--//page-row-->
-                </div><!--//page-content-->
-            </div><!--//page--> 
-        </div><!--//content-->
-    </div><!--//wrapper-->
-    {% endblock %}
+                    <div class="page-row">
+                        <h1 class="no-margin-top has-divider text-highlight">Staff Profile</h1>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped table-boxed">
+                                <thead>
+                                    <tr>
+                                        <th>Photo</th>
+                                        <th>Name</th>
+                                        <th>Designation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="../images/lib/1.jpg" rel="prettyPhoto[gallery1]"
+                                                title="Dr.K.V.Manjunatha"><img src="../images/lib/1.jpg" width=40
+                                                    height=40 alt="" /></a></td>
+                                        <td>Dr.K.V.Manjunatha, M.Sc, Ph.D.</td>
+                                        <td>Librarian <br /> Email: kvmdvg@gmail.com<br />Phone: 9844949956</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="../images/lib/2.jpg" rel="prettyPhoto[gallery1]"
+                                                title="Smt.Shakunthala G.S"><img src="../images/lib/2.jpg" width=40
+                                                    height=40 alt="" /></a></td>
+                                        <td>Smt.Shakunthala G.S, M.Sc,M.Phil,</td>
+                                        <td>Assistant Librarian <br /> Email: shakuntalags@rediffmail.com<br />Phone:
+                                            9964434648</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="../images/lib/3.jpg" rel="prettyPhoto[gallery1]"
+                                                title="Sri.G.K.Prasanna Kumar"><img src="../images/lib/3.jpg" width=40
+                                                    height=40 alt="" /></a></td>
+                                        <td>G.K.Prasanna Kumar, M.L.I.Sc</td>
+                                        <td>Library Assistant <br />Phone: 9945523118</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="../images/lib/6.jpg" rel="prettyPhoto[gallery1]"
+                                                title="Smt.Sharadamma"><img src="../images/lib/6.jpg" width=40 height=40
+                                                    alt="" /></a></td>
+                                        <td>Sharadamma</td>
+                                        <td>SDA,<br />Phone: 9844335487</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="../images/lib/basavarajappac.jpg" rel="prettyPhoto[gallery1]"
+                                                title="Sri.Basavaraj.K.B"><img src="../images/lib/basavarajappac.jpg"
+                                                    width=40 height=40 alt="" /></a></td>
+                                        <td>Sri.Basavaraj.K.B</td>
+                                        <td>SDA, BSc.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="../images/lib/basavarajappa c.jpg" rel="prettyPhoto[gallery1]"
+                                                title="Basavarajappa.C"><img src="../images/lib/basavarajappa c.jpg"
+                                                    width=40 height=40 alt="" /></a></td>
+                                        <td>Basavarajappa.C</td>
+                                        <td>Peon</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="../images/lib/shanthaiah T.jpg" rel="prettyPhoto[gallery1]"
+                                                title="Shanthaiah.T.M"><img src="../images/lib/shanthaiah T.jpg"
+                                                    width=40 height=40 alt="" /></a></td>
+                                        <td>Shanthaiah.T.M</td>
+                                        <td>Attender</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="../images/lib/manjunatha.JPG" rel="prettyPhoto[gallery1]"
+                                                title="Manjunatha"><img src="../images/lib/manjunatha.JPG" width=40
+                                                    height=40 alt="" /></a></td>
+                                        <td>Manjunatha</td>
+                                        <td>Attender</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="../images/lib/Pushpa.jpg" rel="prettyPhoto[gallery1]"
+                                                title="Smt. Pushpa"><img src="../images/lib/Pushpa.jpg" width=40
+                                                    height=40 alt="" /></a></td>
+                                        <td>Smt. Pushpa</td>
+                                        <td>Attender</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="../images/lib/shivamurthy.JPG" rel="prettyPhoto[gallery1]"
+                                                title="Shivamurthy"><img src="../images/lib/shivamurthy.JPG" width=40
+                                                    height=40 alt="" /></a></td>
+                                        <td>Shivamurthy</td>
+                                        <td>Scavenger</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <!--//table-->
+                        </div>
+                        <!--//table-responsive-->
+                    </div>
+                    <!--//page-row-->
+
+                </div>
+                <!--//content-wrapper-->
+            </div>
+            <!--//page-row-->
+        </div>
+        <!--//page-content-->
+    </div>
+    <!--//page-->
+</div>
+<!--//content-->
+</div>
+<!--//wrapper-->
+{% endblock %}
