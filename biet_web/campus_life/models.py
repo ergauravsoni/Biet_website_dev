@@ -12,3 +12,10 @@ class NAAC(models.Model):
 
     def __str__(self):
         return '{}'.format(self.brochure)
+
+class Btech_Technowav(models.Model):
+    btech_technowav = models.FileField(upload_to = 'campus_life/btech_technowav/')
+    type_id  = models.CharField(max_length=10)
+
+    def __str__(self):
+        return '{}'.format(self.btech_technowav)
