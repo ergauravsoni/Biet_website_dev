@@ -7,7 +7,7 @@ class Academic_Calender(models.Model):
 
     def __str__(self):
         return '{}'.format(self.calender)
-    
+
 class Office_Staff(models.Model):
     name = models.CharField(max_length=200)
     designation = models.CharField(max_length=200)
@@ -17,3 +17,9 @@ class Office_Staff(models.Model):
 
     def __str__(self):
         return '{}'.format(self.name)
+
+class EOA(models.Model):
+    eoa = models.FileField(upload_to = 'about_biet/eoa/')
+
+    def __str__(self):
+        return '{}'.format(self.eoa)
