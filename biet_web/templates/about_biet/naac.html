@@ -4,36 +4,43 @@
 {% block content %}
 
 
-        <!-- ******CONTENT****** -->
-        <div class="content container">
-            <div class="page-wrapper">
+<!-- ******CONTENT****** -->
+<div class="content container bgdata">
+    <div class="page-wrapper">
 
-                <div class="page-content">
-                    <div class="row page-row">
+        <div class="page-content">
+            <div class="row page-row">
 
-                        <div class="content-wrapper col-md-12 col-sm-8">
-                            <div class="page-row">
-                                <!--<h1 class="no-margin-top has-divider text-highlight">Descriptions</h1>-->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h1 class="has-divider text-highlight">NAAC Brochure</h1>
+                <div class="content-wrapper col-md-12 col-sm-8">
+                    <div class="page-row">
+                        <!--<h1 class="no-margin-top has-divider text-highlight">Descriptions</h1>-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h1 class="textColorCustom" class="has-divider text-highlight">NAAC Brochure</h1>
 
-                                        {% for brochure in brochures %}
+                                {% for brochure in brochures %}
 
-                                        <dl class="dl-horizontal">
-                                            <h3 class="title">Download Brochure</h3>
-                                            <a class="btn btn-theme" href="{{brochure.brochure.url}}"><i class="fa fa-download"></i>View PDF</a>
-                                        </dl>
+                                <dl class="dl-horizontal">
+                                    <h3 class="title">Download Brochure</h3>
+                                    <a class="btn btn-theme" href="{{brochure.brochure.url}}"><i
+                                            class="fa fa-download"></i>View PDF</a>
+                                </dl>
 
-                                        {% endfor %}
-                                        
-                                    </div>
-                        </div><!--//content-wrapper-->
-                    </div><!--//page-row-->
-                </div><!--//page-content-->
-            </div><!--//page-->
-        </div><!--//content-->
-    </div><!--//wrapper-->
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                        <!--//content-wrapper-->
+                    </div>
+                    <!--//page-row-->
+                </div>
+                <!--//page-content-->
+            </div>
+            <!--//page-->
+        </div>
+        <!--//content-->
+    </div>
+    <!--//wrapper-->
 </div>
 
 {% endblock %}

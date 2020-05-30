@@ -1,43 +1,54 @@
 {% extends 'base.html' %}
 
 {% load static %}
-{% block content %} 
+{% block content %}
 
 
- <!-- ******CONTENT****** --> 
-        <div class="content container">
-            <div class="page-wrapper">
-                <header class="page-heading clearfix">
-                    <strong><h1 style="font-weight: 600">Transportation</h1></strong>
-                    
-                </header> 
-                <div class="page-content">
-                    <div class="row page-row">
-                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
-                            <div class="album-cover">
-                                <a href="gallery-album.html"><img class="img-responsive" src="{% static 'assets/images/transport/T1.JPG' %}" alt="" /></a>
-                                <div class="desc">
-                                    <h4><small><a href="#"></a></small></h4>
-                                    <p>The campus being 06 Kms from the heart of the city and more than 12 Kms from suburban areas of the city.</p>
-                                </div>
-                            </div>
+<!-- ******CONTENT****** -->
+<div class="content container bgdata">
+    <div class="page-wrapper">
+        <header class="page-heading clearfix">
+            <strong>
+                <h1 class="textColorCustom" style="font-weight: 600">Transportation</h1>
+            </strong>
+
+        </header>
+        <div class="page-content">
+            <div class="row page-row">
+                <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                    <div class="album-cover">
+                        <a href="gallery-album.html"><img class="img-responsive"
+                                src="{% static 'assets/images/transport/T1.JPG' %}" alt="" /></a>
+                        <div class="desc">
+                            <h4><small><a href="#"></a></small></h4>
+                            <p>The campus being 06 Kms from the heart of the city and more than 12 Kms from suburban
+                                areas of the city.</p>
                         </div>
-                        
-                        <div class="col-md-6 col-sm-6 col-xs-12 text-center">
-                            <div class="album-cover">
-                                <a href="gallery-album.html"><img class="img-responsive" src="{% static 'assets/images/transport/T2.JPG' %}" alt="" /></a>
-                                <div class="desc">
-                                    <h4><small><a href="#"></a></small></h4>
-                                    <p>The city metropolitan transport service runs city buses from important and almost all areas of city to the college.</p>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                    <div class="album-cover">
+                        <a href="gallery-album.html"><img class="img-responsive"
+                                src="{% static 'assets/images/transport/T2.JPG' %}" alt="" /></a>
+                        <div class="desc">
+                            <h4><small><a href="#"></a></small></h4>
+                            <p>The city metropolitan transport service runs city buses from important and almost all
+                                areas of city to the college.</p>
                         </div>
-                       <!--//page-content-->
-                        
-                    </div><!--//page-row-->
-                </div><!--//page-content-->
-            </div><!--//page--> 
-        </div><!--//content-->
-    </div><!--//wrapper-->
-    
-    {% endblock %}
+                    </div>
+                </div>
+                <!--//page-content-->
+
+            </div>
+            <!--//page-row-->
+        </div>
+        <!--//page-content-->
+    </div>
+    <!--//page-->
+</div>
+<!--//content-->
+</div>
+<!--//wrapper-->
+
+{% endblock %}

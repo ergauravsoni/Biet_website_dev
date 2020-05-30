@@ -359,11 +359,11 @@ ul.custom-list-style li {
 .table-hover > tbody > tr:hover > th {
   background: #e4f1ef;
 }
-.table-boxed,
+.table-boxed table-striped,
 .table-bordered {
   border: 1px solid #ebebeb;
 }
-.table.table-boxed > thead > tr > th {
+.table.table-boxed table-striped > thead > tr > th {
   border-bottom: none;
   background: #57a89a;
   color: #fff;

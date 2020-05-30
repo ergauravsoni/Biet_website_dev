@@ -3,18 +3,18 @@
 {% load static %}
 {% block content %}
 
-<!-- ******CONTENT****** --> 
-<div class="content container">
-            <div class="page-wrapper">
-                <header class="page-heading clearfix">
-                    <h1 class="heading-title pull-left">Department of Computer Science and Engineering</h1>
-                   
-                </header> 
-                <div class="page-content">
-                    <div class="row page-row">
-                    <div class='row'>
-                        <div class='col-md-3'>
-                        <aside class="page-sidebar affix-top">                    
+<!-- ******CONTENT****** -->
+<div class="content container bgdata">
+    <div class="page-wrapper">
+        <header class="page-heading clearfix">
+            <h1 class="heading-title pull-left">Department of Computer Science and Engineering</h1>
+
+        </header>
+        <div class="page-content">
+            <div class="row page-row">
+                <div class='row'>
+                    <div class='col-md-3'>
+                        <aside class="page-sidebar affix-top">
                             <section class="widget">
                                 <ul class="nav">
                                     <li><a href="/department/UG/CS/">Home</a></li>
@@ -28,51 +28,59 @@
                                     <li><a href="/department/UG/CS/newsletter">News Letter</a></li>
                                     <li><a href="/department/UG/CS/gallery">Photo Gallery</a></li>
                                     <!-- <li><a href="/department/UG/CS/gallery">Photo Gallery</a></li> -->
-                                </ul>                    
-                            </section><!--//widget-->
-                        </aside><!--//page-sidebar-->
-                        </div>
+                                </ul>
+                            </section>
+                            <!--//widget-->
+                        </aside>
+                        <!--//page-sidebar-->
+                    </div>
 
 
 
-                        <div class='col-md-9'>
+                    <div class='col-md-9'>
                         <div class="row page-row">
-                                {% for faculty_data in faculties_data %}
-                            
-                                    <div class="col-md-3 col-sm-3 text-center">
-                                        <div class="album-cover">
-                                            <!-- <a href="#"> -->
-                                                <img class="img-thumbnail" src="{{faculty_data.image.url}}" alt="" style="width:360px;height:270px;">
-                                            <!-- </a> -->
-                                            <div class="desc">
-                                                <h5>{{faculty_data.name}}</h5>
-                                                <h4><small><a href="#">{{faculty_data.designation}}</a></small></h4>
-                                                
-                                                
-                                                <!-- <p>Integer ornare nisl tortor, sed condimentum metus pulvinar ut. Etiam ac pretium nunc. Donec porttitor erat non nibh pellentesque vehicula. Vestibulum tincidunt</p> -->
-                                                <!-- <button type="button" class="btn btn-theme">Theme Button</button> -->
-                                                <a href="{{faculty_data.detail.url}}" class="btn btn-theme view-pdf">Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                            {% for faculty_data in faculties_data %}
 
-                            {% endfor %} 
-                        
-                        
-                        
-                    </div>
+                            <div class="col-md-3 col-sm-3 text-center">
+                                <div class="album-cover">
+                                    <!-- <a href="#"> -->
+                                    <img class="img-thumbnail" src="{{faculty_data.image.url}}" alt=""
+                                        style="width:360px;height:270px;">
+                                    <!-- </a> -->
+                                    <div class="desc">
+                                        <h5>{{faculty_data.name}}</h5>
+                                        <h4><small><a href="#">{{faculty_data.designation}}</a></small></h4>
+
+
+                                        <!-- <p>Integer ornare nisl tortor, sed condimentum metus pulvinar ut. Etiam ac pretium nunc. Donec porttitor erat non nibh pellentesque vehicula. Vestibulum tincidunt</p> -->
+                                        <!-- <button type="button" class="btn btn-theme">Theme Button</button> -->
+                                        <a href="{{faculty_data.detail.url}}" class="btn btn-theme view-pdf">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+
+
+
                         </div>
                     </div>
-                                         
-                    </div><!--//page-row-->
-                </div><!--//page-content-->
+                </div>
 
-                
+            </div>
+            <!--//page-row-->
+        </div>
+        <!--//page-content-->
 
 
 
-            </div><!--//page--> 
-        </div><!--//content-->
-    </div><!--//wrapper-->
 
-    {% endblock %}
+
+    </div>
+    <!--//page-->
+</div>
+<!--//content-->
+</div>
+<!--//wrapper-->
+
+{% endblock %}

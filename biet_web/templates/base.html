@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{% static 'assets/plugins/flexslider/flexslider.css' %}">
     <link rel="stylesheet" href="{% static 'assets/plugins/pretty-photo/css/prettyPhoto.css' %}">
     <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="{% static 'assets/css/styles_7.css' %}">
+    <link id="theme-style" rel="stylesheet" href="{% static 'assets/css/styles_8.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style_updates.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/dept_profile.css' %}">
     <!-- <link rel="stylesheet" href="{% static 'assets/css/update.css' %}"> -->
@@ -41,9 +41,9 @@
     <link rel="stylesheet" href="{% static 'assets/rs-plugin/css/settings.css' %} " />
     <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/style_4.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/style_6.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/fmenu.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/css/style5.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/style6.css' %}" />
     <!--Revolation Slider-->
     <!-- <link href="rs-plugin/css/settings.css" rel="stylesheet"> -->
     <!--Carousel Slider-->
@@ -92,16 +92,31 @@
                 </h1>
                 <!--//logo-->
                 <div class="col-md-7" style="text-align:center">
-                    <p style="font-family: 'Montserrat', sans-serif;">Bapuji Educational Association (Regd.)</p>
-                    <h2 style="font-family: 'Bree Serif', serif; font-size: 31px;">Bapuji Institute of Engineering and
+                    <p style="font-family: 'Montserrat', sans-serif; color:#192A56">Bapuji Educational Association
+                        (Regd.)</p>
+                    <h2 style="font-family: 'Bree Serif', serif; font-size: 31px; color:#192A56">Bapuji Institute of
+                        Engineering and
                         Technology</h2>
-                    <p style="font-family: 'Oswald', sans-serif;">Affiliated to Visvesvaraya Technological University,
+                    <p style="font-family: 'Oswald', sans-serif; color:#192A56">Affiliated to Visvesvaraya Technological
+                        University,
                         Belgavi, Accredited by NAAC with 'A' grade,<br> Recognized by UGC under 2(F) and 12(B)</p>
                 </div>
                 <div class="info col-md-3 col-sm-3">
                     <div class="contact pull-right">
-                        <p class="phone"><i class="fa fa-phone"></i>Tel: 08192 221461 </p> <br>
-                        <p class="email"><i class="fa fa-envelope"></i><a href="#">webmaster@bietdvg.edu</a></p>
+                        <p class="phone" style="color:#192A56"><i class="fa fa-phone"></i>Tel: 91-8192-222245 </p> <br>
+                        <p class="email"><i class="fa fa-envelope"></i><a href="#"
+                                style="color:#192A56">webmaster@bietdvg.edu </a></p>
+                        <br>
+                        <p class="email"><i class="fa fa-envelope"></i><a href="#"
+                                style="color:#192A56">principal@bietdvg.edu </a></p>
+                        <br>
+                        <p class="email"><i class="fa fa-fax"></i><a href="#" style="color:#192A56">08192 - 223261 </a>
+                        </p>
+                        <br>
+                        <p class="email"><a href="https://login.bluehost.com/?" style="color:#ffffff"
+                                class="btn btn-theme"> <i class="fa fa-globe" style="color:#ffffff"></i> Webmail </a>
+                        </p>
+
                     </div>
                     <!--//contact-->
                 </div>
@@ -136,20 +151,22 @@
                                 <li><a href="/Bapuji_educational_association" class="text-uppercase">Bapuji Educational
                                         Association</a></li>
                                 <li><a href="/governing_body">GOVERNING BODY</a></li>
-                                <li><a href="#">CHAIRMAN'S MESSAGE</a></li>
+                                <li><a href="/chairman_msg">CHAIRMAN'S MESSAGE</a></li>
                                 <li><a href="/principal_msg">PRINCIPAL'S MESSAGE</a></li>
                                 <li><a href="/director_msg">DIRECTOR'S MESSAGE</a></li>
-                                <li><a href="#">DEAN'S MESSAGE</a></li>
+                                <li><a href="#">DEAN'S</a></li>
                                 <li><a href="#">ORGANISATIONAL CHART</a></li>
                                 <li class="dropdown-submenu">
-                                    <a class="trigger" tabindex="-1" href="#">ACCREDITATION<i
-                                            class="fa fa-angle-right"></i></a>
+                                    <a class="trigger" tabindex="-1" href="#">ACCREDITATION / RANKING
+                                        <i class="fa fa-angle-right"></i></a>
                                     <ul class="dropdown-menu">
+                                        <li><a href="/naac">AICTE</a></li>
                                         <li><a href="/naac">NAAC</a></li>
                                         <li><a href="/nirf">NIRF</a></li>
                                         <li><a href="/nba">NBA</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="#"> RESEARCH</a></li>
                                 <li class="dropdown-submenu">
                                     <a class="trigger" tabindex="-1" href="#">INCUBATION<i
                                             class="fa fa-angle-right"></i></a>
@@ -170,9 +187,9 @@
                                         <li><a href="#">DUMMY 3</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">OFFICE</a></li>
-                                <li><a href="#">ABC</a></li>
-                                <li><a href="#">XYZ</a></li>
+                                <li><a href="/office">OFFICE</a></li>
+                                <li><a href="#">ACTIVITY POINT CELL</a></li>
+                                <li><a href="#">PRODUCT DEVELOPMENT CELL</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -295,14 +312,15 @@
                                 data-close-others="false" href="#">FACILITIES <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/facilities/auditorium">AUDITORIUM</a></li>
-                                <li><a href="/facilities/sport">SPORTS</a></li>
+                                <!-- <li><a href="/facilities/sport">SPORTS</a></li> -->
                                 <li><a href="/facilities/hostel">HOSTEL</a></li>
                                 <li><a href="/facilities/ladies_rest_room">LADIES REST ROOM</a></li>
                                 <li><a href="/facilities/canteen">CANTEEN / CAFETERIA</a></li>
                                 <li><a href="/facilities/scholarship">SCHOLARSHIPS</a></li>
                                 <li><a href="/facilities/dispensary">DISPENSARY</a></li>
-                                <li><a href="/facilities/perography" class="text-upper">REPROGRAPHY</a></li>
+                                <li><a href="/facilities/perography" class="text-upper">GUEST HOUSE</a></li>
                                 <li><a href="/campus_life/redcross">RED CROSS</a></li>
+                                <li><a href="/campus_life/redcross">NCC / NSS</a></li>
                                 <li><a href="/facilities/internet">INTERNET</a></li>
                                 <!-- <li><a href="/facilities/transportation">TRANSPORTATION</a></li> -->
                                 <li><a href="/facilities/elearning">ELEARNING</a></li>
@@ -363,6 +381,8 @@
                                 <li><a href="#">STUDENT ACADEMIC COUNCIL</a></li>
                                 <li><a href="#">GYM</a></li>
                                 <li><a href="/campus_life/graduation_day">GRADUANDS' DAY</a></li>
+                                <li><a href="/campus_life/btech_technowav">BTECH VOICE / TECHNOWAVE</a></li>
+                                <li><a href="/facilities/sport">SPORTS</a></li>
                                 <!-- <li><a href="news-single-2.html">IBM COE</a></li> -->
                             </ul>
                         </li>
@@ -392,7 +412,7 @@
                         <li class="nav-item"><a href="/gallery">GALLERY</a></li>
                         <li class="nav-item"><a href="https://www.bietdvg.edu/feedback/" target="_blank">FEEDBACK</a>
                         </li>
-                        
+
                     </ul>
                     <!--//nav-->
                 </div>
@@ -433,7 +453,7 @@
 
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.725050337043!2d75.89939131478727!3d14.443002539903063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bba2561b45cd815%3A0x4736841a4844a2a0!2sBIET%2C%20Davanagere%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1590003699523!5m2!1sen!2sin"
-                                width="" height="250" frameborder="0" style="border:0;" allowfullscreen=""
+                                width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""
                                 aria-hidden="false" tabindex="0"></iframe>
 
                             <ul>
@@ -466,8 +486,23 @@
                                         </span>
                                     </p>
                                     <p class="tel col-md-12 col-sm-4"><i class="fa fa-phone"></i>Tel: +08192-222245</p>
+                                    <br>
+                                    <p class="tel col-md-12 col-sm-4"><i class="fa fa-phone"></i>Tel: +08192-222245</p>
                                     <p class="email col-md-12 col-sm-4"><i class="fa fa-envelope"></i><a href="#">Email:
                                             webmaster@bietdvg.edu</a></p>
+                                    <br>
+                                    <p class="email col-md-12 col-sm-4"><i class="fa fa-envelope"></i><a href="#">Email:
+                                            principal@bietdvg.edu</a></p>
+                                    <br>
+
+                                    <p class="email col-md-12 col-sm-4"><i class="fa fa-fax"></i><a href="#">Fax:
+                                            08192 - 223261</a> </p>
+                                    <br>
+
+
+
+
+
                                 </div>
                             </div>
                             <!--//footer-col-inner-->
@@ -481,12 +516,15 @@
                 <div class="container">
                     <div class="row">
                         <small class="copyright col-md-6 col-sm-12 col-xs-12">Copyright © 2013 - All Rights Reserved -
-                            <a href="#" style="color: #ffff">webmaster@bietdvg.edu</a></small>
+                            <a href="" style="color: #ffff">webmaster@bietdvg.edu</a></small>
                         <ul class="social pull-right col-md-6 col-sm-12 col-xs-12">
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.facebook.com/BapujiInstituteOfEngineeringTechnology"><i
+                                        class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/school/bapuji-institute-of-engineering-&-technology-davanagere/"><i
+                                        class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                             <li><a href="#"><i class="fa fa-skype"></i></a></li>

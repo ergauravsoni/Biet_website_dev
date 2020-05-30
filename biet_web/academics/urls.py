@@ -19,5 +19,6 @@ urlpatterns = [
     path('library/online_courses',views.online_courses, name='library/online_courses'),
     path('library/gallery',views.gallery, name='library/gallery'),
     path('library/user_manual',views.user_manual, name='library/user_manual'),
+    path('facilities/perography',views.perography, name='facilities/perography'),
     # path('major_events',views.major_events, name='major_events'),
 ]
