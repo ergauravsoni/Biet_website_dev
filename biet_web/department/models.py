@@ -349,3 +349,30 @@ class computer_science_dept_laboratory_facilities_gallary(models.Model):
 
     def __str__(self):
         return '{}'.format(self.image)
+
+class computer_science_dept_publications(models.Model):
+    name_of_faculty = models.CharField(max_length=100)
+    y15 = models.IntegerField(blank=True,null=True)
+    y16 = models.IntegerField(blank=True,null=True)
+    y17 = models.IntegerField(blank=True,null=True)
+    y18 = models.IntegerField(blank=True,null=True)
+    y19 = models.IntegerField(blank=True,null=True)
+    national_or_inter = models.CharField(max_length=13)
+    indexing = models.CharField(max_length=500, blank=True,null=True)
+    citations = models.IntegerField(blank=True,null=True)
+    impact_factor = models.CharField(max_length=80, blank=True,null=True)
+    i10_index = models.IntegerField(blank=True,null=True)
+    h_index = models.IntegerField(blank=True,null=True)
+
+    def __str__(self):
+        return self.name_of_faculty
+
+class computer_science_dept_book_chapters(models.Model):
+    sl_no = models.IntegerField()
+    name_of_book_chapter = models.CharField(max_length=500)
+    names_of_authors = models.CharField(max_length=500)
+    year_of_pub = models.IntegerField()
+    name_of_pub = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name_of_book_chapter 
