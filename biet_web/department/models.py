@@ -1,5 +1,4 @@
 from django.db import models
-import datetime
 
 # Create your models here.
 
@@ -323,8 +322,7 @@ class computer_science_dept_research_guide(models.Model):
 class computer_science_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    current_year = datetime.datetime.now().year
-    for year in range(1979, current_year+1):
+    for year in range(1979, 2021):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -377,4 +375,4 @@ class computer_science_dept_book_chapters(models.Model):
     name_of_pub = models.CharField(max_length=500)
 
     def __str__(self):
-        return self.name_of_book_chapter
+        return self.name_of_book_chapter 
