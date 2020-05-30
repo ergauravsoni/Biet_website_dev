@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 
@@ -322,7 +323,8 @@ class computer_science_dept_research_guide(models.Model):
 class computer_science_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    current_year = datetime.datetime.now().year
+    for year in range(1979, current_year+1):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
