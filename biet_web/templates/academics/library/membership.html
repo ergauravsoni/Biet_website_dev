@@ -2,113 +2,130 @@
 
 {% load static %}
 {% block content %}
-<!-- ******CONTENT****** --> 
-<div class="content container">
-            <div class="page-wrapper">
-                <header class="page-heading clearfix">
-                    <h1 class="heading-title pull-left">Library</h1>
-                    <div class="breadcrumbs pull-right">
-                        <ul class="breadcrumbs-list">
-                            <li class="breadcrumbs-label">You are here:</li>
-                            <li><a href="../index.html">Home</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="home.php">Academics</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="home.php">Library</a><i class="fa fa-angle-right"></i></li>
-                            <li class="current">Membership</li>
+<!-- ******CONTENT****** -->
+<div class="content container bgdata">
+    <div class="page-wrapper">
+        <header class="page-heading clearfix">
+            <h1 class="heading-title pull-left">Library</h1>
+            <div class="breadcrumbs pull-right">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-label">You are here:</li>
+                    <li><a href="../index.html">Home</a><i class="fa fa-angle-right"></i></li>
+                    <li><a href="home.php">Academics</a><i class="fa fa-angle-right"></i></li>
+                    <li><a href="home.php">Library</a><i class="fa fa-angle-right"></i></li>
+                    <li class="current">Membership</li>
+                </ul>
+            </div>
+            <!--//breadcrumbs-->
+        </header>
+        <div class="page-content">
+            <div class="row page-row">
+                <aside class="page-sidebar col-md-3 col-sm-4 affix-top">
+                    <section class="widget">
+                        <ul class="nav">
+                            <li><a href="/library">Library Home</a></li>
+                            <li><a href="/library/layout">Layout of Library</a></li>
+                            <li><a href="/library/staff">Library Staff</a></li>
+                            <li><a href="/library/resources">Library Resources</a></li>
+                            <li class="active"><a href="/library/membership">Membership</a></li>
+                            <li><a href="/library/rules">Library Rules</a></li>
+                            <li><a href="/library/services">Library Services</a></li>
+                            <li><a href="/library/e_resources">E-Resources</a></li>
+                            <li><a href="http://www.knimbus.com/user/auth.do" target="_blank">Knimbus(Federal
+                                    search)</a></li>
+                            <li><a href="/library/committee">Library Committee</a></li>
+                            <li><a href="/library/question_papers">VTU Question papers</a></li>
+                            <li><a href="http://10.201.4.11:1234/easylib/index.php">Library OPAC</a></li>
+                            <li><a href="https://ndl.iitkgp.ac.in/">National Digital Library</a></li>
+                            <li><a href="http://www.nptel.ac.in/">NPTEL</a></li>
+                            <li><a href="/library/online_courses">Online Courses</a></li>
+                            <li><a href="/library/gallery">Library Gallery</a></li>
+                            <li><a href="/library/user_manual">Library User Manual</a></li>
+                            <li><a href="/facilities/perography">Reprography</a></li>
                         </ul>
-                    </div><!--//breadcrumbs-->
-                </header> 
-                <div class="page-content">
-                    <div class="row page-row">
-                        <aside class="page-sidebar col-md-3 col-sm-4 affix-top">                    
-                            <section class="widget">
-                                <ul class="nav">
-                                    <li ><a href="#">Library Home</a></li>
-                                    <li><a href="/library/layout">Layout of Library</a></li>
-                                    <li><a href="/library/staff">Library Staff</a></li>
-                                    <li><a href="/library/resources">Library Resources</a></li>
-                                    <li class="active" ><a href="/library/membership">Membership</a></li>
-                                    <li><a href="/library/rules">Library Rules</a></li>
-                                    <li><a href="/library/services">Library Services</a></li>
-                                    <li><a href="/library/e_resources">E-Resources</a></li>
-                                    <li><a href="http://www.knimbus.com/user/auth.do" target="_blank">Knimbus(Federal search)</a></li>
-                                    <li><a href="/library/committee">Library Committee</a></li>
-                                    <li><a href="/library/question_papers">VTU Question papers</a></li>
-                                    <li><a href="http://10.201.4.11:1234/easylib/index.php">Library OPAC</a></li>
-                                    <li><a href="https://ndl.iitkgp.ac.in/">National Digital Library</a></li>
-                                    <li><a href="http://www.nptel.ac.in/">NPTEL</a></li>
-                                    <li><a href="/library/online_courses">Online Courses</a></li>
-                                    <li><a href="/library/gallery">Library Gallery</a></li>
-                                    <li><a href="/library/user_manual">Library User Manual</a></li>     
-                                </ul>                      
-                            </section><!--//widget-->
-                        </aside><!--//page-sidebar-->
-                        <div class="content-wrapper col-md-8 col-sm-7">  
-                            
-                            <div class="page-row">
-                                <h1 class="no-margin-top has-divider text-highlight">Membership</h1>
-                                <p>Digital ID card will be provided to each students and staffs. It is to be used for borrowing library books and also as college Identity Card. The Detailed information and Digital ID Card Application forms are available at Library Office.</p>
-                                
-                            </div><!--//page-row--> 
+                    </section>
+                    <!--//widget-->
+                </aside>
+                <!--//page-sidebar-->
+                <div class="content-wrapper col-md-8 col-sm-7">
 
-                                        <div class="table-responsive">                      
-                                            <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Type of Books</th>
-                                                    <th>Type of Members</th>
-                                                    <th>Duration of Loan</th>
-                                                    <th>No of books</th>
-                                                    <th>Overdue charges</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td rowspan = "3"><br /><br /><br />Borrowing Section</td>
-                                                    <td>UG/PG/PhD Students</td>
-                                                    <td>15 days</td>
-                                                    <td>02</td>
-                                                    <td>
-                                                        <ul style="list-style-type:disc;">
-                                                            <li>16th to 30th day 50 paisa per day.</li>
-                                                            <li>After 30 days onwards Rs.2/- per day till the book is returned to library.</li>
-                                                        </ul>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Teaching Staff</td>
-                                                    <td>One year</td>
-                                                    <td>05</td>             
-                                                    <td>*****</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Non Teaching</td>
-                                                    <td>One year</td>
-                                                    <td>02</td>             
-                                                    <td>*****</td>
-                                                </tr>
-                                                <tr>
-                                                <td>General Book Bank</td>
-                                                    <td>All the Students Members</td>
-                                                    <td>One semester</td>
-                                                    <td>05</td>
-                                                    <td>*****</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Social welfare Book Bank</td>
-                                                    <td>Only for SC/ST students</td>
-                                                    <td>One Semester</td>
-                                                    <td>05</td>
-                                                    <td>*****</td>
-                                                </tr>
-                                            </tbody>
-                                            </table><!--//table-->
-                                        </div><!--//table-responsive--> 
-                                                           
-                        </div><!--//content-wrapper-->                    
-                    </div><!--//page-row-->
-                </div><!--//page-content-->
-            </div><!--//page--> 
-        </div><!--//content-->
-    </div><!--//wrapper-->
+                    <div class="page-row">
+                        <h1 class="no-margin-top has-divider text-highlight">Membership</h1>
+                        <p>Digital ID card will be provided to each students and staffs. It is to be used for borrowing
+                            library books and also as college Identity Card. The Detailed information and Digital ID
+                            Card Application forms are available at Library Office.</p>
 
-    {% endblock %}
+                    </div>
+                    <!--//page-row-->
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-boxed">
+                            <thead>
+                                <tr>
+                                    <th>Type of Books</th>
+                                    <th>Type of Members</th>
+                                    <th>Duration of Loan</th>
+                                    <th>No of books</th>
+                                    <th>Overdue charges</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3"><br /><br /><br />Borrowing Section</td>
+                                    <td>UG/PG/PhD Students</td>
+                                    <td>15 days</td>
+                                    <td>02</td>
+                                    <td>
+                                        <ul style="list-style-type:disc;">
+                                            <li>16th to 30th day 50 paisa per day.</li>
+                                            <li>After 30 days onwards Rs.2/- per day till the book is returned to
+                                                library.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Teaching Staff</td>
+                                    <td>One year</td>
+                                    <td>05</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Non Teaching</td>
+                                    <td>One year</td>
+                                    <td>02</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>General Book Bank</td>
+                                    <td>All the Students Members</td>
+                                    <td>One semester</td>
+                                    <td>05</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Social welfare Book Bank</td>
+                                    <td>Only for SC/ST students</td>
+                                    <td>One Semester</td>
+                                    <td>05</td>
+                                    <td>*****</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--//table-->
+                    </div>
+                    <!--//table-responsive-->
+
+                </div>
+                <!--//content-wrapper-->
+            </div>
+            <!--//page-row-->
+        </div>
+        <!--//page-content-->
+    </div>
+    <!--//page-->
+</div>
+<!--//content-->
+</div>
+<!--//wrapper-->
+
+{% endblock %}

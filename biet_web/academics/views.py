@@ -50,3 +50,7 @@ def user_manual(request):
     user_manual = Library_User_Manual.objects.all()
     return render(request,'academics/library/user_manual.html',{'user_manual' : user_manual})
 
+def perography(request):
+    return render(request,'academics/library/perography.html')
+
+

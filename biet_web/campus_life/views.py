@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graduation_Day, NAAC
+from .models import Graduation_Day, NAAC, Btech_Technowav
 
 # Create your views here.
 def naac(request):
@@ -25,3 +25,8 @@ def to_be_updated(request):
 
 def redcross(request):
     return render(request, 'campus_life/redcross.html')
+
+def btech_technowav(request):
+    btech_technowav_data = Btech_Technowav.objects.all()
+    print(btech_technowav_data)
+    return render(request, 'campus_life/btech_technowav.html',{'btech_technowav_data' : btech_technowav_data})

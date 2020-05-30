@@ -7,3 +7,13 @@ class Academic_Calender(models.Model):
 
     def __str__(self):
         return '{}'.format(self.calender)
+    
+class Office_Staff(models.Model):
+    name = models.CharField(max_length=200)
+    designation = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='about_biet/office/image/')
+    detail = models.FileField(upload_to='department/office/data/')
+    sno = models.IntegerField()
+
+    def __str__(self):
+        return '{}'.format(self.name)

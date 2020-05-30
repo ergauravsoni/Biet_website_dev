@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="content container bgdata">
+  <div class="page-wrapper">
+    <header class="page-heading clearfix">
+      <strong>
+        <h1 class="textColorCustom" style="font-weight: 600">Reprography</h1>
+      </strong>
+
+    </header>
+    <div class="page-content">
+      <div class="row page-row">
+
+
+        <aside class="page-sidebar col-md-3 col-sm-4 affix-top">
+          <section class="widget">
+            <ul class="nav">
+              <li><a href="/library">Library Home</a></li>
+              <li><a href="/library/layout">Layout of Library</a></li>
+              <li><a href="/library/staff">Library Staff</a></li>
+              <li><a href="/library/resources">Library Resources</a></li>
+              <li><a href="/library/membership">Membership</a></li>
+              <li><a href="/library/rules">Library Rules</a></li>
+              <li><a href="/library/services">Library Services</a></li>
+              <li><a href="/library/e_resources">E-Resources</a></li>
+              <li><a href="http://www.knimbus.com/user/auth.do" target="_blank">Knimbus(Federal
+                  search)</a></li>
+              <li><a href="/library/committee">Library Committee</a></li>
+              <li><a href="/library/question_papers">VTU Question papers</a></li>
+              <li><a href="http://10.201.4.11:1234/easylib/index.php">Library OPAC</a></li>
+              <li><a href="https://ndl.iitkgp.ac.in/">National Digital Library</a></li>
+              <li><a href="http://www.nptel.ac.in/">NPTEL</a></li>
+              <li><a href="/library/online_courses">Online Courses</a></li>
+              <li><a href="/library/gallery">Library Gallery</a></li>
+              <li><a href="/library/user_manual">Library User Manual</a></li>
+              <li class="active"><a href="/facilities/perography">Reprography</a></li>
+            </ul>
+          </section>
+          <!--//widget-->
+        </aside>
+
+        <div class="content-wrapper col-md-8 col-sm-7">
+          <article class="welcome col-md-12 col-sm-11">
+
+            <!-- <p><img class="img-responsive" src="assets/images/750x300-about.jpg" alt="" /></p> -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="{% static 'assets/images/reprography/repo.jpg' %}" alt="Los Angeles" style="width:100%;">
+                </div>
+
+              </div>
+
+
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <br><br>
+
+
+
+            <div class="box medical">
+              Reprographic facilities are provided on Campus, located in the central library, in the office and in the
+              placement cell. The facility caters to the documentation needs of the students and staff and adds to their
+              convenience.
+            </div>
+            <br>
+
+          </article>
+        </div>
+
+
+        <!--//page-content-->
+
+      </div>
+      <!--//page-row-->
+    </div>
+    <!--//page-content-->
+  </div>
+  <!--//page-->
+</div>
+<!--//content-->
+</div>
+<!--//wrapper-->
+{% endblock %}
