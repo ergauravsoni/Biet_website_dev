@@ -608,11 +608,8 @@
                                                         <!--//table-->
                                                     </div>
 
-
-
-
-                                                    <!--//table-responsive-->
-                                                    <h2 class="no-margin-top text-highlight">Number of quality publications in refereed/SCI Journals, citations</h2>
+                                                    <h2 class="no-margin-top text-highlight">Number of quality
+                                                        publications in refereed/SCI Journals, citations</h2>
                                                     <div class="table-responsive">
                                                         <table class="table table-striped table-boxed">
                                                             <thead>
@@ -638,23 +635,44 @@
                                                                 {% for publication in publications_data %}
                                                                 <tr>
                                                                     <td>{{publication.name_of_faculty}}</td>
-                                                                    <td style="text-align: center;">{% if publication.y15 %}{{publication.y15}}{% else %}---{% endif %}</td>
-                                                                    <td style="text-align: center;">{% if publication.y16 %}{{publication.y16}}{% else %}---{% endif %}</td>
-                                                                    <td style="text-align: center;">{% if publication.y17 %}{{publication.y17}}{% else %}---{% endif %}</td>
-                                                                    <td style="text-align: center;">{% if publication.y18 %}{{publication.y18}}{% else %}---{% endif %}</td>
-                                                                    <td style="text-align: center;">{% if publication.y19 %}{{publication.y19}}{% else %}---{% endif %}</td>
-                                                                    <td style="text-align: center;">{{publication.national_or_inter}}</td>
-                                                                    <td>{% if publication.indexing %}{{publication.indexing}}{% else %}---{% endif %}</td>
-                                                                    <td style="text-align: center;">{% if publication.citations %}{{publication.citations}}{% else %}---{% endif %}</td>
-                                                                    <td style="text-align: center;">{% if publication.impact_factor %}{{publication.impact_factor}}{% else %}---{% endif %}</td>
-                                                                    <td style="text-align: center;">{% if publication.i10_index %}{{publication.i10_index}}{% else %}---{% endif %}</td>
-                                                                    <td style="text-align: center;">{% if publication.h_index %}{{publication.h_index}}{% else %}---{% endif %}</td>
+                                                                    <td style="text-align: center;">
+                                                                        {% if publication.y15 %}{{publication.y15}}{% else %}---{% endif %}
+                                                                    </td>
+                                                                    <td style="text-align: center;">
+                                                                        {% if publication.y16 %}{{publication.y16}}{% else %}---{% endif %}
+                                                                    </td>
+                                                                    <td style="text-align: center;">
+                                                                        {% if publication.y17 %}{{publication.y17}}{% else %}---{% endif %}
+                                                                    </td>
+                                                                    <td style="text-align: center;">
+                                                                        {% if publication.y18 %}{{publication.y18}}{% else %}---{% endif %}
+                                                                    </td>
+                                                                    <td style="text-align: center;">
+                                                                        {% if publication.y19 %}{{publication.y19}}{% else %}---{% endif %}
+                                                                    </td>
+                                                                    <td style="text-align: center;">
+                                                                        {{publication.national_or_inter}}</td>
+                                                                    <td>{% if publication.indexing %}{{publication.indexing}}{% else %}---{% endif %}
+                                                                    </td>
+                                                                    <td style="text-align: center;">
+                                                                        {% if publication.citations %}{{publication.citations}}{% else %}---{% endif %}
+                                                                    </td>
+                                                                    <td style="text-align: center;">
+                                                                        {% if publication.impact_factor %}{{publication.impact_factor}}{% else %}---{% endif %}
+                                                                    </td>
+                                                                    <td style="text-align: center;">
+                                                                        {% if publication.i10_index %}{{publication.i10_index}}{% else %}---{% endif %}
+                                                                    </td>
+                                                                    <td style="text-align: center;">
+                                                                        {% if publication.h_index %}{{publication.h_index}}{% else %}---{% endif %}
+                                                                    </td>
                                                                 </tr>
                                                                 {% endfor %}
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                <h2 class="no-margin-top text-highlight">Books/Book Chapters Published</h2>
+                                                    <h2 class="no-margin-top text-highlight">Books/Book Chapters
+                                                        Published</h2>
                                                     <div class="table-responsive">
                                                         <table class="table table-striped table-boxed">
                                                             <thead>
@@ -680,6 +698,11 @@
                                                         </table>
                                                         <!--//table-->
                                                     </div>
+                                                    <!--//table-responsive-->
+
+
+
+
                                                     <!--//table-responsive-->
                                                 </div>
                                                 <!--//panel-body-->

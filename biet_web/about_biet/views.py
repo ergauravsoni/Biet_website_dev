@@ -36,6 +36,9 @@ def director_msg(request):
 def principal_msg(request):
     return render(request,'about_biet/principal_msg.html')
 
+def chairman_msg(request):
+    return render(request,'about_biet/chairman_msg.html')
+
 def office(request):
     office_member_data = Office_Staff.objects.all().order_by('sno')
     return render(request,'about_biet/office.html',{'office_member_data' : office_member_data})
