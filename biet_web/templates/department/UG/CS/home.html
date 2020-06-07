@@ -729,10 +729,16 @@
                                                     {% for image in laboratory_facilities_gallary %}
 
                                                     <a class="prettyphoto col-md-3 col-sm-3" rel="prettyPhoto[gallery]"
-                                                        title="" href="{{image.image.url}}"><img
-                                                            class="img-responsive img-thumbnail"
-                                                            src="{{image.image.url}}" alt=""
-                                                            style=" height: 170px;" /></a>
+                                                        title="" href="{{image.image.url}}">
+                                                            <div class="container-photo-overlay">
+                                                                <img class="image-photo-overlay img-responsive img-thumbnail"
+                                                                    src="{{image.image.url}}" alt=""
+                                                                    style=" height: 170px;" />    
+                                                                <div class="middle-photo-overlay">
+                                                                  <div class="text-photo-overlay">Laboratory: A321</div>
+                                                                </div>
+                                                              </div>
+                                                    </a>
 
                                                     {% endfor %}
                                                     <div class="row">
@@ -890,10 +896,17 @@
                                                     {% for classroom in classrooms %}
 
                                                     <a class="prettyphoto col-md-3 col-sm-3 " rel="prettyPhoto[gallery]"
-                                                        title="" href="{{classroom.classroom.url}}"><img
-                                                            class="img-responsive img-thumbnail"
-                                                            src="{{classroom.classroom.url}}" alt=""
-                                                            style=" height: 170px;" /></a>
+                                                        title="" href="{{classroom.classroom.url}}">
+                                                            <div class="container-photo-overlay">
+                                                                <img
+                                                                class="image-photo-overlay img-responsive img-thumbnail"
+                                                                src="{{classroom.classroom.url}}" alt=""
+                                                                style=" height: 170px;" />    
+                                                                <div class="middle-photo-overlay">
+                                                                  <div class="text-photo-overlay">Classroom: A321</div>
+                                                                </div>
+                                                            </div>
+                                                    </a>
 
                                                     {% endfor %}
 
