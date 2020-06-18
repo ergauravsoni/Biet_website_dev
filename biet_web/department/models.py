@@ -376,3 +376,14 @@ class computer_science_dept_book_chapters(models.Model):
 
     def __str__(self):
         return self.name_of_book_chapter 
+
+class computer_science_dept_accreditation(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    designation = models.TextField(blank=True)
+    member_type = models.CharField(max_length=10, choices=(
+        ('PAC', 'Program Assessment Committee (PAC)'), 
+        ('DAB', 'Department Advisory Board (DAB)')), default='DAB')
+        
+    def __str__(self):
+        return self.name + " : " + self.member_type

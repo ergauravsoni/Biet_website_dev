@@ -10,7 +10,7 @@ from .models import computer_science_dept_lab_facilities, computer_science_dept_
 from .models import computer_science_dept_classroom,computer_science_dept_events
 from .models import computer_science_dept_achievements, computer_science_dept_timetable
 from .models import computer_science_dept_research_scholars, computer_science_dept_research_guide,computer_science_dept_laboratory_facilities_gallary
-from .models import computer_science_dept_book_chapters, computer_science_dept_publications
+from .models import computer_science_dept_book_chapters, computer_science_dept_publications, computer_science_dept_accreditation
 # Create your views here.
 
 
@@ -161,7 +161,8 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
-
+        accreditation_data = computer_science_dept_accreditation.objects.all().order_by('sno')
+        
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
                     'activities_data': activities_data,
@@ -169,12 +170,13 @@ def home(request, course, dept):
                     'major_equipments_data': major_equipments_data,
                     'images': images,
                     'timetable_data': timetable_data,
-                     'events': events,
-                     'classrooms': classrooms,
+                    'events': events,
+                    'classrooms': classrooms,
                     'research_data': research_data,
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
-                    'publications_data': publications_data
+                    'publications_data': publications_data,
+                    'accreditation_data': accreditation_data
                 }
 
     elif course == 'UG' and dept == 'EC':
