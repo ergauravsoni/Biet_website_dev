@@ -41,7 +41,7 @@ def faculty(request, course, dept):
         faculties_data = computer_science_dept.objects.all().order_by('image')
     elif course == 'UG' and dept == 'EC':
         faculties_data = electronics_and_communication_dept.objects.all().order_by('image')
-    elif course == 'UG' and dept == 'EEE':
+    elif course == 'UG' and dept == 'EE':
         faculties_data = electrical_and_electronics_dept.objects.all().order_by('image')
     elif course == 'UG' and dept == 'EI':
         faculties_data = biotechnology_dept.objects.all().order_by('image')
@@ -77,7 +77,7 @@ def gallery(request, course, dept):
         images = computer_science_dept_gallery.objects.all()
     elif course == 'UG' and dept == 'EC':
         images = electronics_and_communication_gallery.objects.all()
-    elif course == 'UG' and dept == 'EEE':
+    elif course == 'UG' and dept == 'EE':
         images = electrical_and_electronics_gallery.objects.all()
     elif course == 'UG' and dept == 'EI':
         images = biotechnology_dept.objects.all()
@@ -98,15 +98,40 @@ def home(request, course, dept):
     # print(dept)
 
     if course == 'UG' and dept == 'BT':
+       
         faculties_data = biotechnology_dept.objects.all().order_by('image')
+    
+        content = {'faculties_data': faculties_data
+                }
+                    
     elif course == 'UG' and dept == 'CV':
+        
         faculties_data = civil_dept.objects.all().order_by('image')
+    
+        content = {'faculties_data': faculties_data
+                }
+    
     elif course == 'UG' and dept == 'ME':
+        
         faculties_data = mechanical_dept.objects.all().order_by('image')
+    
+        content = {'faculties_data': faculties_data
+                }    
+    
     elif course == 'UG' and dept == 'CH':
+    
         faculties_data = chemical_dept.objects.all().order_by('image')
+    
+        content = {'faculties_data': faculties_data
+                }    
+    
     elif course == 'UG' and dept == 'CHE':
+        
         faculties_data = chemistry_dept.objects.all().order_by('image')
+    
+        content = {'faculties_data': faculties_data
+                }    
+    
     elif course == 'UG' and dept == 'CS':
 
         faculties_data = computer_science_dept.objects.all().order_by('sno')
@@ -153,23 +178,65 @@ def home(request, course, dept):
                 }
 
     elif course == 'UG' and dept == 'EC':
+        
         faculties_data = electronics_and_communication_dept.objects.all().order_by('image')
-    elif course == 'UG' and dept == 'EEE':
+        
+        content = {'faculties_data': faculties_data
+                }
+        
+    elif course == 'UG' and dept == 'EE':
+
         faculties_data = electrical_and_electronics_dept.objects.all().order_by('image')
+
+        content = {'faculties_data': faculties_data
+                }
+                
     elif course == 'UG' and dept == 'EI':
+        
         faculties_data = biotechnology_dept.objects.all().order_by('image')
+    
+        content = {'faculties_data': faculties_data
+                }    
+    
     elif course == 'UG' and dept == 'IS':
+        
         faculties_data = information_science_dept.objects.all().order_by('image')
+
+        content = {'faculties_data': faculties_data
+                }
+
     elif course == 'UG' and dept == 'MAT':
+        
         faculties_data = mathematics_dept.objects.all().order_by('image')
+    
+        content = {'faculties_data': faculties_data
+                }    
+    
     elif course == 'UG' and dept == 'PHY':
+        
         faculties_data = physics_dept.objects.all().order_by('image')
+
+        content = {'faculties_data': faculties_data
+                }
+
     elif course == 'UG' and dept == 'TX':
+
         faculties_data = textile_dept.objects.all().order_by('image')
 
         for faculty_data in faculties_data:
             print(faculty_data.name, faculty_data.designation,
                   faculty_data.image, faculty_data.detail)
+
+        content = {'faculties_data': faculties_data
+                }
+                
+    elif course == 'UG' and dept == 'BM':
+        
+        faculties_data = physics_dept.objects.all().order_by('image')
+
+        content = {'faculties_data': faculties_data
+                }
+
 
     return render(request, 'department/'+course+'/' + dept + '/home.html', content)
 
