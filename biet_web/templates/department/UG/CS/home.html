@@ -300,7 +300,7 @@
 
                                                         {% for faculty_data in faculties_data %}
 
-                                                        {%  if faculty_data.designation == 'Professor and Head'  %}
+                                                        {%  if faculty_data.staff_type == 'HOD'  %}
 
 
                                                         <div class="col-md-12">
@@ -416,7 +416,7 @@
 
                                                         {% for faculty_data in faculties_data %}
 
-                                                        {%  if faculty_data.designation != 'Professor and Head'  %}
+                                                        {%  if faculty_data.staff_type == 'FACULTY'  %}
 
                                                         <div class="col-md-3 col-sm-3 text-center">
                                                             <div class="album-cover">
@@ -443,10 +443,59 @@
                                                         {% endif %}
                                                         {% endfor %}
                                                     </div>
-                                                    <h3>Non - Teaching Staff</h3>
+                                                    <h3>Technical Staff</h3>
                                                     <div class="row page-row">
 
+                                                        {% for faculty_data in faculties_data %}
 
+                                                        {%  if faculty_data.staff_type == 'TECHNICAL'  %}
+
+                                                        <div class="col-md-3 col-sm-3 text-center">
+                                                            <div class="album-cover">
+                                                                <!-- <a href="#"> -->
+                                                                <img class="img-thumbnail"
+                                                                    src="{{faculty_data.image.url}}" alt=""
+                                                                    style="width:360px;height:300px;">
+
+
+                                                                <!-- </a> -->
+                                                                <div class="desc">
+                                                                    <h5>{{faculty_data.name}}</h5>
+                                                                    <h4><small><a
+                                                                                href="#">{{faculty_data.designation}}</a></small>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                    <h3>Supporting Staff</h3>
+                                                    <div class="row page-row">
+
+                                                        {% for faculty_data in faculties_data %}
+
+                                                        {%  if faculty_data.staff_type == 'SUPPORTING'  %}
+
+                                                        <div class="col-md-3 col-sm-3 text-center">
+                                                            <div class="album-cover">
+                                                                <!-- <a href="#"> -->
+                                                                <img class="img-thumbnail"
+                                                                    src="{{faculty_data.image.url}}" alt=""
+                                                                    style="width:360px;height:300px;">
+
+
+                                                                <!-- </a> -->
+                                                                <div class="desc">
+                                                                    <h5>{{faculty_data.name}}</h5>
+                                                                    <h4><small><a
+                                                                                href="#">{{faculty_data.designation}}</a></small>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
                                                     </div>
                                                 </div>
                                                 <!--//panel-body-->

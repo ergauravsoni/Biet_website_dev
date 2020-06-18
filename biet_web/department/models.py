@@ -92,13 +92,16 @@ class computer_science_dept(models.Model):
     name = models.CharField(max_length=200)
     designation = models.CharField(max_length=200)
     image = models.ImageField(upload_to='department/CS/image/')
-    detail = models.FileField(upload_to='department/CS/data/')
+    detail = models.FileField(upload_to='department/CS/data/',blank='True')
     sno = models.IntegerField()
-    
-
+    staff_type = models.CharField(max_length=100, choices=(
+        ('HOD', 'Head Of Department'),
+        ('FACULTY', 'Faculty Member'), 
+        ('TECHNICAL', 'Technical Staff'),
+        ('SUPPORTING', 'Supporting Staff')), default='FACULTY')
 
     def __str__(self):
-        return '{}'.format(self.name)
+        return '{}'.format(self.name) + " : " + self.staff_type
 
 
 class computer_science_dept_gallery(models.Model):
@@ -381,7 +384,7 @@ class computer_science_dept_accreditation(models.Model):
     sno = models.IntegerField()
     name = models.CharField(max_length=200)
     designation = models.TextField(blank=True)
-    member_type = models.CharField(max_length=10, choices=(
+    member_type = models.CharField(max_length=100, choices=(
         ('PAC', 'Program Assessment Committee (PAC)'), 
         ('DAB', 'Department Advisory Board (DAB)')), default='DAB')
         
