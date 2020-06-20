@@ -13,7 +13,7 @@ class civil_dept(models.Model):
         return '{}'.format(self.name)
 
 
-class civil_depatment_gallery(models.Model):
+class civil_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/CV/')
 
     def __str__(self):
