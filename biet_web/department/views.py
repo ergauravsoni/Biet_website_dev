@@ -41,7 +41,7 @@ def faculty(request, course, dept):
         faculties_data = computer_science_dept.objects.all().order_by('image')
     elif course == 'UG' and dept == 'EC':
         faculties_data = electronics_and_communication_dept.objects.all().order_by('image')
-    elif course == 'UG' and dept == 'EEE':
+    elif course == 'UG' and dept == 'EE':
         faculties_data = electrical_and_electronics_dept.objects.all().order_by('image')
     elif course == 'UG' and dept == 'EI':
         faculties_data = biotechnology_dept.objects.all().order_by('image')
@@ -77,7 +77,7 @@ def gallery(request, course, dept):
         images = computer_science_dept_gallery.objects.all()
     elif course == 'UG' and dept == 'EC':
         images = electronics_and_communication_gallery.objects.all()
-    elif course == 'UG' and dept == 'EEE':
+    elif course == 'UG' and dept == 'EE':
         images = electrical_and_electronics_gallery.objects.all()
     elif course == 'UG' and dept == 'EI':
         images = biotechnology_dept.objects.all()
@@ -98,15 +98,130 @@ def home(request, course, dept):
     # print(dept)
 
     if course == 'UG' and dept == 'BT':
+       
         faculties_data = biotechnology_dept.objects.all().order_by('image')
+    
+        content = {'faculties_data': faculties_data
+                }
+                    
     elif course == 'UG' and dept == 'CV':
+        
         faculties_data = civil_dept.objects.all().order_by('image')
+        achievements_data = civil_science_dept_achievements.objects.all()
+        activities_data = civil_science_dept_activities.objects.all().order_by('sno')
+        lab_facilities_data = civil_science_dept_lab_facilities.objects.all().order_by('sno')
+        major_equipments_data = civil_science_dept_major_equipments.objects.all()
+        images = civil_science_dept_gallery.objects.all()
+        timetable_data = civil_science_dept_timetable.objects.order_by('semester', 'section')
+        events = civil_science_dept_events.objects.all()
+        classrooms = civil_science_dept_classroom.objects.all()
+        laboratory_facilities_gallary = civil_science_dept_laboratory_facilities_gallary.objects.all()
+        research_scholar_data = civil_science_dept_research_scholars.objects.all().order_by('guide')
+        research_guide_data = civil_science_dept_research_guide.objects.all().order_by('sno')
+        book_chapters_data = civil_science_dept_book_chapters.objects.all()
+        publications_data = civil_science_dept_publications.objects.all()
+        research_data = []
+        guide_count = research_guide_data.count()
+        
+        for i in range(guide_count):
+            research_data.append(research_scholar_data.filter(guide_id=i+1))
+    
+        content = {'faculties_data': faculties_data
+                    'achievements_data': achievements_data,
+                    'activities_data': activities_data,
+                    'lab_facilities_data': lab_facilities_data,
+                    'major_equipments_data': major_equipments_data,
+                    'images': images,
+                    'timetable_data': timetable_data,
+                     'events': events,
+                     'classrooms': classrooms,
+                    'research_data': research_data,
+                    'laboratory_facilities_gallary' : laboratory_facilities_gallary,
+                    'book_chapters_data': book_chapters_data,
+                    'publications_data': publications_data
+                }
+    
     elif course == 'UG' and dept == 'ME':
+        
         faculties_data = mechanical_dept.objects.all().order_by('image')
+        achievements_data = mechanical_science_dept_achievements.objects.all()
+        activities_data = mechanical_science_dept_activities.objects.all().order_by('sno')
+        lab_facilities_data = mechanical_science_dept_lab_facilities.objects.all().order_by('sno')
+        major_equipments_data = mechanical_science_dept_major_equipments.objects.all()
+        images = mechanical_science_dept_gallery.objects.all()
+        timetable_data = mechanical_science_dept_timetable.objects.order_by('semester', 'section')
+        events = mechanical_science_dept_events.objects.all()
+        classrooms = mechanical_science_dept_classroom.objects.all()
+        laboratory_facilities_gallary = mechanical_science_dept_laboratory_facilities_gallary.objects.all()
+        research_scholar_data = mechanical_science_dept_research_scholars.objects.all().order_by('guide')
+        research_guide_data = mechanical_science_dept_research_guide.objects.all().order_by('sno')
+        book_chapters_data = mechanical_science_dept_book_chapters.objects.all()
+        publications_data = mechanical_science_dept_publications.objects.all()
+        research_data = []
+        guide_count = research_guide_data.count()
+        
+        for i in range(guide_count):
+            research_data.append(research_scholar_data.filter(guide_id=i+1))
+    
+        content = {'faculties_data': faculties_data
+                    'achievements_data': achievements_data,
+                    'activities_data': activities_data,
+                    'lab_facilities_data': lab_facilities_data,
+                    'major_equipments_data': major_equipments_data,
+                    'images': images,
+                    'timetable_data': timetable_data,
+                     'events': events,
+                     'classrooms': classrooms,
+                    'research_data': research_data,
+                    'laboratory_facilities_gallary' : laboratory_facilities_gallary,
+                    'book_chapters_data': book_chapters_data,
+                    'publications_data': publications_data
+                }    
+    
     elif course == 'UG' and dept == 'CH':
+    
         faculties_data = chemical_dept.objects.all().order_by('image')
+    
+        content = {'faculties_data': faculties_data
+                }    
+    
     elif course == 'UG' and dept == 'CHE':
+        
         faculties_data = chemistry_dept.objects.all().order_by('image')
+        achievements_data = chemistry_science_dept_achievements.objects.all()
+        activities_data = chemistry_science_dept_activities.objects.all().order_by('sno')
+        lab_facilities_data = chemistry_science_dept_lab_facilities.objects.all().order_by('sno')
+        major_equipments_data = chemistry_science_dept_major_equipments.objects.all()
+        images = chemistry_science_dept_gallery.objects.all()
+        timetable_data = chemistry_science_dept_timetable.objects.order_by('semester', 'section')
+        events = chemistry_science_dept_events.objects.all()
+        classrooms = chemistry_science_dept_classroom.objects.all()
+        laboratory_facilities_gallary = chemistry_science_dept_laboratory_facilities_gallary.objects.all()
+        research_scholar_data = chemistry_science_dept_research_scholars.objects.all().order_by('guide')
+        research_guide_data = chemistry_science_dept_research_guide.objects.all().order_by('sno')
+        book_chapters_data = chemistry_science_dept_book_chapters.objects.all()
+        publications_data = chemistry_science_dept_publications.objects.all()
+        research_data = []
+        guide_count = research_guide_data.count()
+        
+        for i in range(guide_count):
+            research_data.append(research_scholar_data.filter(guide_id=i+1))
+    
+        content = {'faculties_data': faculties_data
+                    'achievements_data': achievements_data,
+                    'activities_data': activities_data,
+                    'lab_facilities_data': lab_facilities_data,
+                    'major_equipments_data': major_equipments_data,
+                    'images': images,
+                    'timetable_data': timetable_data,
+                     'events': events,
+                     'classrooms': classrooms,
+                    'research_data': research_data,
+                    'laboratory_facilities_gallary' : laboratory_facilities_gallary,
+                    'book_chapters_data': book_chapters_data,
+                    'publications_data': publications_data
+                }    
+    
     elif course == 'UG' and dept == 'CS':
 
         faculties_data = computer_science_dept.objects.all().order_by('sno')
@@ -115,8 +230,7 @@ def home(request, course, dept):
         lab_facilities_data = computer_science_dept_lab_facilities.objects.all().order_by('sno')
         major_equipments_data = computer_science_dept_major_equipments.objects.all()
         images = computer_science_dept_gallery.objects.all()
-        timetable_data = computer_science_dept_timetable.objects.order_by(
-            'semester', 'section')
+        timetable_data = computer_science_dept_timetable.objects.order_by('semester', 'section')
 
 
         events = computer_science_dept_events.objects.all()
@@ -153,23 +267,125 @@ def home(request, course, dept):
                 }
 
     elif course == 'UG' and dept == 'EC':
+        
         faculties_data = electronics_and_communication_dept.objects.all().order_by('image')
-    elif course == 'UG' and dept == 'EEE':
+        
+        content = {'faculties_data': faculties_data
+                }
+        
+    elif course == 'UG' and dept == 'EE':
+
         faculties_data = electrical_and_electronics_dept.objects.all().order_by('image')
+
+        content = {'faculties_data': faculties_data
+                }
+                
     elif course == 'UG' and dept == 'EI':
+        
         faculties_data = biotechnology_dept.objects.all().order_by('image')
+    
+        content = {'faculties_data': faculties_data
+                }    
+    
     elif course == 'UG' and dept == 'IS':
+        
         faculties_data = information_science_dept.objects.all().order_by('image')
+
+        content = {'faculties_data': faculties_data
+                }
+
     elif course == 'UG' and dept == 'MAT':
+        
         faculties_data = mathematics_dept.objects.all().order_by('image')
+        achievements_data = mathematics_science_dept_achievements.objects.all()
+        activities_data = mathematics_science_dept_activities.objects.all().order_by('sno')
+        lab_facilities_data = mathematics_science_dept_lab_facilities.objects.all().order_by('sno')
+        major_equipments_data = mathematics_science_dept_major_equipments.objects.all()
+        images = mathematics_science_dept_gallery.objects.all()
+        timetable_data = mathematics_science_dept_timetable.objects.order_by('semester', 'section')
+        events = mathematics_science_dept_events.objects.all()
+        classrooms = mathematics_science_dept_classroom.objects.all()
+        laboratory_facilities_gallary = mathematics_science_dept_laboratory_facilities_gallary.objects.all()
+        research_scholar_data = mathematics_science_dept_research_scholars.objects.all().order_by('guide')
+        research_guide_data = mathematics_science_dept_research_guide.objects.all().order_by('sno')
+        book_chapters_data = mathematics_science_dept_book_chapters.objects.all()
+        publications_data = mathematics_science_dept_publications.objects.all()
+        research_data = []
+        guide_count = research_guide_data.count()
+        
+        for i in range(guide_count):
+            research_data.append(research_scholar_data.filter(guide_id=i+1))
+    
+        content = {'faculties_data': faculties_data
+                    'achievements_data': achievements_data,
+                    'activities_data': activities_data,
+                    'lab_facilities_data': lab_facilities_data,
+                    'major_equipments_data': major_equipments_data,
+                    'images': images,
+                    'timetable_data': timetable_data,
+                     'events': events,
+                     'classrooms': classrooms,
+                    'research_data': research_data,
+                    'laboratory_facilities_gallary' : laboratory_facilities_gallary,
+                    'book_chapters_data': book_chapters_data,
+                    'publications_data': publications_data
+                }    
+    
     elif course == 'UG' and dept == 'PHY':
+        
         faculties_data = physics_dept.objects.all().order_by('image')
+        achievements_data = physics_science_dept_achievements.objects.all()
+        activities_data = physics_science_dept_activities.objects.all().order_by('sno')
+        lab_facilities_data = physics_science_dept_lab_facilities.objects.all().order_by('sno')
+        major_equipments_data = physics_science_dept_major_equipments.objects.all()
+        images = physics_science_dept_gallery.objects.all()
+        timetable_data = physics_science_dept_timetable.objects.order_by('semester', 'section')
+        events = physics_science_dept_events.objects.all()
+        classrooms = physics_science_dept_classroom.objects.all()
+        laboratory_facilities_gallary = physics_science_dept_laboratory_facilities_gallary.objects.all()
+        research_scholar_data = physics_science_dept_research_scholars.objects.all().order_by('guide')
+        research_guide_data = physics_science_dept_research_guide.objects.all().order_by('sno')
+        book_chapters_data = physics_science_dept_book_chapters.objects.all()
+        publications_data = physics_science_dept_publications.objects.all()
+        research_data = []
+        guide_count = research_guide_data.count()
+        
+        for i in range(guide_count):
+            research_data.append(research_scholar_data.filter(guide_id=i+1))
+
+        content = {'faculties_data': faculties_data
+                    'achievements_data': achievements_data,
+                    'activities_data': activities_data,
+                    'lab_facilities_data': lab_facilities_data,
+                    'major_equipments_data': major_equipments_data,
+                    'images': images,
+                    'timetable_data': timetable_data,
+                     'events': events,
+                     'classrooms': classrooms,
+                    'research_data': research_data,
+                    'laboratory_facilities_gallary' : laboratory_facilities_gallary,
+                    'book_chapters_data': book_chapters_data,
+                    'publications_data': publications_data
+                }
+
     elif course == 'UG' and dept == 'TX':
+
         faculties_data = textile_dept.objects.all().order_by('image')
 
         for faculty_data in faculties_data:
             print(faculty_data.name, faculty_data.designation,
                   faculty_data.image, faculty_data.detail)
+
+        content = {'faculties_data': faculties_data
+                }
+                
+    elif course == 'UG' and dept == 'BM':
+        
+        faculties_data = physics_dept.objects.all().order_by('image')
+
+        content = {'faculties_data': faculties_data
+                }
+
 
     return render(request, 'department/'+course+'/' + dept + '/home.html', content)
 
