@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Academic_Calender
+from .models import Academic_Calender, Office_Staff,EOA
 
 # Create your views here.
 def Bapuji_educational_association(request):
@@ -36,6 +36,12 @@ def director_msg(request):
 def principal_msg(request):
     return render(request,'about_biet/principal_msg.html')
 
+def chairman_msg(request):
+    return render(request,'about_biet/chairman_msg.html')
+
+def office(request):
+    office_member_data = Office_Staff.objects.all().order_by('sno')
+    return render(request,'about_biet/office.html',{'office_member_data' : office_member_data})
 def aicte(request):
-    # eoas = EOA.objects.all()
+    eoas = EOA.objects.all()
     return render(request,'about_biet/aicte.html')

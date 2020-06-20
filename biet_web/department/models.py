@@ -92,13 +92,16 @@ class computer_science_dept(models.Model):
     name = models.CharField(max_length=200)
     designation = models.CharField(max_length=200)
     image = models.ImageField(upload_to='department/CS/image/')
-    detail = models.FileField(upload_to='department/CS/data/')
+    detail = models.FileField(upload_to='department/CS/data/',blank='True')
     sno = models.IntegerField()
-    
-
+    staff_type = models.CharField(max_length=100, choices=(
+        ('HOD', 'Head Of Department'),
+        ('FACULTY', 'Faculty Member'), 
+        ('TECHNICAL', 'Technical Staff'),
+        ('SUPPORTING', 'Supporting Staff')), default='FACULTY')
 
     def __str__(self):
-        return '{}'.format(self.name)
+        return '{}'.format(self.name) + " : " + self.staff_type
 
 
 class computer_science_dept_gallery(models.Model):
@@ -349,3 +352,41 @@ class computer_science_dept_laboratory_facilities_gallary(models.Model):
 
     def __str__(self):
         return '{}'.format(self.image)
+
+class computer_science_dept_publications(models.Model):
+    name_of_faculty = models.CharField(max_length=100)
+    y15 = models.IntegerField(blank=True,null=True)
+    y16 = models.IntegerField(blank=True,null=True)
+    y17 = models.IntegerField(blank=True,null=True)
+    y18 = models.IntegerField(blank=True,null=True)
+    y19 = models.IntegerField(blank=True,null=True)
+    national_or_inter = models.CharField(max_length=13)
+    indexing = models.CharField(max_length=500, blank=True,null=True)
+    citations = models.IntegerField(blank=True,null=True)
+    impact_factor = models.CharField(max_length=80, blank=True,null=True)
+    i10_index = models.IntegerField(blank=True,null=True)
+    h_index = models.IntegerField(blank=True,null=True)
+
+    def __str__(self):
+        return self.name_of_faculty
+
+class computer_science_dept_book_chapters(models.Model):
+    sl_no = models.IntegerField()
+    name_of_book_chapter = models.CharField(max_length=500)
+    names_of_authors = models.CharField(max_length=500)
+    year_of_pub = models.IntegerField()
+    name_of_pub = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name_of_book_chapter 
+
+class computer_science_dept_accreditation(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    designation = models.TextField(blank=True)
+    member_type = models.CharField(max_length=100, choices=(
+        ('PAC', 'Program Assessment Committee (PAC)'), 
+        ('DAB', 'Department Advisory Board (DAB)')), default='DAB')
+        
+    def __str__(self):
+        return self.name + " : " + self.member_type

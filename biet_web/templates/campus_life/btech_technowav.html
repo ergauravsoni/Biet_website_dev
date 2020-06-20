@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<!-- ******CONTENT****** -->
+<div class="content container bgdata">
+    <div class="page-wrapper">
+        <header class="page-heading clearfix">
+            <strong>
+                <h1 class="textColorCustom" style="font-weight: 600">BTECH VOICE </h1>
+            </strong>
+
+        </header>
+        <div class="page-content">
+            <div class="row page-row">
+                <article class="welcome col-md-12 col-sm-11">
+                    {% for calender in btech_technowav_data %}
+                    {% if calender.type_id == 'btech' %}
+                    <section class="widget has-divider">
+                        <h3 class="title">Download Academic Calender</h3>
+                        <p>Click the link below to download the Academic Calender</p>
+                        <a class="btn btn-theme" href="{{calender.btech_technowav.url}}" target="_blank"><i
+                                class="fa fa-download"></i>Download now</a>
+                        <a href="{{calender.btech_technowav.url}}" class="btn btn-theme view-pdf"><i
+                                class="fa fa-eye"></i>View
+                            now</a>
+                    </section>
+                    {% endif %}
+                    {% endfor %}
+
+                </article>
+                <!--//page-content-->
+
+            </div>
+            <!--//page-row-->
+        </div>
+
+        <header class="page-heading clearfix">
+            <strong>
+                <h1 class="textColorCustom" style="font-weight: 600"> TECHNOWAVE</h1>
+            </strong>
+
+        </header>
+        <div class="page-content">
+            <div class="row page-row">
+                <article class="welcome col-md-12 col-sm-11">
+                    {% for calender in btech_technowav_data %}
+                    {% if calender.type_id == 'technowav' %}
+                    <section class="widget has-divider">
+                        <h3 class="title">Download Academic Calender</h3>
+                        <p>Click the link below to download the Academic Calender</p>
+                        <a class="btn btn-theme" href="{{calender.btech_technowav.url}}" target="_blank"><i
+                                class="fa fa-download"></i>Download now</a>
+                        <a href="{{calender.btech_technowav.url}}" class="btn btn-theme view-pdf"><i
+                                class="fa fa-eye"></i>View
+                            now</a>
+                    </section>
+                    {% endif %}
+
+                    {% endfor %}
+
+                </article>
+                <!--//page-content-->
+
+            </div>
+            <!--//page-row-->
+        </div>
+        <!--//page-content-->
+    </div>
+    <!--//page-->
+</div>
+<!--//content-->
+</div>
+<!--//wrapper-->
+
+{% endblock %}
