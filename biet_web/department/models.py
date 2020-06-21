@@ -1058,7 +1058,7 @@ class mca_dept_laboratory_facilities_gallary(models.Model):
     def __str__(self):
         return '{}'.format(self.image)
 
-class cmca_dept_publications(models.Model):
+class mca_dept_publications(models.Model):
     name_of_faculty = models.CharField(max_length=100)
     y15 = models.IntegerField(blank=True,null=True)
     y16 = models.IntegerField(blank=True,null=True)
