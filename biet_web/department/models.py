@@ -390,7 +390,18 @@ class computer_science_dept_accreditation(models.Model):
 
     def __str__(self):
         return self.name + " : " + self.member_type
+
 class civil_dept_lab_facilities(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    qty = models.IntegerField()
+    config_specs = models.TextField()
+    softwares = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+class information_science_dept_lab_facilities(models.Model):
     sno = models.IntegerField()
     name = models.CharField(max_length=200)
     qty = models.IntegerField()
@@ -407,8 +418,24 @@ class civil_dept_major_equipments(models.Model):
     def __str__(self):
         return self.equipment_description[:50] + "..."
 
+class information_science_dept_major_equipments(models.Model):
+    equipment_description = models.TextField()
+
+    def __str__(self):
+        return self.equipment_description[:50] + "..."
+
 
 class civil_dept_activities(models.Model):
+    sno = models.IntegerField()
+    activity_name = models.CharField(max_length=200)
+    activity_description = models.TextField()
+    activity_type = models.CharField(max_length=500, choices=(
+        ('RE', 'Regular Event'), ('STC', 'Short-term Course')), default='RE')
+
+    def __str__(self):
+        return self.activity_name
+
+class information_science_dept_activities(models.Model):
     sno = models.IntegerField()
     activity_name = models.CharField(max_length=200)
     activity_description = models.TextField()
@@ -427,13 +454,31 @@ class civil_dept_achievements(models.Model):
     def __str__(self):
         return self.achievement_description[:50] + "..."
 
+class information_science_dept_achievements(models.Model):
+    achievement_description = models.TextField()
+    achievement_type = models.CharField(max_length=500, choices=(
+        ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
+
+    def __str__(self):
+        return self.achievement_description[:50] + "..."
+
 
 class civil_dept_timetable(models.Model):
     course = models.CharField(max_length=100, choices=(
         ('BE', 'B.E.'), ('MT', 'M.Tech')), default='BE')
     semester = models.IntegerField()
     section = models.CharField(max_length=1)
-    timetable = models.FileField(upload_to='department/CS/data/timetable/')
+    timetable = models.FileField(upload_to='department/CV/data/timetable/')
+
+    def __str__(self):
+        return self.course + ": " + str(self.semester) + "-" + self.section
+
+class information_science_dept_timetable(models.Model):
+    course = models.CharField(max_length=100, choices=(
+        ('BE', 'B.E.'), ('MT', 'M.Tech')), default='BE')
+    semester = models.IntegerField()
+    section = models.CharField(max_length=1)
+    timetable = models.FileField(upload_to='department/IS/data/timetable/')
 
     def __str__(self):
         return self.course + ": " + str(self.semester) + "-" + self.section
@@ -447,6 +492,14 @@ class civil_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class information_science_dept_events(models.Model):
+    events = models.FileField(upload_to='department/IS/data/events/')
+    semester = models.CharField(max_length=10)
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return '{}'.format(self.events)
+
 
 class civil_dept_classroom(models.Model):
     classroom = models.FileField(upload_to='department/CS/data/classroom/')
@@ -454,8 +507,21 @@ class civil_dept_classroom(models.Model):
     def __str__(self):
         return '{}'.format(self.classroom)
 
+class information_science_dept_classroom(models.Model):
+    classroom = models.FileField(upload_to='department/IS/data/classroom/')
+
+    def __str__(self):
+        return '{}'.format(self.classroom)
+
 
 class civil_dept_research_guide(models.Model):
+    sno = models.IntegerField(primary_key=True)
+    guide_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.guide_name
+
+class information_science_dept_research_guide(models.Model):
     sno = models.IntegerField(primary_key=True)
     guide_name = models.CharField(max_length=100)
 
@@ -483,14 +549,43 @@ class civil_dept_research_scholars(models.Model):
     submitted_final_thesis = models.CharField(
         max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
     phD_awarded_year = models.IntegerField(choices=year_choices, default=0)
-    guide = models.ForeignKey(
-        computer_science_dept_research_guide, on_delete=models.CASCADE)
+    guide = models.ForeignKey(computer_science_dept_research_guide, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.research_scholar_name
+
+class information_science_dept_research_scholars(models.Model):
+
+    year_choices_array = []
+    for year in range(1979, 2021):
+        year_choices_array.append((year, year))
+    year_choices_array.append((0, 'NA'))
+    year_choices = tuple(year_choices_array)
+    research_scholar_name = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
+    year_of_regn = models.IntegerField(choices=year_choices, default=0)
+    phD = models.CharField(max_length=10, choices=(
+        ('PHD', 'Ph.D.'), ('(PHD)', '(Ph.D.)')), default='(PHD)')
+    course_work_completed = models.CharField(
+        max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+    pre_phD_viva_voce = models.CharField(
+        max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+    submitted_final_thesis = models.CharField(
+        max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+    phD_awarded_year = models.IntegerField(choices=year_choices, default=0)
+    guide = models.ForeignKey(information_science_dept_research_guide, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.research_scholar_name
 
 class civil_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/CS/laboratory/')
+
+    def __str__(self):
+        return '{}'.format(self.image)
+
+class information_science_dept_laboratory_facilities_gallary(models.Model):
+    image = models.ImageField(upload_to='department/gallery/IS/laboratory/')
 
     def __str__(self):
         return '{}'.format(self.image)
@@ -512,7 +607,34 @@ class civil_dept_publications(models.Model):
     def __str__(self):
         return self.name_of_faculty
 
+class information_science_dept_publications(models.Model):
+    name_of_faculty = models.CharField(max_length=100)
+    y15 = models.IntegerField(blank=True,null=True)
+    y16 = models.IntegerField(blank=True,null=True)
+    y17 = models.IntegerField(blank=True,null=True)
+    y18 = models.IntegerField(blank=True,null=True)
+    y19 = models.IntegerField(blank=True,null=True)
+    national_or_inter = models.CharField(max_length=13)
+    indexing = models.CharField(max_length=500, blank=True,null=True)
+    citations = models.IntegerField(blank=True,null=True)
+    impact_factor = models.CharField(max_length=80, blank=True,null=True)
+    i10_index = models.IntegerField(blank=True,null=True)
+    h_index = models.IntegerField(blank=True,null=True)
+
+    def __str__(self):
+        return self.name_of_faculty
+
 class civil_dept_book_chapters(models.Model):
+    sl_no = models.IntegerField()
+    name_of_book_chapter = models.CharField(max_length=500)
+    names_of_authors = models.CharField(max_length=500)
+    year_of_pub = models.IntegerField()
+    name_of_pub = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name_of_book_chapter
+
+class information_science_dept_book_chapters(models.Model):
     sl_no = models.IntegerField()
     name_of_book_chapter = models.CharField(max_length=500)
     names_of_authors = models.CharField(max_length=500)
@@ -664,6 +786,27 @@ class chemistry_dept_lab_facilities(models.Model):
     def __str__(self):
         return self.name
 
+class information_science_dept_accreditation(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    designation = models.TextField(blank=True)
+    member_type = models.CharField(max_length=100, choices=(
+        ('PAC', 'Program Assessment Committee (PAC)'),
+        ('DAB', 'Department Advisory Board (DAB)')), default='DAB')
+
+    def __str__(self):
+        return self.name + " : " + self.member_type
+
+class electronics_and_communication_dept_lab_facilities(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    qty = models.IntegerField()
+    config_specs = models.TextField()
+    softwares = models.TextField()
+
+    def __str__(self):
+        return self.name
+
 
 class chemistry_dept_major_equipments(models.Model):
     equipment_description = models.TextField()
@@ -671,8 +814,24 @@ class chemistry_dept_major_equipments(models.Model):
     def __str__(self):
         return self.equipment_description[:50] + "..."
 
+class electronics_and_communication_dept_major_equipments(models.Model):
+    equipment_description = models.TextField()
+
+    def __str__(self):
+        return self.equipment_description[:50] + "..."
+
 
 class chemistry_dept_activities(models.Model):
+    sno = models.IntegerField()
+    activity_name = models.CharField(max_length=200)
+    activity_description = models.TextField()
+    activity_type = models.CharField(max_length=500, choices=(
+        ('RE', 'Regular Event'), ('STC', 'Short-term Course')), default='RE')
+
+    def __str__(self):
+        return self.activity_name
+
+class electronics_and_communication_dept_activities(models.Model):
     sno = models.IntegerField()
     activity_name = models.CharField(max_length=200)
     activity_description = models.TextField()
@@ -691,6 +850,14 @@ class chemistry_dept_achievements(models.Model):
     def __str__(self):
         return self.achievement_description[:50] + "..."
 
+class electronics_and_communication_dept_achievements(models.Model):
+    achievement_description = models.TextField()
+    achievement_type = models.CharField(max_length=500, choices=(
+        ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
+
+    def __str__(self):
+        return self.achievement_description[:50] + "..."
+
 
 class chemistry_dept_timetable(models.Model):
     course = models.CharField(max_length=100, choices=(
@@ -698,6 +865,16 @@ class chemistry_dept_timetable(models.Model):
     semester = models.IntegerField()
     section = models.CharField(max_length=1)
     timetable = models.FileField(upload_to='department/CS/data/timetable/')
+
+    def __str__(self):
+        return self.course + ": " + str(self.semester) + "-" + self.section
+
+class electronics_and_communication_dept_timetable(models.Model):
+    course = models.CharField(max_length=100, choices=(
+        ('BE', 'B.E.'), ('MT', 'M.Tech')), default='BE')
+    semester = models.IntegerField()
+    section = models.CharField(max_length=1)
+    timetable = models.FileField(upload_to='department/EC/data/timetable/')
 
     def __str__(self):
         return self.course + ": " + str(self.semester) + "-" + self.section
@@ -711,9 +888,23 @@ class chemistry_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class electronics_and_communication_dept_events(models.Model):
+    events = models.FileField(upload_to='department/EC/data/events/')
+    semester = models.CharField(max_length=10)
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return '{}'.format(self.events)
+
 
 class chemistry_dept_classroom(models.Model):
     classroom = models.FileField(upload_to='department/CS/data/classroom/')
+
+    def __str__(self):
+        return '{}'.format(self.classroom)
+
+class electronics_and_communication_dept_classroom(models.Model):
+    classroom = models.FileField(upload_to='department/EC/data/classroom/')
 
     def __str__(self):
         return '{}'.format(self.classroom)
@@ -726,9 +917,38 @@ class chemistry_dept_research_guide(models.Model):
     def __str__(self):
         return self.guide_name
 
+class electronics_and_communication_dept_research_guide(models.Model):
+    sno = models.IntegerField(primary_key=True)
+    guide_name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.guide_name
 
 class chemistry_dept_research_scholars(models.Model):
+
+        year_choices_array = []
+        for year in range(1979, 2021):
+            year_choices_array.append((year, year))
+        year_choices_array.append((0, 'NA'))
+        year_choices = tuple(year_choices_array)
+        research_scholar_name = models.CharField(max_length=100)
+        department = models.CharField(max_length=100)
+        year_of_regn = models.IntegerField(choices=year_choices, default=0)
+        phD = models.CharField(max_length=10, choices=(
+            ('PHD', 'Ph.D.'), ('(PHD)', '(Ph.D.)')), default='(PHD)')
+        course_work_completed = models.CharField(
+            max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+        pre_phD_viva_voce = models.CharField(
+            max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+        submitted_final_thesis = models.CharField(
+            max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+        phD_awarded_year = models.IntegerField(choices=year_choices, default=0)
+        guide = models.ForeignKey(computer_science_dept_research_guide, on_delete=models.CASCADE)
+
+        def __str__(self):
+            return self.research_scholar_name
+
+class electronics_and_communication_dept_research_scholars(models.Model):
 
     year_choices_array = []
     for year in range(1979, 2021):
@@ -747,8 +967,7 @@ class chemistry_dept_research_scholars(models.Model):
     submitted_final_thesis = models.CharField(
         max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
     phD_awarded_year = models.IntegerField(choices=year_choices, default=0)
-    guide = models.ForeignKey(
-        computer_science_dept_research_guide, on_delete=models.CASCADE)
+    guide = models.ForeignKey(electronics_and_communication_dept_research_guide, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.research_scholar_name
@@ -759,7 +978,30 @@ class chemistry_dept_laboratory_facilities_gallary(models.Model):
     def __str__(self):
         return '{}'.format(self.image)
 
+class electronics_and_communication_dept_laboratory_facilities_gallary(models.Model):
+    image = models.ImageField(upload_to='department/gallery/EC/laboratory/')
+
+    def __str__(self):
+        return '{}'.format(self.image)
+
 class chemistry_dept_publications(models.Model):
+    name_of_faculty = models.CharField(max_length=100)
+    y15 = models.IntegerField(blank=True,null=True)
+    y16 = models.IntegerField(blank=True,null=True)
+    y17 = models.IntegerField(blank=True,null=True)
+    y18 = models.IntegerField(blank=True,null=True)
+    y19 = models.IntegerField(blank=True,null=True)
+    national_or_inter = models.CharField(max_length=13)
+    indexing = models.CharField(max_length=500, blank=True,null=True)
+    citations = models.IntegerField(blank=True,null=True)
+    impact_factor = models.CharField(max_length=80, blank=True,null=True)
+    i10_index = models.IntegerField(blank=True,null=True)
+    h_index = models.IntegerField(blank=True,null=True)
+
+    def __str__(self):
+        return self.name_of_faculty
+
+class electronics_and_communication_dept_publications(models.Model):
     name_of_faculty = models.CharField(max_length=100)
     y15 = models.IntegerField(blank=True,null=True)
     y16 = models.IntegerField(blank=True,null=True)
@@ -786,7 +1028,38 @@ class chemistry_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class electronics_and_communication_dept_book_chapters(models.Model):
+    sl_no = models.IntegerField()
+    name_of_book_chapter = models.CharField(max_length=500)
+    names_of_authors = models.CharField(max_length=500)
+    year_of_pub = models.IntegerField()
+    name_of_pub = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name_of_book_chapter
+
 class physics_dept_lab_facilities(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    qty = models.IntegerField()
+    config_specs = models.TextField()
+    softwares = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+class electronics_and_communication_dept_accreditation(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    designation = models.TextField(blank=True)
+    member_type = models.CharField(max_length=100, choices=(
+        ('PAC', 'Program Assessment Committee (PAC)'),
+        ('DAB', 'Department Advisory Board (DAB)')), default='DAB')
+
+    def __str__(self):
+        return self.name + " : " + self.member_type
+
+class electrical_and_electronics_dept_lab_facilities(models.Model):
     sno = models.IntegerField()
     name = models.CharField(max_length=200)
     qty = models.IntegerField()
@@ -803,8 +1076,24 @@ class physics_dept_major_equipments(models.Model):
     def __str__(self):
         return self.equipment_description[:50] + "..."
 
+class electrical_and_electronics_dept_major_equipments(models.Model):
+    equipment_description = models.TextField()
+
+    def __str__(self):
+        return self.equipment_description[:50] + "..."
+
 
 class physics_dept_activities(models.Model):
+    sno = models.IntegerField()
+    activity_name = models.CharField(max_length=200)
+    activity_description = models.TextField()
+    activity_type = models.CharField(max_length=500, choices=(
+        ('RE', 'Regular Event'), ('STC', 'Short-term Course')), default='RE')
+
+    def __str__(self):
+        return self.activity_name
+
+class electrical_and_electronics_dept_activities(models.Model):
     sno = models.IntegerField()
     activity_name = models.CharField(max_length=200)
     activity_description = models.TextField()
@@ -823,6 +1112,14 @@ class physics_dept_achievements(models.Model):
     def __str__(self):
         return self.achievement_description[:50] + "..."
 
+class electrical_and_electronics_dept_achievements(models.Model):
+    achievement_description = models.TextField()
+    achievement_type = models.CharField(max_length=500, choices=(
+        ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
+
+    def __str__(self):
+        return self.achievement_description[:50] + "..."
+
 
 class physics_dept_timetable(models.Model):
     course = models.CharField(max_length=100, choices=(
@@ -830,6 +1127,16 @@ class physics_dept_timetable(models.Model):
     semester = models.IntegerField()
     section = models.CharField(max_length=1)
     timetable = models.FileField(upload_to='department/CS/data/timetable/')
+
+    def __str__(self):
+        return self.course + ": " + str(self.semester) + "-" + self.section
+
+class electrical_and_electronics_dept_timetable(models.Model):
+    course = models.CharField(max_length=100, choices=(
+        ('BE', 'B.E.'), ('MT', 'M.Tech')), default='BE')
+    semester = models.IntegerField()
+    section = models.CharField(max_length=1)
+    timetable = models.FileField(upload_to='department/EE/data/timetable/')
 
     def __str__(self):
         return self.course + ": " + str(self.semester) + "-" + self.section
@@ -843,6 +1150,14 @@ class physics_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class electrical_and_electronics_dept_events(models.Model):
+    events = models.FileField(upload_to='department/EE/data/events/')
+    semester = models.CharField(max_length=10)
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return '{}'.format(self.events)
+
 
 class physics_dept_classroom(models.Model):
     classroom = models.FileField(upload_to='department/CS/data/classroom/')
@@ -850,8 +1165,21 @@ class physics_dept_classroom(models.Model):
     def __str__(self):
         return '{}'.format(self.classroom)
 
+class electrical_and_electronics_dept_classroom(models.Model):
+    classroom = models.FileField(upload_to='department/EE/data/classroom/')
+
+    def __str__(self):
+        return '{}'.format(self.classroom)
+
 
 class physics_dept_research_guide(models.Model):
+    sno = models.IntegerField(primary_key=True)
+    guide_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.guide_name
+
+class electrical_and_electronics_dept_research_guide(models.Model):
     sno = models.IntegerField(primary_key=True)
     guide_name = models.CharField(max_length=100)
 
@@ -879,8 +1207,31 @@ class physics_dept_research_scholars(models.Model):
     submitted_final_thesis = models.CharField(
         max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
     phD_awarded_year = models.IntegerField(choices=year_choices, default=0)
-    guide = models.ForeignKey(
-        computer_science_dept_research_guide, on_delete=models.CASCADE)
+    guide = models.ForeignKey(computer_science_dept_research_guide, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.research_scholar_name
+
+class electrical_and_electronics_dept_research_scholars(models.Model):
+
+    year_choices_array = []
+    for year in range(1979, 2021):
+        year_choices_array.append((year, year))
+    year_choices_array.append((0, 'NA'))
+    year_choices = tuple(year_choices_array)
+    research_scholar_name = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
+    year_of_regn = models.IntegerField(choices=year_choices, default=0)
+    phD = models.CharField(max_length=10, choices=(
+        ('PHD', 'Ph.D.'), ('(PHD)', '(Ph.D.)')), default='(PHD)')
+    course_work_completed = models.CharField(
+        max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+    pre_phD_viva_voce = models.CharField(
+        max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+    submitted_final_thesis = models.CharField(
+        max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+    phD_awarded_year = models.IntegerField(choices=year_choices, default=0)
+    guide = models.ForeignKey(electrical_and_electronics_dept_research_guide, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.research_scholar_name
@@ -891,7 +1242,30 @@ class physics_dept_laboratory_facilities_gallary(models.Model):
     def __str__(self):
         return '{}'.format(self.image)
 
+class electrical_and_electronics_dept_laboratory_facilities_gallary(models.Model):
+    image = models.ImageField(upload_to='department/gallery/EE/laboratory/')
+
+    def __str__(self):
+        return '{}'.format(self.image)
+
 class physics_dept_publications(models.Model):
+    name_of_faculty = models.CharField(max_length=100)
+    y15 = models.IntegerField(blank=True,null=True)
+    y16 = models.IntegerField(blank=True,null=True)
+    y17 = models.IntegerField(blank=True,null=True)
+    y18 = models.IntegerField(blank=True,null=True)
+    y19 = models.IntegerField(blank=True,null=True)
+    national_or_inter = models.CharField(max_length=13)
+    indexing = models.CharField(max_length=500, blank=True,null=True)
+    citations = models.IntegerField(blank=True,null=True)
+    impact_factor = models.CharField(max_length=80, blank=True,null=True)
+    i10_index = models.IntegerField(blank=True,null=True)
+    h_index = models.IntegerField(blank=True,null=True)
+
+    def __str__(self):
+        return self.name_of_faculty
+
+class electrical_and_electronics_dept_publications(models.Model):
     name_of_faculty = models.CharField(max_length=100)
     y15 = models.IntegerField(blank=True,null=True)
     y16 = models.IntegerField(blank=True,null=True)
@@ -917,8 +1291,38 @@ class physics_dept_book_chapters(models.Model):
 
     def __str__(self):
         return self.name_of_book_chapter
+class electrical_and_electronics_dept_book_chapters(models.Model):
+    sl_no = models.IntegerField()
+    name_of_book_chapter = models.CharField(max_length=500)
+    names_of_authors = models.CharField(max_length=500)
+    year_of_pub = models.IntegerField()
+    name_of_pub = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name_of_book_chapter
 
 class mathematics_dept_lab_facilities(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    qty = models.IntegerField()
+    config_specs = models.TextField()
+    softwares = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+class electrical_and_electronics_dept_accreditation(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    designation = models.TextField(blank=True)
+    member_type = models.CharField(max_length=100, choices=(
+        ('PAC', 'Program Assessment Committee (PAC)'),
+        ('DAB', 'Department Advisory Board (DAB)')), default='DAB')
+
+    def __str__(self):
+        return self.name + " : " + self.member_type
+
+class biotechnology_dept_lab_facilities(models.Model):
     sno = models.IntegerField()
     name = models.CharField(max_length=200)
     qty = models.IntegerField()
@@ -935,8 +1339,24 @@ class mathematics_dept_major_equipments(models.Model):
     def __str__(self):
         return self.equipment_description[:50] + "..."
 
+class biotechnology_dept_major_equipments(models.Model):
+    equipment_description = models.TextField()
+
+    def __str__(self):
+        return self.equipment_description[:50] + "..."
+
 
 class mathematics_dept_activities(models.Model):
+    sno = models.IntegerField()
+    activity_name = models.CharField(max_length=200)
+    activity_description = models.TextField()
+    activity_type = models.CharField(max_length=500, choices=(
+        ('RE', 'Regular Event'), ('STC', 'Short-term Course')), default='RE')
+
+    def __str__(self):
+        return self.activity_name
+
+class biotechnology_dept_activities(models.Model):
     sno = models.IntegerField()
     activity_name = models.CharField(max_length=200)
     activity_description = models.TextField()
@@ -955,6 +1375,14 @@ class mathematics_dept_achievements(models.Model):
     def __str__(self):
         return self.achievement_description[:50] + "..."
 
+class biotechnology_dept_achievements(models.Model):
+    achievement_description = models.TextField()
+    achievement_type = models.CharField(max_length=500, choices=(
+        ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
+
+    def __str__(self):
+        return self.achievement_description[:50] + "..."
+
 
 class mathematics_dept_timetable(models.Model):
     course = models.CharField(max_length=100, choices=(
@@ -962,6 +1390,16 @@ class mathematics_dept_timetable(models.Model):
     semester = models.IntegerField()
     section = models.CharField(max_length=1)
     timetable = models.FileField(upload_to='department/CS/data/timetable/')
+
+    def __str__(self):
+        return self.course + ": " + str(self.semester) + "-" + self.section
+
+class biotechnology_dept_timetable(models.Model):
+    course = models.CharField(max_length=100, choices=(
+        ('BE', 'B.E.'), ('MT', 'M.Tech')), default='BE')
+    semester = models.IntegerField()
+    section = models.CharField(max_length=1)
+    timetable = models.FileField(upload_to='department/BT/data/timetable/')
 
     def __str__(self):
         return self.course + ": " + str(self.semester) + "-" + self.section
@@ -975,6 +1413,14 @@ class mathematics_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class biotechnology_dept_events(models.Model):
+    events = models.FileField(upload_to='department/BT/data/events/')
+    semester = models.CharField(max_length=10)
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return '{}'.format(self.events)
+
 
 class mathematics_dept_classroom(models.Model):
     classroom = models.FileField(upload_to='department/CS/data/classroom/')
@@ -982,8 +1428,20 @@ class mathematics_dept_classroom(models.Model):
     def __str__(self):
         return '{}'.format(self.classroom)
 
+class biotechnology_dept_classroom(models.Model):
+    classroom = models.FileField(upload_to='department/BT/data/classroom/')
+
+    def __str__(self):
+        return '{}'.format(self.classroom)
+
 
 class mathematics_dept_research_guide(models.Model):
+    sno = models.IntegerField(primary_key=True)
+    guide_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.guide_name
+class biotechnology_dept_research_guide(models.Model):
     sno = models.IntegerField(primary_key=True)
     guide_name = models.CharField(max_length=100)
 
@@ -1011,8 +1469,31 @@ class mathematics_dept_research_scholars(models.Model):
     submitted_final_thesis = models.CharField(
         max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
     phD_awarded_year = models.IntegerField(choices=year_choices, default=0)
-    guide = models.ForeignKey(
-        computer_science_dept_research_guide, on_delete=models.CASCADE)
+    guide = models.ForeignKey(computer_science_dept_research_guide, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.research_scholar_name
+
+class biotechnology_dept_research_scholars(models.Model):
+
+    year_choices_array = []
+    for year in range(1979, 2021):
+        year_choices_array.append((year, year))
+    year_choices_array.append((0, 'NA'))
+    year_choices = tuple(year_choices_array)
+    research_scholar_name = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
+    year_of_regn = models.IntegerField(choices=year_choices, default=0)
+    phD = models.CharField(max_length=10, choices=(
+        ('PHD', 'Ph.D.'), ('(PHD)', '(Ph.D.)')), default='(PHD)')
+    course_work_completed = models.CharField(
+        max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+    pre_phD_viva_voce = models.CharField(
+        max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+    submitted_final_thesis = models.CharField(
+        max_length=1, choices=(('Y', 'Yes'), ('N', 'No')), default='Y')
+    phD_awarded_year = models.IntegerField(choices=year_choices, default=0)
+    guide = models.ForeignKey(biotechnology_dept_research_guide, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.research_scholar_name
@@ -1023,7 +1504,30 @@ class mathematics_dept_laboratory_facilities_gallary(models.Model):
     def __str__(self):
         return '{}'.format(self.image)
 
+class biotechnology_dept_laboratory_facilities_gallary(models.Model):
+    image = models.ImageField(upload_to='department/gallery/BT/laboratory/')
+
+    def __str__(self):
+        return '{}'.format(self.image)
+
 class mathematics_dept_publications(models.Model):
+    name_of_faculty = models.CharField(max_length=100)
+    y15 = models.IntegerField(blank=True,null=True)
+    y16 = models.IntegerField(blank=True,null=True)
+    y17 = models.IntegerField(blank=True,null=True)
+    y18 = models.IntegerField(blank=True,null=True)
+    y19 = models.IntegerField(blank=True,null=True)
+    national_or_inter = models.CharField(max_length=13)
+    indexing = models.CharField(max_length=500, blank=True,null=True)
+    citations = models.IntegerField(blank=True,null=True)
+    impact_factor = models.CharField(max_length=80, blank=True,null=True)
+    i10_index = models.IntegerField(blank=True,null=True)
+    h_index = models.IntegerField(blank=True,null=True)
+
+    def __str__(self):
+        return self.name_of_faculty
+
+class biotechnology_dept_publications(models.Model):
     name_of_faculty = models.CharField(max_length=100)
     y15 = models.IntegerField(blank=True,null=True)
     y16 = models.IntegerField(blank=True,null=True)
@@ -1049,3 +1553,24 @@ class mathematics_dept_book_chapters(models.Model):
 
     def __str__(self):
         return self.name_of_book_chapter
+        
+class biotechnology_dept_book_chapters(models.Model):
+    sl_no = models.IntegerField()
+    name_of_book_chapter = models.CharField(max_length=500)
+    names_of_authors = models.CharField(max_length=500)
+    year_of_pub = models.IntegerField()
+    name_of_pub = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name_of_book_chapter
+
+class biotechnology_dept_accreditation(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    designation = models.TextField(blank=True)
+    member_type = models.CharField(max_length=100, choices=(
+        ('PAC', 'Program Assessment Committee (PAC)'),
+        ('DAB', 'Department Advisory Board (DAB)')), default='DAB')
+
+    def __str__(self):
+        return self.name + " : " + self.member_type
