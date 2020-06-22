@@ -31,8 +31,10 @@ def home(request, course, dept):
         
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
-
+        
+        grants_patents_data = civil_dept_grants_and_patents.objects.all()
         accreditation_data = civil_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = civil_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -47,7 +49,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }
     
     elif course == 'UG' and dept == 'ME':
@@ -76,7 +80,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = mechanical_dept_grants_and_patents.objects.all()
         accreditation_data = mechanical_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = mechanical_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -91,7 +97,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }    
     
     elif course == 'UG' and dept == 'EE':
@@ -120,7 +128,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = electrical_and_electronics_dept_grants_and_patents.objects.all()
         accreditation_data = electrical_and_electronics_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = electrical_and_electronics_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -135,7 +145,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }
                 
     elif course == 'UG' and dept == 'EC':
@@ -164,7 +176,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = electronics_and_communication_dept_grants_and_patents.objects.all()
         accreditation_data = electronics_and_communication_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = electronics_and_communication_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -179,7 +193,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }
     
     elif course == 'UG' and dept == 'CH':
@@ -208,7 +224,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = chemical_dept_grants_and_patents.objects.all()
         accreditation_data = chemical_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = chemical_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -223,7 +241,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }    
     
     elif course == 'UG' and dept == 'EI':
@@ -252,7 +272,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = electronics_and_instrumentation_dept_grants_and_patents.objects.all()
         accreditation_data = electronics_and_instrumentation_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = electronics_and_instrumentation_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -267,7 +289,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }
     
     elif course == 'UG' and dept == 'CS':
@@ -296,7 +320,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = computer_science_dept_grants_and_patents.objects.all()
         accreditation_data = computer_science_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = computer_science_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -311,7 +337,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }
     
     elif course == 'UG' and dept == 'IS':
@@ -340,7 +368,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = information_science_dept_grants_and_patents.objects.all()
         accreditation_data = information_science_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = information_science_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -355,7 +385,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }
 
     elif course == 'UG' and dept == 'TX':
@@ -384,7 +416,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = textile_technology_dept_grants_and_patents.objects.all()
         accreditation_data = textile_technology_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = textile_technology_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -399,7 +433,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }
 
     elif course == 'UG' and dept == 'BT':
@@ -428,7 +464,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = bio_technology_dept_grants_and_patents.objects.all()
         accreditation_data = bio_technology_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = bio_technology_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -443,7 +481,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }
     
     elif course == 'UG' and dept == 'PHY':
@@ -472,6 +512,7 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = physics_dept_grants_and_patents.objects.all()
         accreditation_data = physics_dept_accreditation.objects.all().order_by('sno')
         
         content = {'faculties_data': faculties_data,
@@ -487,6 +528,7 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
+                    'grants_patents_data': grants_patents_data,
                     'accreditation_data': accreditation_data
                 }
 
@@ -516,6 +558,7 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = chemistry_dept_grants_and_patents.objects.all()
         accreditation_data = chemistry_dept_accreditation.objects.all().order_by('sno')
         
         content = {'faculties_data': faculties_data,
@@ -531,6 +574,7 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
+                    'grants_patents_data': grants_patents_data,
                     'accreditation_data': accreditation_data
                 }
                 
@@ -560,8 +604,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = mathematics_dept_grants_and_patents.objects.all()
         accreditation_data = mathematics_dept_accreditation.objects.all().order_by('sno')
-        
+
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
                     'activities_data': activities_data,
@@ -575,6 +620,7 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
+                    'grants_patents_data': grants_patents_data,
                     'accreditation_data': accreditation_data
                 }
 
@@ -604,7 +650,9 @@ def home(request, course, dept):
         for i in range(guide_count):
             research_data.append(research_scholar_data.filter(guide_id=i+1))
 
+        grants_patents_data = bio_medical_dept_grants_and_patents.objects.all()
         accreditation_data = bio_medical_dept_accreditation.objects.all().order_by('sno')
+        alumni_data = bio_medical_dept_alumni.objects.all()
         
         content = {'faculties_data': faculties_data,
                     'achievements_data': achievements_data,
@@ -619,7 +667,9 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'grants_patents_data': grants_patents_data,
+                    'accreditation_data': accreditation_data,
+                    'alumni_data': alumni_data
                 }
 
 

@@ -432,7 +432,6 @@
 
                                                             </thead>
                                                             <tbody>
-                                                                
                                                                 {% for guide_scholars in research_data %}
                                                                 {% for scholar in guide_scholars %}
                                                                 {% if forloop.first %}
@@ -465,13 +464,14 @@
                                                                 <tr class="blank_row">
                                                                     <td colspan="3"></td>
                                                                 </tr>
-                                                                {% endfor %}    
-
+                                                                {% endfor %}
+                                                                
                                                             </tbody>
                                                         </table>
                                                         <!--//table-->
                                                     </div>
-
+                                                </div>
+                                                <div class="panel-body">
                                                     <h2 class="no-margin-top text-highlight">Number of quality
                                                         publications in refereed/SCI Journals, citations</h2>
                                                     <div class="table-responsive">
@@ -535,6 +535,8 @@
                                                             </tbody>
                                                         </table>
                                                     </div>
+                                                </div>
+                                                <div class="panel-body">
                                                     <h2 class="no-margin-top text-highlight">Books/Book Chapters
                                                         Published</h2>
                                                     <div class="table-responsive">
@@ -563,13 +565,58 @@
                                                         <!--//table-->
                                                     </div>
                                                     <!--//table-responsive-->
-
-
-
-
-                                                    <!--//table-responsive-->
                                                 </div>
-                                                <!--//panel-body-->
+                                                <div class="panel-body">
+                                                    <div class="page-wrapper">
+                                                        <h2 class="no-margin-top text-highlight">Grants</h2>
+                                                        <div class="page-content">
+                                                            <!-- <div class="row page-row"> -->
+                                                            <article
+                                                                class="welcome col-md-11 col-sm-7 content-text">
+                                                                <ul class="custom-list-style medical">
+
+                                                                    {% for grant in grants_patents_data %}
+                                                                    {% if grant.grant_or_patent == "GRANT" %}
+                                                                    <li><i
+                                                                            class="fa fa-star"></i>{{grant.description}}
+                                                                    </li>
+                                                                    <br>
+                                                                    {% endif %}
+                                                                    {% endfor %}
+
+                                                                </ul>
+
+                                                            </article>
+                                                            <!-- </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="page-wrapper">
+                                                        <h2 class="no-margin-top text-highlight">Patents</h2>
+                                                        <div class="page-content">
+                                                            <!-- <div class="row page-row"> -->
+                                                            <article
+                                                                class="welcome col-md-11 col-sm-7 content-text">
+                                                                <ul class="custom-list-style medical">
+
+                                                                    {% for patent in grants_patents_data %}
+                                                                    {% if patent.grant_or_patent == "PATENT" %}
+                                                                    <li><i
+                                                                            class="fa fa-star"></i>{{patent.description}}
+                                                                    </li>
+                                                                    <br>
+                                                                    {% endif %}
+                                                                    {% endfor %}
+
+                                                                </ul>
+
+                                                            </article>
+                                                            <!-- </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                             <!--//panel-colapse-->
                                         </div>

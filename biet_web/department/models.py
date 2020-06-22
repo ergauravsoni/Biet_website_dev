@@ -76,6 +76,14 @@ class civil_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class civil_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class civil_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/CV/laboratory/')
 
@@ -115,13 +123,22 @@ class civil_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class civil_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/CV/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class civil_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..." 
+         return self.achievement_description[:50] + "... : " + self.achievement_type 
 
 class civil_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -230,6 +247,14 @@ class mechanical_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class mechanical_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class mechanical_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/ME/laboratory/')
 
@@ -264,13 +289,22 @@ class mechanical_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class mechanical_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/ME/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class mechanical_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
         
 class mechanical_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -385,6 +419,14 @@ class electrical_and_electronics_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class electrical_and_electronics_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class electrical_and_electronics_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/EE/laboratory/')
 
@@ -424,13 +466,22 @@ class electrical_and_electronics_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class electrical_and_electronics_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/EE/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class electrical_and_electronics_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class electrical_and_electronics_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -539,6 +590,14 @@ class electronics_and_communication_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class electronics_and_communication_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class electronics_and_communication_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/EC/laboratory/')
 
@@ -578,13 +637,22 @@ class electronics_and_communication_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class electronics_and_communication_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/EC/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class electronics_and_communication_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class electronics_and_communication_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -693,6 +761,14 @@ class chemical_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class chemical_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class chemical_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/CH/laboratory/')
 
@@ -732,13 +808,22 @@ class chemical_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class chemical_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/CH/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class chemical_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class chemical_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -847,6 +932,14 @@ class electronics_and_instrumentation_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class electronics_and_instrumentation_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class electronics_and_instrumentation_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/EI/laboratory/')
 
@@ -886,13 +979,22 @@ class electronics_and_instrumentation_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class electronics_and_instrumentation_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/EI/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class electronics_and_instrumentation_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class electronics_and_instrumentation_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -1001,6 +1103,14 @@ class computer_science_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class computer_science_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class computer_science_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/CS/laboratory/')
 
@@ -1040,13 +1150,22 @@ class computer_science_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class computer_science_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/CS/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class computer_science_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+        return self.achievement_description[:50] + "... : " + self.achievement_type 
 
 class computer_science_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -1155,6 +1274,14 @@ class information_science_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class information_science_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class information_science_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/IS/laboratory/')
 
@@ -1194,13 +1321,22 @@ class information_science_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class information_science_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/IS/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class information_science_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class information_science_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -1309,6 +1445,14 @@ class textile_technology_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class textile_technology_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class textile_technology_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/TX/laboratory/')
 
@@ -1348,13 +1492,22 @@ class textile_technology_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class textile_technology_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/TX/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class textile_technology_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class textile_technology_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -1463,6 +1616,14 @@ class bio_technology_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class bio_technology_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class bio_technology_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/BT/laboratory/')
 
@@ -1502,13 +1663,22 @@ class bio_technology_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class bio_technology_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/BT/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class bio_technology_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class bio_technology_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -1617,6 +1787,14 @@ class physics_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class physics_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class physics_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/PHY/laboratory/')
 
@@ -1662,7 +1840,7 @@ class physics_dept_achievements(models.Model):
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class physics_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -1771,6 +1949,14 @@ class chemistry_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class chemistry_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class chemistry_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/CHEM/laboratory/')
 
@@ -1816,7 +2002,7 @@ class chemistry_dept_achievements(models.Model):
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class chemistry_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -1925,6 +2111,14 @@ class mathematics_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class mathematics_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class mathematics_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/MAT/laboratory/')
 
@@ -1970,7 +2164,7 @@ class mathematics_dept_achievements(models.Model):
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class mathematics_dept_activities(models.Model):
     sno = models.IntegerField()
@@ -2079,6 +2273,14 @@ class bio_medical_dept_book_chapters(models.Model):
     def __str__(self):
         return self.name_of_book_chapter
 
+class bio_medical_dept_grants_and_patents(models.Model):
+    description = models.TextField()
+    grant_or_patent = models.CharField(max_length=500, choices=(
+        ('GRANT', 'Grant'), ('PATENT', 'Patent')), default='GRANT')
+
+    def __str__(self):
+         return self.description[:50] + "... : " + self.grant_or_patent
+
 class bio_medical_dept_laboratory_facilities_gallary(models.Model):
     image = models.ImageField(upload_to='department/gallery/BM/laboratory/')
 
@@ -2118,13 +2320,22 @@ class bio_medical_dept_accreditation(models.Model):
     def __str__(self):
         return self.name + " : " + self.member_type
 
+class bio_medical_dept_alumni(models.Model):
+    name = models.CharField(max_length=500)
+    designation = models.CharField(max_length=500)
+    description = models.TextField()
+    image = models.ImageField(upload_to='department/alumni/BM/')
+    
+    def __str__(self):
+        return self.name + ":" + self.designation
+
 class bio_medical_dept_achievements(models.Model):
     achievement_description = models.TextField()
     achievement_type = models.CharField(max_length=500, choices=(
         ('STUDENT', 'Student Achievement'), ('STAFF', 'Staff Achievement')), default='STAFF')
 
     def __str__(self):
-        return self.achievement_description[:50] + "..."
+         return self.achievement_description[:50] + "... : " + self.achievement_type
 
 class bio_medical_dept_activities(models.Model):
     sno = models.IntegerField()

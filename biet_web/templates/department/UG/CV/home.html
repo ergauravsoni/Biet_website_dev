@@ -445,7 +445,6 @@
 
                                                             </thead>
                                                             <tbody>
-                                                                
                                                                 {% for guide_scholars in research_data %}
                                                                 {% for scholar in guide_scholars %}
                                                                 {% if forloop.first %}
@@ -478,13 +477,14 @@
                                                                 <tr class="blank_row">
                                                                     <td colspan="3"></td>
                                                                 </tr>
-                                                                {% endfor %}    
-
+                                                                {% endfor %}
+                                                                
                                                             </tbody>
                                                         </table>
                                                         <!--//table-->
                                                     </div>
-
+                                                </div>
+                                                <div class="panel-body">
                                                     <h2 class="no-margin-top text-highlight">Number of quality
                                                         publications in refereed/SCI Journals, citations</h2>
                                                     <div class="table-responsive">
@@ -548,6 +548,8 @@
                                                             </tbody>
                                                         </table>
                                                     </div>
+                                                </div>
+                                                <div class="panel-body">
                                                     <h2 class="no-margin-top text-highlight">Books/Book Chapters
                                                         Published</h2>
                                                     <div class="table-responsive">
@@ -576,13 +578,58 @@
                                                         <!--//table-->
                                                     </div>
                                                     <!--//table-responsive-->
-
-
-
-
-                                                    <!--//table-responsive-->
                                                 </div>
-                                                <!--//panel-body-->
+                                                <div class="panel-body">
+                                                    <div class="page-wrapper">
+                                                        <h2 class="no-margin-top text-highlight">Grants</h2>
+                                                        <div class="page-content">
+                                                            <!-- <div class="row page-row"> -->
+                                                            <article
+                                                                class="welcome col-md-11 col-sm-7 content-text">
+                                                                <ul class="custom-list-style medical">
+
+                                                                    {% for grant in grants_patents_data %}
+                                                                    {% if grant.grant_or_patent == "GRANT" %}
+                                                                    <li><i
+                                                                            class="fa fa-star"></i>{{grant.description}}
+                                                                    </li>
+                                                                    <br>
+                                                                    {% endif %}
+                                                                    {% endfor %}
+
+                                                                </ul>
+
+                                                            </article>
+                                                            <!-- </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="page-wrapper">
+                                                        <h2 class="no-margin-top text-highlight">Patents</h2>
+                                                        <div class="page-content">
+                                                            <!-- <div class="row page-row"> -->
+                                                            <article
+                                                                class="welcome col-md-11 col-sm-7 content-text">
+                                                                <ul class="custom-list-style medical">
+
+                                                                    {% for patent in grants_patents_data %}
+                                                                    {% if patent.grant_or_patent == "PATENT" %}
+                                                                    <li><i
+                                                                            class="fa fa-star"></i>{{patent.description}}
+                                                                    </li>
+                                                                    <br>
+                                                                    {% endif %}
+                                                                    {% endfor %}
+
+                                                                </ul>
+
+                                                            </article>
+                                                            <!-- </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                             <!--//panel-colapse-->
                                         </div>
@@ -881,90 +928,22 @@
                                             <div id="collapse-6" class="panel-collapse collapse">
                                                 <div class="panel-body">
                                                     <!-- <div class="team-wrapper col-md-8 col-sm-7">         -->
+                                                    {% for alumni in alumni_data %}
+                                        
                                                     <div class="row page-row">
                                                         <figure class="thumb col-md-3 col-sm-4 col-xs-6">
                                                             <img class="img-responsive"
-                                                                src="{% static 'assets/images/team/team-1.jpg' %}"
+                                                                src="{{alumni.image.url}}"
                                                                 alt="" />
                                                         </figure>
                                                         <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                            <h3 class="title">Alumni 1</h3>
-                                                            <h4>Designation</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                                Suspendisse aliquam, tellus id pellentesque viverra,
-                                                                metus lacus lobortis augue, sed malesuada urna sapien id
-                                                                orci. Maecenas pharetra mauris quis tincidunt egestas.
-                                                                Sed condimentum felis quis nulla varius. Lorem ipsum
-                                                                dolor sit amet, consectetur adipiscing elit. Etiam diam
-                                                                diam, porttitor quis mollis non, suscipit id tellus.
-                                                                Nullam a ultrices sem, vel tincidunt felis. Sed eu
-                                                                suscipit erat. Nam malesuada, leo porta rhoncus blandit,
-                                                                ipsum tellus fringilla mi, ac pretium nisl turpis sit
-                                                                amet purus. Mauris pellentesque tincidunt lacus commodo
-                                                                lobortis. Nulla consectetur scelerisque molestie.</p>
+                                                            <h3 class="title">{{alumni.name}}</h3>
+                                                            <h4>{{alumni.designation}}</h4>
+                                                            <p>{{alumni.description}}</p>
                                                         </div>
                                                     </div>
-                                                    <div class="row page-row">
-                                                        <figure class="thumb col-md-3 col-sm-4 col-xs-6">
-                                                            <img class="img-responsive"
-                                                                src="{% static 'assets/images/team/team-2.jpg' %}"
-                                                                alt="" />
-                                                        </figure>
-                                                        <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                            <h3 class="title">Alumni 2</h3>
-                                                            <h4>Designation</h4>
-                                                            <p>Pellentesque eu bibendum massa. Morbi et metus adipiscing
-                                                                libero lobortis accumsan ac eget turpis. Duis vehicula,
-                                                                velit sit amet vehicula gravida, nibh dui cursus risus,
-                                                                eget tristique tortor dolor id ligula. Integer id
-                                                                iaculis ante. In massa dolor, consequat quis sodales
-                                                                vel, cursus sed ligula. Sed neque est, pharetra ac enim
-                                                                ut, dignissim molestie tellus. Cras luctus est sit amet
-                                                                dui condimentum, eu varius tellus molestie. Curabitur
-                                                                eleifend faucibus pharetra. Mauris non elit dui.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row page-row">
-                                                        <figure class="thumb col-md-3 col-sm-4 col-xs-6">
-                                                            <img class="img-responsive"
-                                                                src="{% static 'assets/images/team/team-3.jpg' %}"
-                                                                alt="" />
-                                                        </figure>
-                                                        <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                            <h3 class="title">Alumni 3</h3>
-                                                            <h4>Designation</h4>
-                                                            <p>Donec justo magna, mattis a ipsum in, pretium aliquet
-                                                                dolor. Vestibulum rhoncus dolor placerat diam laoreet
-                                                                dictum. Integer auctor augue eget nibh ultrices, vitae
-                                                                fermentum est vehicula. Nullam suscipit metus felis. Ut
-                                                                arcu ante, mollis quis urna in, facilisis placerat leo.
-                                                                Duis auctor diam at quam laoreet, vitae blandit mi
-                                                                fermentum. Fusce mollis pellentesque sem, non eleifend
-                                                                nisl. Suspendisse nisi nulla, consectetur sed
-                                                                pellentesque vitae.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row page-row">
-                                                        <figure class="thumb col-md-3 col-sm-4 col-xs-6">
-                                                            <img class="img-responsive"
-                                                                src="{% static 'assets/images/team/team-4.jpg' %}"
-                                                                alt="" />
-                                                        </figure>
-                                                        <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                            <h3 class="title">Alumni 4</h3>
-                                                            <h4>Designation</h4>
-                                                            <p>Suspendisse tempus, nibh vel facilisis eleifend, ante
-                                                                lorem ultricies erat, id blandit mauris felis ac elit.
-                                                                Mauris et placerat massa. Duis nec tellus dui. Nullam
-                                                                facilisis lectus a nunc feugiat interdum. Fusce et sem a
-                                                                diam accumsan aliquam. Fusce eu hendrerit massa. Integer
-                                                                eget facilisis metus. Quisque vel lectus sed neque
-                                                                cursus auctor vitae sed nisi. Integer augue mauris,
-                                                                scelerisque sit amet suscipit sit amet, scelerisque in
-                                                                felis. Aenean lacus magna, vestibulum eu pulvinar sed,
-                                                                posuere nec neque.</p>
-                                                        </div>
-                                                    </div>
+
+                                                    {% endfor %}                                                   
                                                     <!-- </div>//team-wrapper -->
                                                 </div>
                                                 <!--//panel-body-->
