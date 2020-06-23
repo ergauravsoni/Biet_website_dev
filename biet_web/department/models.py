@@ -128,6 +128,7 @@ class civil_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/CV/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
@@ -294,6 +295,7 @@ class mechanical_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/ME/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
@@ -471,6 +473,7 @@ class electrical_and_electronics_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/EE/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
@@ -642,6 +645,7 @@ class electronics_and_communication_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/EC/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
@@ -813,6 +817,7 @@ class chemical_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/CH/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
@@ -984,6 +989,7 @@ class electronics_and_instrumentation_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/EI/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
@@ -1155,6 +1161,7 @@ class computer_science_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/CS/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
@@ -1326,6 +1333,7 @@ class information_science_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/IS/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
@@ -1497,6 +1505,7 @@ class textile_technology_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/TX/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
@@ -1668,6 +1677,7 @@ class bio_technology_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/BT/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
@@ -2325,6 +2335,7 @@ class bio_medical_dept_alumni(models.Model):
     designation = models.CharField(max_length=500)
     description = models.TextField()
     image = models.ImageField(upload_to='department/alumni/BM/')
+    sno = models.IntegerField(default='1')
     
     def __str__(self):
         return self.name + ":" + self.designation
