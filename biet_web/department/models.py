@@ -2,6 +2,10 @@ from django.db import models
 
 # Create your models here.
 
+import datetime;
+
+today = str(datetime.date.today())
+cur_year = int(today[:4])
 
 class civil_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -28,7 +32,7 @@ class civil_dept_research_guide(models.Model):
 class civil_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -200,7 +204,7 @@ class mechanical_dept_research_guide(models.Model):
 class mechanical_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -373,7 +377,7 @@ class electrical_and_electronics_dept_research_guide(models.Model):
 class electrical_and_electronics_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -545,7 +549,7 @@ class electronics_and_communication_dept_research_guide(models.Model):
 class electronics_and_communication_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -717,7 +721,7 @@ class chemical_dept_research_guide(models.Model):
 class chemical_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -889,7 +893,7 @@ class electronics_and_instrumentation_dept_research_guide(models.Model):
 class electronics_and_instrumentation_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -1061,7 +1065,7 @@ class computer_science_dept_research_guide(models.Model):
 class computer_science_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -1233,7 +1237,7 @@ class information_science_dept_research_guide(models.Model):
 class information_science_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -1405,7 +1409,7 @@ class textile_technology_dept_research_guide(models.Model):
 class textile_technology_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -1577,7 +1581,7 @@ class bio_technology_dept_research_guide(models.Model):
 class bio_technology_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -1749,7 +1753,7 @@ class physics_dept_research_guide(models.Model):
 class physics_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -1911,7 +1915,7 @@ class chemistry_dept_research_guide(models.Model):
 class chemistry_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -2073,7 +2077,7 @@ class mathematics_dept_research_guide(models.Model):
 class mathematics_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
@@ -2235,7 +2239,7 @@ class bio_medical_dept_research_guide(models.Model):
 class bio_medical_dept_research_scholars(models.Model):
 
     year_choices_array = []
-    for year in range(1979, 2021):
+    for year in range(1979, cur_year):
         year_choices_array.append((year, year))
     year_choices_array.append((0, 'NA'))
     year_choices = tuple(year_choices_array)
