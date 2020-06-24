@@ -15,7 +15,7 @@ def home(request, course, dept):
         major_equipments_data = civil_dept_major_equipments.objects.all()
         images = civil_dept_gallery.objects.all()
         timetable_data = civil_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = civil_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = civil_dept_events.objects.all()
         classrooms = civil_dept_classroom.objects.all()
@@ -47,7 +47,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
     
     elif course == 'UG' and dept == 'ME':
@@ -59,7 +60,7 @@ def home(request, course, dept):
         major_equipments_data = mechanical_dept_major_equipments.objects.all()
         images = mechanical_dept_gallery.objects.all()
         timetable_data = mechanical_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = mechanical_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = mechanical_dept_events.objects.all()
         classrooms = mechanical_dept_classroom.objects.all()
@@ -91,7 +92,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }    
     
     elif course == 'UG' and dept == 'EE':
@@ -103,7 +105,7 @@ def home(request, course, dept):
         major_equipments_data = electrical_and_electronics_dept_major_equipments.objects.all()
         images = electrical_and_electronics_dept_gallery.objects.all()
         timetable_data = electrical_and_electronics_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = electrical_and_electronics_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = electrical_and_electronics_dept_events.objects.all()
         classrooms = electrical_and_electronics_dept_classroom.objects.all()
@@ -135,7 +137,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
                 
     elif course == 'UG' and dept == 'EC':
@@ -147,7 +150,7 @@ def home(request, course, dept):
         major_equipments_data = electronics_and_communication_dept_major_equipments.objects.all()
         images = electronics_and_communication_dept_gallery.objects.all()
         timetable_data = electronics_and_communication_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = electronics_and_communication_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = electronics_and_communication_dept_events.objects.all()
         classrooms = electronics_and_communication_dept_classroom.objects.all()
@@ -179,7 +182,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
     
     elif course == 'UG' and dept == 'CH':
@@ -191,7 +195,7 @@ def home(request, course, dept):
         major_equipments_data = chemical_dept_major_equipments.objects.all()
         images = chemical_dept_gallery.objects.all()
         timetable_data = chemical_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = chemical_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = chemical_dept_events.objects.all()
         classrooms = chemical_dept_classroom.objects.all()
@@ -223,7 +227,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }    
     
     elif course == 'UG' and dept == 'EI':
@@ -235,7 +240,7 @@ def home(request, course, dept):
         major_equipments_data = electronics_and_instrumentation_dept_major_equipments.objects.all()
         images = electronics_and_instrumentation_dept_gallery.objects.all()
         timetable_data = electronics_and_instrumentation_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = electronics_and_instrumentation_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = electronics_and_instrumentation_dept_events.objects.all()
         classrooms = electronics_and_instrumentation_dept_classroom.objects.all()
@@ -267,7 +272,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
     
     elif course == 'UG' and dept == 'CS':
@@ -279,7 +285,7 @@ def home(request, course, dept):
         major_equipments_data = computer_science_dept_major_equipments.objects.all()
         images = computer_science_dept_gallery.objects.all()
         timetable_data = computer_science_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = computer_science_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = computer_science_dept_events.objects.all()
         classrooms = computer_science_dept_classroom.objects.all()
@@ -311,7 +317,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
     
     elif course == 'UG' and dept == 'IS':
@@ -323,7 +330,7 @@ def home(request, course, dept):
         major_equipments_data = information_science_dept_major_equipments.objects.all()
         images = information_science_dept_gallery.objects.all()
         timetable_data = information_science_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = information_science_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = information_science_dept_events.objects.all()
         classrooms = information_science_dept_classroom.objects.all()
@@ -355,7 +362,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
 
     elif course == 'UG' and dept == 'TX':
@@ -367,7 +375,7 @@ def home(request, course, dept):
         major_equipments_data = textile_technology_dept_major_equipments.objects.all()
         images = textile_technology_dept_gallery.objects.all()
         timetable_data = textile_technology_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = textile_technology_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = textile_technology_dept_events.objects.all()
         classrooms = textile_technology_dept_classroom.objects.all()
@@ -399,7 +407,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
 
     elif course == 'UG' and dept == 'BT':
@@ -411,7 +420,7 @@ def home(request, course, dept):
         major_equipments_data = bio_technology_dept_major_equipments.objects.all()
         images = bio_technology_dept_gallery.objects.all()
         timetable_data = bio_technology_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = bio_technology_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = bio_technology_dept_events.objects.all()
         classrooms = bio_technology_dept_classroom.objects.all()
@@ -443,7 +452,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
     
     elif course == 'UG' and dept == 'PHY':
@@ -455,7 +465,7 @@ def home(request, course, dept):
         major_equipments_data = physics_dept_major_equipments.objects.all()
         images = physics_dept_gallery.objects.all()
         timetable_data = physics_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = physics_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = physics_dept_events.objects.all()
         classrooms = physics_dept_classroom.objects.all()
@@ -487,7 +497,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
 
     elif course == 'UG' and dept == 'CHE':
@@ -499,7 +510,7 @@ def home(request, course, dept):
         major_equipments_data = chemistry_dept_major_equipments.objects.all()
         images = chemistry_dept_gallery.objects.all()
         timetable_data = chemistry_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = chemistry_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = chemistry_dept_events.objects.all()
         classrooms = chemistry_dept_classroom.objects.all()
@@ -531,7 +542,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
                 
     elif course == 'UG' and dept == 'MAT':
@@ -543,7 +555,7 @@ def home(request, course, dept):
         major_equipments_data = mathematics_dept_major_equipments.objects.all()
         images = mathematics_dept_gallery.objects.all()
         timetable_data = mathematics_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = mathematics_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = mathematics_dept_events.objects.all()
         classrooms = mathematics_dept_classroom.objects.all()
@@ -575,7 +587,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
 
     elif course == 'UG' and dept == 'BM':
@@ -587,7 +600,7 @@ def home(request, course, dept):
         major_equipments_data = bio_medical_dept_major_equipments.objects.all()
         images = bio_medical_dept_gallery.objects.all()
         timetable_data = bio_medical_dept_timetable.objects.order_by('semester', 'section')
-
+        learning_materials_data = bio_medical_dept_learning_materials.objects.all().order_by('semester', 'subject')
 
         events = bio_medical_dept_events.objects.all()
         classrooms = bio_medical_dept_classroom.objects.all()
@@ -619,7 +632,8 @@ def home(request, course, dept):
                     'laboratory_facilities_gallary' : laboratory_facilities_gallary,
                     'book_chapters_data': book_chapters_data,
                     'publications_data': publications_data,
-                    'accreditation_data': accreditation_data
+                    'accreditation_data': accreditation_data,
+                    'learning_materials_data': learning_materials_data
                 }
 
 
