@@ -173,16 +173,19 @@ class civil_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class civil_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/CV/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+        
 class civil_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/CV/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class civil_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/CV/data/learning-materials')
         
 class mechanical_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -351,17 +354,20 @@ class mechanical_dept_classroom(models.Model):
     def __str__(self):
         return '{}'.format(self.classroom)
 
+class mechanical_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/ME/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class mechanical_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/ME/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class mechanical_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/ME/data/learning-materials')
-
+        
 class electrical_and_electronics_dept(models.Model):
     name = models.CharField(max_length=200)
     designation = models.CharField(max_length=200)
@@ -528,16 +534,19 @@ class electrical_and_electronics_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class electrical_and_electronics_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/EE/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class electrical_and_electronics_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/EE/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class electrical_and_electronics_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/EE/data/learning-materials')
 
 class electronics_and_communication_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -705,16 +714,19 @@ class electronics_and_communication_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class electronics_and_communication_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/EC/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class electronics_and_communication_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/EC/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class electronics_and_communication_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/EC/data/learning-materials')
 
 class chemical_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -882,16 +894,19 @@ class chemical_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class chemical_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/CH/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class chemical_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/CH/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class chemical_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/CH/data/learning-materials')
 
 class electronics_and_instrumentation_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -1059,16 +1074,19 @@ class electronics_and_instrumentation_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class electronics_and_instrumentation_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/EI/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class electronics_and_instrumentation_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/EI/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class electronics_and_instrumentation_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/EI/data/learning-materials')
 
 class computer_science_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -1236,16 +1254,19 @@ class computer_science_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class computer_science_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/CS/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class computer_science_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/PhotoGallery/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class computer_science_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/CS/data/learning-materials')
 
 class information_science_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -1413,16 +1434,19 @@ class information_science_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class information_science_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/IS/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class information_science_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/IS/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class information_science_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/IS/data/learning-materials')
 
 class textile_technology_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -1590,16 +1614,19 @@ class textile_technology_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class textile_technology_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/TX/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class textile_technology_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/TX/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class textile_technology_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/TX/data/learning-materials')
 
 class bio_technology_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -1767,16 +1794,19 @@ class bio_technology_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class bio_technology_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/BT/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class bio_technology_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/BT/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class bio_technology_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/BT/data/learning-materials')
 
 class physics_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -1934,16 +1964,19 @@ class physics_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class physics_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(1, 3), range(1, 3))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/PHY/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class physics_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/PHY/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class physics_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(1, 3), range(1, 3))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/PHY/data/learning-materials')
 
 class chemistry_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -2101,16 +2134,19 @@ class chemistry_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class chemistry_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(1, 3), range(1, 3))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/CHEM/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class chemistry_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/CHEM/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class chemistry_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(1, 3), range(1, 3))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/CHE/data/learning-materials')
 
 class mathematics_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -2268,16 +2304,19 @@ class mathematics_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class mathematics_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(1, 5), range(1, 5))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/MAT/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class mathematics_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/MAT/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class mathematics_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(1, 3), range(1, 3))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/MAT/data/learning-materials')
 
 class bio_medical_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -2445,16 +2484,19 @@ class bio_medical_dept_events(models.Model):
     def __str__(self):
         return '{}'.format(self.events)
 
+class bio_medical_dept_learning_materials(models.Model):
+    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
+    subject_code = models.CharField(max_length=100)
+    material = models.FileField(upload_to='department/BM/data/learning-materials')
+
+    def __str__(self):
+        return 'SEM-' + str(self.semester) + ' : ' + self.subject_code
+
 class bio_medical_dept_gallery(models.Model):
     image = models.ImageField(upload_to='department/gallery/BM/')
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class bio_medical_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(3, 9), range(3, 9))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/BM/data/learning-materials')
 
 class mca_dept(models.Model):
     name = models.CharField(max_length=200)
@@ -2471,11 +2513,6 @@ class mca_dept_gallery(models.Model):
     def __str__(self):
         return '{}'.format(self.image)
 
-class mca_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(1, 7), range(1, 7))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/MCA/data/learning-materials')
-
 class environmental_dept(models.Model):
     name = models.CharField(max_length=200)
     designation = models.CharField(max_length=200)
@@ -2491,8 +2528,3 @@ class environmental_dept_gallery(models.Model):
 
     def __str__(self):
         return '{}'.format(self.image)
-
-class environmental_dept_learning_materials(models.Model):
-    semester = models.IntegerField(choices=list(zip(range(1, 5), range(1, 5))))
-    subject = models.CharField(max_length=100)
-    material = models.FileField(upload_to='department/ENV/data/learning-materials')

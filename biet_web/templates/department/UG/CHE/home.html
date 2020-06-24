@@ -1156,15 +1156,50 @@
                                                 <div class="panel-body">
                                                     <h3 class="no-margin-top has-divider text-highlight">Learning
                                                         Materials</h3>
-                                                    <div class="welcome col-md-3 col-sm-2"
-                                                    style="display: inline-block; margin-top: 15px;">
-                                                    <h3>Chemistry Notes</h3>
-                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                            class="fa fa-download"></i>Download</a>
-                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                            class="fa fa-eye"></i>View</a>
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active"><a href="#tab5" data-toggle="tab"><strong>1st
+                                                                    Sem</strong></a></li>
+                                                        <li><a href="#tab6" data-toggle="tab"><strong>2nd
+                                                                    sem</strong></a></li>
+                                                    </ul>
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="tab5">
+                                                            <div class="row medical">
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 1 %}
+                                                                <div class="welcome col-md-3 col-sm-2"
+                                                                    style="display: inline-block; margin-top: 15px;">
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
+                                                                            class="fa fa-download"></i>Download</a>
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
+                                                                            class="fa fa-eye"></i>View</a>
+                                                                </div>
+                                                                {% endif %}
+                                                                {% endfor %}
+                                                            </div>
+                                                            <!--//row-->
+                                                        </div>
+                                                        <div class="tab-pane " id="tab6">
+                                                            <div class="row medical">
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 2 %}
+                                                                <div class="welcome col-md-3 col-sm-2"
+                                                                    style="display: inline-block; margin-top: 15px;">
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
+                                                                            class="fa fa-download"></i>Download</a>
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
+                                                                            class="fa fa-eye"></i>View</a>
+                                                                </div>
+                                                                {% endif %}
+                                                                {% endfor %}
+                                                            </div>
+                                                            <!--//row-->
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <!--//panel-body-->
                                             </div>
                                         </div>
                                             <div class="panel panel-default">

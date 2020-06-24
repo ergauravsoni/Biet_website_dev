@@ -1290,199 +1290,103 @@ Karnataka State Council for Science & Technology, (KSCST), Bangalore, has sponso
                                                     <div class="tab-content">
                                                         <div class="tab-pane active" id="tab5">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 3 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC31 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC32 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC33 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC34 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC35 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC36 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18ECL37 Lab Manual</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18ECL38 Lab Manual</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
                                                         <div class="tab-pane " id="tab6">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 4 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC41 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC42 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC43 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC44 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC45 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18EC46 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18ECL47 Lab Manual</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18ECL48 Lab Manual</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
                                                         <div class="tab-pane " id="tab7">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 5 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>15EC51 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
                                                         <div class="tab-pane " id="tab8">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 6 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>15EC61 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
                                                         <div class="tab-pane " id="tab9">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 7 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>15EC71 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
                                                         <div class="tab-pane " id="tab10">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 8 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>15EC81 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
