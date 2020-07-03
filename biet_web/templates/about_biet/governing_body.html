@@ -20,10 +20,33 @@
             Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus.
         </header>
         <div class="page-content">
+
             <div class="row page-row">
+
+                {% for govern in governing_body_data %}
+
+                <div class="col-md-3 col-sm-3 text-center">
+                    <div class="album-cover">
+                        <!-- <a href="#"> -->
+                        <img class="img-thumbnail"
+                            src="{{govern.image.url}}" alt=""
+                            style="width:360px;height:300px;">
+
+
+                        <!-- </a> -->
+                        <div class="desc">
+                            <h5>{{govern.name}}</h5>
+                            <h4><small>{{govern.designation}}</small>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- <div class="row page-row">
                 <article class="welcome col-md-12 col-sm-11">
 
-                    <section class="widget has-divider">
+                    <section class="widget has-divider"> 
                         <div class="table-responsive">
                             <table class="table table-boxed table-striped">
                                 <thead>
@@ -103,17 +126,15 @@
                                             SENIOR FACULT</td>
                                         <td>Member</td>
                                     </tr>
-                                </tbody>
+                                    </tbody>
                             </table>
-                            <!--//table-->
+                            //table 
                         </div>
 
                     </section>
                 </article>
-                <!--//page-content-->
-
-            </div>
-            <!--//page-row-->
+            </div> -->
+                <!--//page-row-->
         </div>
         <!--//page-content-->
     </div>

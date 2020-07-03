@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<!-- ******CONTENT****** -->
+<div class="content container bgdata">
+    <div class="page-wrapper">
+        <header class="page-heading clearfix">
+            <strong>
+                <h1 class="heading-title pull-left" style="font-weight: 600">DEANS</h1>
+            </strong>
+
+        </header>
+        <div class="page-content" style="text-align:justify">
+            <div class="row page-row">             
+                <div class="table-responsive">
+                    <table class="table table-striped table-boxed">
+                        <thead>
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Name</th>
+                                <th>Responsibility</th>
+                                <th>Email</th>
+                                <th>Contact No.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for dean in deans_data %}
+                            <tr>
+                                <td>{{dean.sno}}.</td>
+                                <td>{{dean.name}}</td>
+                                <td>{{dean.responsibility}}</td>
+                                <td>{{dean.email}}</td>
+                                <td>{{dean.contact_no.as_e164}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <!--//table-->
+                </div>
+                <!--//table-responsive-->
+            </div>
+            <!--//page-row-->
+            <div class="row page-row">
+
+                {% for dean in deans_data %}
+                <div class="col-md-12">
+
+                    <div class="col-md-4 text-center">
+                        <div class="album-cover">
+                            <!-- <a href="#"> -->
+                            <img class="img-thumbnail"
+                                src="{{dean.image.url}}" alt=""
+                                style="width:330px;height:360px;">
+
+
+                            <!-- </a> -->
+                            <div class="desc">
+                                <h5>{{dean.name}}</h5>
+                                <h4><small>{{dean.responsibility}}</small>
+                                </h4>
+
+
+                                <!-- <button type="button" class="btn btn-theme">Theme Button</button> -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 text-center">
+                        <div class="" style="  text-align: justify;">
+                            <p>
+                                {{dean.description}}
+                            </p>
+                        </div>
+                        <a href="{{dean.detail.url}}"
+                            class="btn btn-theme view-pdf">Read More</a>
+                    </div>
+                </div>
+
+                {% endfor %}
+            </div>
+            <!--//page-row-->
+        </div>
+        <!--//page-content-->
+    </div>
+    <!--//page-->
+</div>
+<!--//content-->
+
+{% endblock %}

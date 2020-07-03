@@ -16,5 +16,6 @@ urlpatterns = [
     path('director_msg',views.director_msg, name='director_msg'),
     path('principal_msg',views.principal_msg, name='principal_msg'),
     path('chairman_msg',views.chairman_msg, name='chairman_msg'),
+    path('deans',views.deans, name='deans'),
     path('office',views.office, name='office'),
 ]

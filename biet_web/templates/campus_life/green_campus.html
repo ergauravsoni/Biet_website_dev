@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<!-- ******CONTENT****** -->
+<div class="content container bgdata">
+    <div class="page-wrapper">
+        <header class="page-heading clearfix" style="text-align: center;">
+            <h1 class="heading-title">BIET Initiatives for Green campus - BIGc</h1><br>
+            <h1 class="heading-title"><small>where human and nature go hand in hand</small></h1>
+        </header>
+        <div class="page-content" style="text-align:justify">
+            <div class="row page-row">
+
+                <div class="col-md-12">
+
+                    <div class="col-md-4 text-center">
+                        <div class="album-cover">
+                            <!-- <a href="#"> -->
+                            <img class="img-thumbnail"
+                                src="{% static 'assets/green_campus/v.jpg' %}" alt=""
+                                style="width:330px;height:360px;">
+
+
+                            <!-- </a> -->
+                            <div class="desc">
+                                <h4>Coordinator BIGc</h4>
+                                <h5>Dr. Veena Kumara Adi</h5>
+                                <h4><small>Associate Professor<br>PG Dept of Environmental Engg</small>
+                                </h4>
+
+
+                                <!-- <button type="button" class="btn btn-theme">Theme Button</button> -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 text-center">
+                        <div class="" style="  text-align: justify;">
+                            <p>
+                                BIET being a learning centre is a self-contained community that supports academic programs enduring environmental ethic. Natural resource conservation and environmental humanities can empower young people to innovate and implement eco-friendly strategies. Improvements made in pollution prevention arena serve as crucial lessons in environmental accountability and responsibility. Efforts on imparting knowledge about sustainability and carbon foot print needs to be catalysed. BIET shoulders responsibilities to instil green lifestyle by undertaking green moves. What better plan than a college to ply the lesson with the practice? BIET Initiatives for Green campus, BIGc is an opportunity to take the lead in rethinking new paradigms for solving problems that are local, national and global by create positive change to gain invaluable. BIGc is a long term commitment of campus-wide environmental retooling for the benefits of environmental compliance and improved health and safety. Team BIGc is created to facilitate and coordinate initiatives by promoting heightened awareness of environmentally sound practices in all arena of science and engineering
+                            </p>
+                        </div>
+                        <a href="{% static 'assets/green_campus/BIGc for web(Green Campus).pdf' %}"
+                            class="btn btn-theme view-pdf">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!--//page-row-->
+        </div>
+        <!--//page-content-->
+    </div>
+    <!--//page-->
+</div>
+<!--//content-->
+
+{% endblock %}

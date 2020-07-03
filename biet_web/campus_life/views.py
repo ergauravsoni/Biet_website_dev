@@ -10,9 +10,11 @@ def nirf(request):
     return render(request,'campus_life/nirf.html')
 
 
-
 def nain(request):
     return render(request,'campus_life/nain.html')
+
+def green_campus(request):
+    return render(request,'campus_life/green_campus.html')
 
 def graduation_day(request):
     images = Graduation_Day.objects.all()
