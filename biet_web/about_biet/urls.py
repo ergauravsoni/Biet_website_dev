@@ -18,4 +18,13 @@ urlpatterns = [
     path('chairman_msg',views.chairman_msg, name='chairman_msg'),
     path('deans',views.deans, name='deans'),
     path('office',views.office, name='office'),
+    path('research',views.research, name='research'),
+    path('research/dean_message',views.dean_message, name='research/dean_message'),
+    path('research/recognized_research_centers',views.recognized_research_centers, name='research/recognized_research_centers'),
+    path('research/funded_projects',views.funded_projects, name='research/funded_projects'),
+    path('research/kscst_projects',views.kscst_projects, name='research/kscst_projects'),
+    path('research/industry_collaboration',views.industry_collaboration, name='research/industry_collaboration'),
+    path('research/product_development',views.product_development, name='research/product_development'),
+    path('research/research_facilities',views.research_facilities, name='research/research_facilities'),
+    path('research/honors_and_awards',views.honors_and_awards, name='research/honors_and_awards'),
 ]

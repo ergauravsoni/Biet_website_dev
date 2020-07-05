@@ -47,5 +47,33 @@ def deans(request):
 def office(request):
     office_member_data = Office_Staff.objects.all().order_by('sno')
     return render(request,'about_biet/office.html',{'office_member_data' : office_member_data})
+    
 def aicte(request):
     return render(request,'about_biet/aicte.html')
+
+def research(request):
+    return render(request,'about_biet/research.html')
+    
+def dean_message(request):
+    return render(request,'about_biet/research/dean_message.html')
+    
+def recognized_research_centers(request):
+    return render(request,'about_biet/research/recognized_research_centers.html')
+    
+def funded_projects(request):
+    return render(request,'about_biet/research/funded_projects.html')
+    
+def kscst_projects(request):
+    return render(request,'about_biet/research/kscst_projects.html')
+    
+def industry_collaboration(request):
+    return render(request,'about_biet/research/industry_collaboration.html')
+    
+def product_development(request):
+    return render(request,'about_biet/research/product_development.html')
+    
+def research_facilities(request):
+    return render(request,'about_biet/research/research_facilities.html')
+    
+def honors_and_awards(request):
+    return render(request,'about_biet/research/honors_and_awards.html')
