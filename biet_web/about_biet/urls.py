@@ -27,4 +27,6 @@ urlpatterns = [
     path('research/product_development',views.product_development, name='research/product_development'),
     path('research/research_facilities',views.research_facilities, name='research/research_facilities'),
     path('research/honors_and_awards',views.honors_and_awards, name='research/honors_and_awards'),
+    path('other_committees/grievance_redressal',views.grievance_redressal, name='other_committees/grievance_redressal'),
+    path('other_committees/anti_ragging',views.anti_ragging, name='other_committees/anti_ragging'),
 ]

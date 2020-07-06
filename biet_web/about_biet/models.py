@@ -39,3 +39,12 @@ class Governing_Body(models.Model):
 
     def __str__(self):
         return self.name + ": " + self.designation
+
+class Governing_Council(models.Model):
+    sno = models.IntegerField()
+    name = models.CharField(max_length=200)
+    designation = models.CharField(max_length=200)
+    image = models.ImageField(default='',upload_to='about_biet/governing_council/image/')
+
+    def __str__(self):
+        return self.name + ": " + self.designation

@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from .models import Academic_Calender, Office_Staff, Deans, Governing_Body
+from .models import Governing_Council
 
 # Create your views here.
 def Bapuji_educational_association(request):
-    return render(request,'about_biet/Bapuji_educational_association.html')
+    governing_council_data = Governing_Council.objects.all().order_by('sno')
+    context = {'governing_council_data' : governing_council_data}
+    return render(request,'about_biet/Bapuji_educational_association.html',context)
 
 def Vision_Mission_Quality_Policies(request):
     return render(request,'about_biet/bietHome.html')
@@ -77,3 +80,9 @@ def research_facilities(request):
     
 def honors_and_awards(request):
     return render(request,'about_biet/research/honors_and_awards.html')
+
+def grievance_redressal(request):
+    return render(request,'about_biet/other_committees/grievance_redressal.html')
+    
+def anti_ragging(request):
+    return render(request,'about_biet/other_committees/anti_ragging.html')
