@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<!-- ******CONTENT****** -->
+<div class="content container bgdata">
+    <div class="page-wrapper">
+        <header class="page-heading clearfix">
+            <h1 class="heading-title pull-left">Research</h1>
+            <div class="breadcrumbs pull-right">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-label">You are here:</li>
+                    <li><a href="/">Home</a><i class="fa fa-angle-right"></i></li>
+                    <li><a href="#">Research</a><i class="fa fa-angle-right"></i></li>
+                    <li class="current">Product Development</li>
+                </ul>
+            </div>
+            <!--//breadcrumbs-->
+        </header>
+        <div class="page-content">
+            <div class="row page-row">
+                <aside class="page-sidebar col-md-3 col-sm-4 affix-top">
+                    <section class="widget">
+                        <ul class="nav">
+                            <li><a href="/research">Research Overview</a></li>
+                            <li><a href="/research/dean_message">Dean Message</a></li>
+                            <li><a href="/research/recognized_research_centers">Recognized Research Centers</a></li>
+                            <li><a href="/research/funded_projects">Funded Projects</a></li>
+                            <li><a href="/research/kscst_projects">KSCST/In-House/VTU/Other Projects</a></li>
+                            <li><a href="/research/industry_collaboration">Industry Collaboration/MOU/Patents</a></li>
+                            <li class="active"><a href="/research/product_development">Product Development</a></li>
+                            <li><a href="/research/research_facilities">Research Facilities</a></li>
+                            <li><a href="/research/honors_and_awards">Honors and Awards</a></li>
+                        </ul>
+                    </section>
+                    <!--//widget-->
+                </aside>
+                <!--//page-sidebar-->
+                <div class="content-wrapper col-md-8 col-sm-7">
+
+                    <div class="page-row content-text">
+                        <h1 class="no-margin-top has-divider text-highlight">Product Development</h1>
+                    </div>
+                    <!--//page-row-->
+                </div>
+                <!--//content-wrapper-->
+            </div>
+            <!--//page-row-->
+        </div>
+        <!--//page-content-->
+    </div>
+    <!--//page-->
+</div>
+<!--//content-->
+</div>
+<!--//wrapper-->
+
+{% endblock %}

@@ -14,6 +14,9 @@
         <div class="page-content">
             <div class="row page-row">
                 <article class="welcome col-md-12 col-sm-11">
+                    <section class="widget has-divider" style="text-align:justify">
+                        <img class="img-responsive col-md-10"  src="{% static 'assets/images/about_biet/img1.jpg' %}" alt="" />
+                    </section>
 
                     <section class="widget has-divider" style="text-align:justify">
 
@@ -52,8 +55,27 @@
                     <h3 class="has-divider text-highlight">Governing Council Members</h3>
 
                     <section class="widget has-divider">
+                        
+                        {% for govern in governing_council_data %}
 
-                        <div class="table-responsive">
+                        <div class="col-md-3 col-sm-3 text-center">
+                            <div class="album-cover">
+                                <!-- <a href="#"> -->
+                                <img class="img-thumbnail"
+                                    src="{{govern.image.url}}" alt=""
+                                    style="width:360px;height:300px;">
+
+
+                                <!-- </a> -->
+                                <div class="desc">
+                                    <h5>{{govern.name}}</h5>
+                                    <h4><small>{{govern.designation}}</small>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!-- <div class="table-responsive">
                             <table class="table table-boxed table-striped">
                                 <thead>
                                     <tr>
@@ -126,9 +148,9 @@
 
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
                             <!--//table-->
-                        </div>
+                       <!-- </div> -->
 
 
 

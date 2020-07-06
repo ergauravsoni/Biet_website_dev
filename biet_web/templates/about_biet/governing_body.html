@@ -11,19 +11,44 @@
             <strong>
                 <h1 class="textColorCustom" style="font-weight: 600">Governing Body</h1>
             </strong>
-            Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et
+            <p>
+                Mauris eu faucibus sem, ac pharetra justo. Pellentesque habitant morbi tristique senectus et netus et
             malesuada fames ac turpis egestas. Curabitur blandit euismod ipsum, ac commodo eros tincidunt et. Aenean
             tincidunt vestibulum adipiscing. Ut eu enim velit. Ut lectus leo, interdum sodales nibh nec, dictum pulvinar
             nisl. In consequat fringilla turpis id porta. Cras eget lacus ac orci facilisis aliquam. Fusce a lobortis
             purus. Integer sed odio et ipsum interdum volutpat at nec nisl. Sed pulvinar ante orci, id tristique sapien
             cursus et. Nullam ut augue et magna ornare aliquam ut vulputate dui. Vivamus fringilla eu ipsum ut mattis.
             Nulla a varius velit. Phasellus at lectus ut felis posuere lacinia in id purus.
+            </p>
         </header>
         <div class="page-content">
+
             <div class="row page-row">
+
+                {% for govern in governing_body_data %}
+
+                <div class="col-md-3 col-sm-3 text-center">
+                    <div class="album-cover">
+                        <!-- <a href="#"> -->
+                        <img class="img-thumbnail"
+                            src="{{govern.image.url}}" alt=""
+                            style="width:360px;height:300px;">
+
+
+                        <!-- </a> -->
+                        <div class="desc">
+                            <h5>{{govern.name}}</h5>
+                            <h4><small>{{govern.designation}}</small>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- <div class="row page-row">
                 <article class="welcome col-md-12 col-sm-11">
 
-                    <section class="widget has-divider">
+                    <section class="widget has-divider"> 
                         <div class="table-responsive">
                             <table class="table table-boxed table-striped">
                                 <thead>
@@ -103,17 +128,15 @@
                                             SENIOR FACULT</td>
                                         <td>Member</td>
                                     </tr>
-                                </tbody>
+                                    </tbody>
                             </table>
-                            <!--//table-->
+                            //table 
                         </div>
 
                     </section>
                 </article>
-                <!--//page-content-->
-
-            </div>
-            <!--//page-row-->
+            </div> -->
+                <!--//page-row-->
         </div>
         <!--//page-content-->
     </div>

@@ -18,15 +18,13 @@
                             <div class="col-md-6">
                                 <h1 class="textColorCustom" class="has-divider text-highlight">NAAC</h1>
 
-                                {% for brochure in brochures %}
-
-                                <dl class="dl-horizontal">
-                                    <h3 class="title">Download Brochure</h3>
-                                    <a class="btn btn-theme" href="{{brochure.brochure.url}}"><i
-                                            class="fa fa-download"></i>View PDF</a>
-                                </dl>
-
-                                {% endfor %}
+                                <section class="widget has-divider">
+                                    <h3 class="title">Certificate of Accreditation</h3>
+                                    <p>Click the link below to download or view the certificate</p>
+                                    <a class="btn btn-theme" href="{% static 'assets/naac/NAAC 06-Jun-2020 09-19-31.pdf' %}" target="_blank"><i class="fa fa-download"></i>Download</a>
+                                    <a class="btn btn-theme view-pdf" href="{% static 'assets/naac/NAAC 06-Jun-2020 09-19-31.pdf' %}"><i
+                                        class="fa fa-eye"></i>View</a>
+                                </section>
 
                             </div>
                         </div>

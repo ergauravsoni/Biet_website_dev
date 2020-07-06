@@ -300,7 +300,7 @@
 
                                                         {% for faculty_data in faculties_data %}
 
-                                                        {%  if faculty_data.designation == 'Professor and Head'  %}
+                                                        {%  if faculty_data.staff_type == 'HOD'  %}
 
 
                                                         <div class="col-md-12">
@@ -316,8 +316,7 @@
                                                                     <!-- </a> -->
                                                                     <div class="desc">
                                                                         <h5>{{faculty_data.name}}</h5>
-                                                                        <h4><small><a
-                                                                                    href="#">{{faculty_data.designation}}</a></small>
+                                                                        <h4><small>{{faculty_data.designation}}</small>
                                                                         </h4>
 
 
@@ -416,7 +415,7 @@
 
                                                         {% for faculty_data in faculties_data %}
 
-                                                        {%  if faculty_data.designation != 'Professor and Head'  %}
+                                                        {%  if faculty_data.staff_type == 'FACULTY'  %}
 
                                                         <div class="col-md-3 col-sm-3 text-center">
                                                             <div class="album-cover">
@@ -429,8 +428,7 @@
                                                                 <!-- </a> -->
                                                                 <div class="desc">
                                                                     <h5>{{faculty_data.name}}</h5>
-                                                                    <h4><small><a
-                                                                                href="#">{{faculty_data.designation}}</a></small>
+                                                                    <h4><small>{{faculty_data.designation}}</small>
                                                                     </h4>
 
 
@@ -443,10 +441,57 @@
                                                         {% endif %}
                                                         {% endfor %}
                                                     </div>
-                                                    <h3>Non - Teaching Staff</h3>
+                                                    <h3>Technical Staff</h3>
                                                     <div class="row page-row">
 
+                                                        {% for faculty_data in faculties_data %}
 
+                                                        {%  if faculty_data.staff_type == 'TECHNICAL'  %}
+
+                                                        <div class="col-md-3 col-sm-3 text-center">
+                                                            <div class="album-cover">
+                                                                <!-- <a href="#"> -->
+                                                                <img class="img-thumbnail"
+                                                                    src="{{faculty_data.image.url}}" alt=""
+                                                                    style="width:360px;height:300px;">
+
+
+                                                                <!-- </a> -->
+                                                                <div class="desc">
+                                                                    <h5>{{faculty_data.name}}</h5>
+                                                                    <h4><small>{{faculty_data.designation}}</small>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                    <h3>Supporting Staff</h3>
+                                                    <div class="row page-row">
+
+                                                        {% for faculty_data in faculties_data %}
+
+                                                        {%  if faculty_data.staff_type == 'SUPPORTING'  %}
+
+                                                        <div class="col-md-3 col-sm-3 text-center">
+                                                            <div class="album-cover">
+                                                                <!-- <a href="#"> -->
+                                                                <img class="img-thumbnail"
+                                                                    src="{{faculty_data.image.url}}" alt=""
+                                                                    style="width:360px;height:300px;">
+
+
+                                                                <!-- </a> -->
+                                                                <div class="desc">
+                                                                    <h5>{{faculty_data.name}}</h5>
+                                                                    <h4><small>{{faculty_data.designation}}</small>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
                                                     </div>
                                                 </div>
                                                 <!--//panel-body-->
@@ -607,7 +652,8 @@
                                                         </table>
                                                         <!--//table-->
                                                     </div>
-
+                                                </div>
+                                                <div class="panel-body">
                                                     <h2 class="no-margin-top text-highlight">Number of quality
                                                         publications in refereed/SCI Journals, citations</h2>
                                                     <div class="table-responsive">
@@ -671,6 +717,8 @@
                                                             </tbody>
                                                         </table>
                                                     </div>
+                                                </div>
+                                                <div class="panel-body">
                                                     <h2 class="no-margin-top text-highlight">Books/Book Chapters
                                                         Published</h2>
                                                     <div class="table-responsive">
@@ -699,13 +747,68 @@
                                                         <!--//table-->
                                                     </div>
                                                     <!--//table-responsive-->
-
-
-
-
-                                                    <!--//table-responsive-->
                                                 </div>
-                                                <!--//panel-body-->
+                                                <div class="panel-body">
+                                                    <div class="page-wrapper">
+                                                        <h2 class="no-margin-top text-highlight">Grants</h2>
+                                                        <div class="page-content">
+                                                            <!-- <div class="row page-row"> -->
+                                                            <article
+                                                                class="welcome col-md-11 col-sm-7 content-text">
+                                                                <ul class="custom-list-style medical">
+
+                                                                    {% for grant in grants_patents_data %}
+                                                                    {% if grant.grant_or_patent == "GRANT" %}
+                                                                    <li><i
+                                                                            class="fa fa-star"></i>{{grant.description}}
+                                                                    </li>
+                                                                    <br>
+                                                                    {% endif %}
+                                                                    {% endfor %}
+
+                                                                    <!-- <li><i class="fa fa-star"></i>Dr. Poornima B, Professor, received the PhD in 2011-2012 from kuvempu university.</li>
+                                                                    <br>
+                                                                    <li><i class="fa fa-star"></i>Dr. Nirmala C R, Professor, received the PhD in 2012-2013 from VTU, Belgaum.</li>
+                                                                    <br>
+                                                                    <li><i class="fa fa-star"></i>Dr. Nirmala C R, Professor has been awarded "DHRONA" for guiding top TGMC projects under IBM Academic Initiative.</li> -->
+                                                                </ul>
+
+                                                            </article>
+                                                            <!-- </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="page-wrapper">
+                                                        <h2 class="no-margin-top text-highlight">Patents</h2>
+                                                        <div class="page-content">
+                                                            <!-- <div class="row page-row"> -->
+                                                            <article
+                                                                class="welcome col-md-11 col-sm-7 content-text">
+                                                                <ul class="custom-list-style medical">
+
+                                                                    {% for patent in grants_patents_data %}
+                                                                    {% if patent.grant_or_patent == "PATENT" %}
+                                                                    <li><i
+                                                                            class="fa fa-star"></i>{{patent.description}}
+                                                                    </li>
+                                                                    <br>
+                                                                    {% endif %}
+                                                                    {% endfor %}
+
+                                                                    <!-- <li><i class="fa fa-star"></i>Dr. Poornima B, Professor, received the PhD in 2011-2012 from kuvempu university.</li>
+                                                                    <br>
+                                                                    <li><i class="fa fa-star"></i>Dr. Nirmala C R, Professor, received the PhD in 2012-2013 from VTU, Belgaum.</li>
+                                                                    <br>
+                                                                    <li><i class="fa fa-star"></i>Dr. Nirmala C R, Professor has been awarded "DHRONA" for guiding top TGMC projects under IBM Academic Initiative.</li> -->
+                                                                </ul>
+
+                                                            </article>
+                                                            <!-- </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                             <!--//panel-colapse-->
                                         </div>
@@ -729,10 +832,16 @@
                                                     {% for image in laboratory_facilities_gallary %}
 
                                                     <a class="prettyphoto col-md-3 col-sm-3" rel="prettyPhoto[gallery]"
-                                                        title="" href="{{image.image.url}}"><img
-                                                            class="img-responsive img-thumbnail"
-                                                            src="{{image.image.url}}" alt=""
-                                                            style=" height: 170px;" /></a>
+                                                        title="" href="{{image.image.url}}">
+                                                            <div class="container-photo-overlay">
+                                                                <img class="image-photo-overlay img-responsive img-thumbnail"
+                                                                    src="{{image.image.url}}" alt=""
+                                                                    style=" height: 170px;" />
+                                                                <div class="middle-photo-overlay">
+                                                                  <div class="text-photo-overlay">Laboratory: A321</div>
+                                                                </div>
+                                                              </div>
+                                                    </a>
 
                                                     {% endfor %}
                                                     <div class="row">
@@ -799,14 +908,14 @@
                                                                             <td>2.2 GHz, 3GM RAM, 320 HDD, 15.5 Screen, Bluetooth, Wi-Fi network, External Mouse</td>
                                                                             <td>Windows XP professional, Microsoft Visual Studio, Oracle 9i, Fedora10, Java, MASM and Turbo C++.</td>
                                                                         </tr>
-                                                                        <tr>                                                            
+                                                                        <tr>
                                                                             <td rowspan=3><b>6.</b></td>
                                                                             <td rowspan=3>WI-FI-2</td>
                                                                             <td rowspan=3>10</td>
                                                                             <td>HP Pavilion 23-Q141 Touch All-in-one PC: Intel Core i5@2.9 GHz, RAM: 8GB, Graphics: 2GB, HDD: 1TB, Monitor: 23 touch screen, with wireless KBD & Mouse.OS: Windows 10 (VGST Project)</td>
                                                                             <td>Windows 10, R Studio, Mat lab16, JAVA Eclipse, Python, MYSQL, Microsoft Visual Studio, Oracle 9i, Ubuntu, Java, MASM and Turbo C++.</td>
                                                                         </tr>
-                                                                        <tr>                                                            
+                                                                        <tr>
                                                                             <td>Dell-Optiplex 9020SFF, Core-i7@3.6 GHz, RAM: 16 GB DDR3, HDD: 1TB, Monitor: 19.5, with KBD & Mouse (VGST Project)</td>
                                                                             <td>Windows 10, R Studio, Mat lab16, JAVA Eclipse, Python, MYSQL, Microsoft Visual Studio, Oracle 9i, Ubuntu, Java, MASM and Turbo C++.</td>
                                                                         </tr>
@@ -890,10 +999,17 @@
                                                     {% for classroom in classrooms %}
 
                                                     <a class="prettyphoto col-md-3 col-sm-3 " rel="prettyPhoto[gallery]"
-                                                        title="" href="{{classroom.classroom.url}}"><img
-                                                            class="img-responsive img-thumbnail"
-                                                            src="{{classroom.classroom.url}}" alt=""
-                                                            style=" height: 170px;" /></a>
+                                                        title="" href="{{classroom.classroom.url}}">
+                                                            <div class="container-photo-overlay">
+                                                                <img
+                                                                class="image-photo-overlay img-responsive img-thumbnail"
+                                                                src="{{classroom.classroom.url}}" alt=""
+                                                                style=" height: 170px;" />
+                                                                <div class="middle-photo-overlay">
+                                                                  <div class="text-photo-overlay">Classroom: A321</div>
+                                                                </div>
+                                                            </div>
+                                                    </a>
 
                                                     {% endfor %}
 
@@ -920,6 +1036,101 @@
                                             <!--//panel-colapse-->
                                         </div>
                                         <!--//panel-->
+
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" class="collapsed"
+                                                        href="#collapse-14">
+                                                        Accreditation
+                                                    </a>
+                                                </h4>
+                                            </div>
+
+
+
+                                            <!--//pane-heading-->
+                                            <div id="collapse-14" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <h3 class="no-margin-top text-highlight">Department Advisory Board (DAB) Members</h3>
+                                                            <div class="table-responsive">
+                                                                <table class="table table-striped table-boxed">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>S.No.</th>
+                                                                            <th>Member</th>
+                                                                            <th>Designation</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        {% for member in accreditation_data %}
+                                                                        {% if member.member_type == "DAB" %}
+                                                                            <tr>
+                                                                                <td>{{member.sno}}</td>
+                                                                                <td>{{member.name}}</td>
+                                                                                <td>{{member.designation}}</td>
+                                                                            </tr>
+                                                                        {% endif %}
+                                                                        {% endfor %}
+                                                                    </tbody>
+                                                                </table>
+                                                                <!--//table-->
+                                                            </div>
+                                                            <!--//table-responsive-->
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <h3 class="no-margin-top text-highlight">Program Assessment Committee (PAC) Members</h3>
+                                                            <div class="table-responsive">
+                                                                <table class="table table-striped table-boxed">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>S.No.</th>
+                                                                            <th>Member</th>
+                                                                            <th>Designation</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        {% for member in accreditation_data %}
+                                                                        {% if member.member_type == "PAC" %}
+                                                                            <tr>
+                                                                                <td>{{member.sno}}</td>
+                                                                                <td>{{member.name}}</td>
+                                                                                <td>{{member.designation}}</td>
+                                                                            </tr>
+                                                                        {% endif %}
+                                                                        {% endfor %}
+                                                                    </tbody>
+                                                                </table>
+                                                                <!--//table-->
+                                                            </div>
+                                                            <!--//table-responsive-->
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <h3 class="no-margin-top text-highlight">SAR Report</h3>
+                                                            <div class="table-responsive">
+                                                                <a class="btn btn-theme" href="#"
+                                                                        target="_blank"><i
+                                                                            class="fa fa-download"></i>Download</a>
+                                                                    <a href="#"
+                                                                        class="btn btn-theme view-pdf"><i
+                                                                            class="fa fa-eye"></i>View
+                                                                </a>
+                                                            </div>
+                                                            <!--//table-responsive-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--//panel-body-->
+                                            </div>
+                                            <!--//panel-colapse-->
+                                        </div>
 
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
@@ -1228,90 +1439,22 @@
                                             <div id="collapse-6" class="panel-collapse collapse">
                                                 <div class="panel-body">
                                                     <!-- <div class="team-wrapper col-md-8 col-sm-7">         -->
+                                                    {% for alumni in alumni_data %}
+                                                    
                                                     <div class="row page-row">
                                                         <figure class="thumb col-md-3 col-sm-4 col-xs-6">
                                                             <img class="img-responsive"
-                                                                src="{% static 'assets/images/team/team-1.jpg' %}"
+                                                                src="{{alumni.image.url}}"
                                                                 alt="" />
                                                         </figure>
                                                         <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                            <h3 class="title">Alumni 1</h3>
-                                                            <h4>Designation</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                                Suspendisse aliquam, tellus id pellentesque viverra,
-                                                                metus lacus lobortis augue, sed malesuada urna sapien id
-                                                                orci. Maecenas pharetra mauris quis tincidunt egestas.
-                                                                Sed condimentum felis quis nulla varius. Lorem ipsum
-                                                                dolor sit amet, consectetur adipiscing elit. Etiam diam
-                                                                diam, porttitor quis mollis non, suscipit id tellus.
-                                                                Nullam a ultrices sem, vel tincidunt felis. Sed eu
-                                                                suscipit erat. Nam malesuada, leo porta rhoncus blandit,
-                                                                ipsum tellus fringilla mi, ac pretium nisl turpis sit
-                                                                amet purus. Mauris pellentesque tincidunt lacus commodo
-                                                                lobortis. Nulla consectetur scelerisque molestie.</p>
+                                                            <h3 class="title">{{alumni.name}}</h3>
+                                                            <h4>{{alumni.designation}}</h4>
+                                                            <p>{{alumni.description}}</p>
                                                         </div>
                                                     </div>
-                                                    <div class="row page-row">
-                                                        <figure class="thumb col-md-3 col-sm-4 col-xs-6">
-                                                            <img class="img-responsive"
-                                                                src="{% static 'assets/images/team/team-2.jpg' %}"
-                                                                alt="" />
-                                                        </figure>
-                                                        <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                            <h3 class="title">Alumni 2</h3>
-                                                            <h4>Designation</h4>
-                                                            <p>Pellentesque eu bibendum massa. Morbi et metus adipiscing
-                                                                libero lobortis accumsan ac eget turpis. Duis vehicula,
-                                                                velit sit amet vehicula gravida, nibh dui cursus risus,
-                                                                eget tristique tortor dolor id ligula. Integer id
-                                                                iaculis ante. In massa dolor, consequat quis sodales
-                                                                vel, cursus sed ligula. Sed neque est, pharetra ac enim
-                                                                ut, dignissim molestie tellus. Cras luctus est sit amet
-                                                                dui condimentum, eu varius tellus molestie. Curabitur
-                                                                eleifend faucibus pharetra. Mauris non elit dui.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row page-row">
-                                                        <figure class="thumb col-md-3 col-sm-4 col-xs-6">
-                                                            <img class="img-responsive"
-                                                                src="{% static 'assets/images/team/team-3.jpg' %}"
-                                                                alt="" />
-                                                        </figure>
-                                                        <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                            <h3 class="title">Alumni 3</h3>
-                                                            <h4>Designation</h4>
-                                                            <p>Donec justo magna, mattis a ipsum in, pretium aliquet
-                                                                dolor. Vestibulum rhoncus dolor placerat diam laoreet
-                                                                dictum. Integer auctor augue eget nibh ultrices, vitae
-                                                                fermentum est vehicula. Nullam suscipit metus felis. Ut
-                                                                arcu ante, mollis quis urna in, facilisis placerat leo.
-                                                                Duis auctor diam at quam laoreet, vitae blandit mi
-                                                                fermentum. Fusce mollis pellentesque sem, non eleifend
-                                                                nisl. Suspendisse nisi nulla, consectetur sed
-                                                                pellentesque vitae.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row page-row">
-                                                        <figure class="thumb col-md-3 col-sm-4 col-xs-6">
-                                                            <img class="img-responsive"
-                                                                src="{% static 'assets/images/team/team-4.jpg' %}"
-                                                                alt="" />
-                                                        </figure>
-                                                        <div class="details col-md-9 col-sm-8 col-xs-6">
-                                                            <h3 class="title">Alumni 4</h3>
-                                                            <h4>Designation</h4>
-                                                            <p>Suspendisse tempus, nibh vel facilisis eleifend, ante
-                                                                lorem ultricies erat, id blandit mauris felis ac elit.
-                                                                Mauris et placerat massa. Duis nec tellus dui. Nullam
-                                                                facilisis lectus a nunc feugiat interdum. Fusce et sem a
-                                                                diam accumsan aliquam. Fusce eu hendrerit massa. Integer
-                                                                eget facilisis metus. Quisque vel lectus sed neque
-                                                                cursus auctor vitae sed nisi. Integer augue mauris,
-                                                                scelerisque sit amet suscipit sit amet, scelerisque in
-                                                                felis. Aenean lacus magna, vestibulum eu pulvinar sed,
-                                                                posuere nec neque.</p>
-                                                        </div>
-                                                    </div>
+
+                                                    {% endfor %}
                                                     <!-- </div>//team-wrapper -->
                                                 </div>
                                                 <!--//panel-body-->
@@ -1406,7 +1549,7 @@
                                                                                 <li><i class="fa fa-star"></i>Sharath P J Secured 3rd  place in CodeVeta on 24th February 2018 organized under Technie’18 (State Level Technical Fest) by CS&E Dept., Jain Institute of Technology, Davangere.</li>
                                                                                 <br>
                                                                                 <li><i class="fa fa-star"></i>2 teams participated in Smart India Hackthon 2018, National level project.</li>
-                                                                                <br>   
+                                                                                <br>
                                                                                 <li><i class="fa fa-star"></i>Sharath P J Secured 1st place in JIT Hackathon on 16th March 2018 organised under TECHNIE’18 (National Level Technical Fest) by CS&E Dept, Jain Institute of Technology, Davangere.</li>
                                                                                 <br>
                                                                                 <li><i class="fa fa-star"></i>Sharath P J Secured 1st place in Coding and Error Correction on 27th March 2018 under Tech Aspire 2K18 by Dept. of MCA, UBDTCE, Davangere.</li>
@@ -1414,7 +1557,7 @@
                                                                                 <li><i class="fa fa-star"></i>Sharath P J Secured 1st place in C-Genius on 10th April 2018 under Kaushala 2018 by CS&E Dept., UBDTCE, Davangere </li>
                                                                                 <br>
                                                                                 <li><i class="fa fa-star"></i>Every year 10 teams are selected for TCS TechBytes regional round which would be held at BVB Hubli. </li>
-                                                                                <br>                                                             
+                                                                                <br>
                                                                                 <li><i class="fa fa-star"></i>Mr. Tejas Jain, Mr. Bharath, Ms. Swetha, Ms. Veda P Shinde under the guidance of Dr. Nirmala.C.R have won the Best Project Award under "TGMC 2010, IBM Academic Initiative".</li>
                                                                                 <br>
                                                                                 <li><i class="fa fa-star"></i>Mr. Prashanth Y, Ms. Prakruthi V, Ms. Poonam, Ms. ashwini G with the team name of "E-sparks" under the guidance of Dr.Nirmala.C.R have won the Best Project Award under "TGMC 2011, IBM Academic Initiative".</li>
@@ -1460,27 +1603,25 @@
                                                                 COMPUTER SCIENCE FORUM (UniCS)</h4>
                                                             <!-- <h3 class="title">COMPUTER SCIENCE FORUM (UniCS)</h3> -->
 
-                                                            <div class="content container">
-                                                                <div class="page-wrapper">
-                                                                    <div class="page-content">
-                                                                        <!-- <article class="welcome col-md-12 col-sm-7">                          -->
-                                                                        <p>UniCS provides a platform for the students to
-                                                                            exhibit their talents and skills. UniCS
-                                                                            conducts variuos technical and non-technical
-                                                                            events. UniCS conducts several short term
-                                                                            courses and technical talks by inviting
-                                                                            experts from industry and academia, organize
-                                                                            industry and research centre visits and
-                                                                            conduct personality development programs
-                                                                            which may help in the placement.</p>
-                                                                        <p>The following events are conducted regularly
-                                                                            by UniCS:</p>
-                                                                        <!-- </article> -->
-                                                                    </div>
-                                                                    <!--//page-content-->
+                                                            <div class="page-wrapper">
+                                                                <div class="page-content">
+                                                                    <!-- <article class="welcome col-md-12 col-sm-7">                          -->
+                                                                    <p>UniCS provides a platform for the students to
+                                                                        exhibit their talents and skills. UniCS
+                                                                        conducts variuos technical and non-technical
+                                                                        events. UniCS conducts several short term
+                                                                        courses and technical talks by inviting
+                                                                        experts from industry and academia, organize
+                                                                        industry and research centre visits and
+                                                                        conduct personality development programs
+                                                                        which may help in the placement.</p>
+                                                                    <p>The following events are conducted regularly
+                                                                        by UniCS:</p>
+                                                                    <!-- </article> -->
                                                                 </div>
-                                                                <!--//page-->
+                                                                <!--//page-content-->
                                                             </div>
+                                                            <!--//page-->
 
                                                             <div class="table-responsive">
                                                                 <table class="table table-striped table-boxed">
@@ -1817,199 +1958,103 @@
                                                     <div class="tab-content">
                                                         <div class="tab-pane active" id="tab5">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 3 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS31 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS32 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS33 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS34 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS35 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS36 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CSL37 Lab Manual</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CSL38 Lab Manual</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
                                                         <div class="tab-pane " id="tab6">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 4 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS41 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS42 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS43 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS44 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS45 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CS46 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CSL47 Lab Manual</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-                                                                <div class="welcome col-md-3 col-sm-2"
-                                                                    style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>18CSL48 Lab Manual</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
-                                                                            class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
-                                                                            class="fa fa-eye"></i>View</a>
-                                                                </div>
-
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
                                                         <div class="tab-pane " id="tab7">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 5 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>15CS51 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
                                                         <div class="tab-pane " id="tab8">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 6 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>15CS61 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
                                                         <div class="tab-pane " id="tab9">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 7 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>15CS71 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
                                                         <div class="tab-pane " id="tab10">
                                                             <div class="row medical">
-
+                                                                {% for notes in learning_materials_data %}
+                                                                {% if notes.semester == 8 %}
                                                                 <div class="welcome col-md-3 col-sm-2"
                                                                     style="display: inline-block; margin-top: 15px;">
-                                                                    <h3>15CS81 Notes</h3>
-                                                                    <a class="btn btn-theme" href=" " target="_blank"><i
+                                                                    <h3>{{notes.subject_code}} Notes</h3>
+                                                                    <a class="btn btn-theme" href="{{notes.material.url}}" target="_blank"><i
                                                                             class="fa fa-download"></i>Download</a>
-                                                                    <a href=" " class="btn btn-theme view-pdf"><i
+                                                                    <a href="{{notes.material.url}}" class="btn btn-theme view-pdf"><i
                                                                             class="fa fa-eye"></i>View</a>
                                                                 </div>
+                                                                {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                             <!--//row-->
                                                         </div>
@@ -2021,6 +2066,48 @@
                                             <!--//panel-colapse-->
                                         </div>
                                         <!--//panel-->
+
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" class="collapsed"
+                                                        href="#collapse-15">
+                                                        Innovative Teaching Methods
+                                                    </a>
+                                                </h4>
+                                            </div>
+
+                                            <!--//pane-heading-->
+                                            <div id="collapse-15" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <!-- <h3 class="no-margin-top text-highlight">Mission</h3> -->
+                                                            <ol class="custom-list-style medical">
+                                                                <li>
+                                                                    <a href="">Use of ICT</a>
+                                                                </li>
+                                                                <br>
+                                                                <li>
+                                                                    <a href="">Instruction deliver</a>
+                                                                </li>
+                                                                <br>
+                                                                <li>
+                                                                    <a href="">Assessment</a>
+                                                                </li>
+                                                                <br>
+                                                                <li>
+                                                                    <a href="">Evaluation and inclusive class rooms that lead to effective, efficient and engaging instruction</a>
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--//panel-body-->
+                                            </div>
+                                            <!--//panel-colapse-->
+                                        </div>
 
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
@@ -2060,11 +2147,11 @@
                                                                                     Result
                                                                                     Analysis</p>
                                                                                 <a class="btn btn-theme"
-                                                                                    href="{% static 'assets/results/Results_8th.pdf' %}"
+                                                                                    href="{% static 'assets/results/cse/Results_8th.pdf' %}"
                                                                                     target="_blank"><i
                                                                                         class="fa fa-download"></i>Download
                                                                                     now</a>
-                                                                                <a href="{% static 'assets/results/Results_8th.pdf' %}"
+                                                                                <a href="{% static 'assets/results/cse/Results_8th.pdf' %}"
                                                                                     class="btn btn-theme view-pdf"><i
                                                                                         class="fa fa-eye"></i>View
                                                                                     now</a>
@@ -2072,9 +2159,9 @@
                                                                             <div class="col-md-6">
                                                                                 <a class="prettyphoto col-md-10 col-sm-10 col-xs-10"
                                                                                     rel="prettyPhoto[gallery]" title=""
-                                                                                    href="{% static 'assets/results/8th sem result graph.jpg' %}"><img
+                                                                                    href="{% static 'assets/results/cse/8th sem result graph.jpg' %}"><img
                                                                                         class="img-responsive img-thumbnail"
-                                                                                        src="{% static 'assets/results/8th sem result graph.jpg' %}"
+                                                                                        src="{% static 'assets/results/cse/8th sem result graph.jpg' %}"
                                                                                         alt="" /></a>
                                                                             </div>
                                                                         </div>
@@ -2090,11 +2177,11 @@
                                                                                 Result
                                                                                 Analysis</p>
                                                                             <a class="btn btn-theme"
-                                                                                href="{% static 'assets/results/Results_6th.pdf' %}"
+                                                                                href="{% static 'assets/results/cse/Results_6th.pdf' %}"
                                                                                 target="_blank"><i
                                                                                     class="fa fa-download"></i>Download
                                                                                 now</a>
-                                                                            <a href="{% static 'assets/results/Results_6th.pdf' %}"
+                                                                            <a href="{% static 'assets/results/cse/Results_6th.pdf' %}"
                                                                                 class="btn btn-theme view-pdf"><i
                                                                                     class="fa fa-eye"></i>View
                                                                                 now</a>
@@ -2102,9 +2189,9 @@
                                                                         <div class="col-md-6">
                                                                             <a class="prettyphoto col-md-10 col-sm-10 col-xs-10"
                                                                                 rel="prettyPhoto[gallery]" title=""
-                                                                                href="{% static 'assets/results/6th sem result graph.png' %}"><img
+                                                                                href="{% static 'assets/results/cse/6th sem result graph.png' %}"><img
                                                                                     class="img-responsive img-thumbnail"
-                                                                                    src="{% static 'assets/results/6th sem result graph.png' %}"
+                                                                                    src="{% static 'assets/results/cse/6th sem result graph.png' %}"
                                                                                     alt="" /></a>
                                                                         </div>
                                                                     </div>
@@ -2112,18 +2199,18 @@
                                                                 <section class="widget has-divider">
                                                                     <div class="row">
                                                                         <div class="col-md-6">
-                                                                            <h4 class="title">B.E Sixth Semester Result
+                                                                            <h4 class="title">B.E Fourth Semester Result
                                                                                 Analysis
                                                                             </h4>
                                                                             <p>Click the link below to download the
                                                                                 Result
                                                                                 Analysis</p>
                                                                             <a class="btn btn-theme"
-                                                                                href="{% static 'assets/results/Results_4th.pdf' %}"
+                                                                                href="{% static 'assets/results/cse/Results_4th.pdf' %}"
                                                                                 target="_blank"><i
                                                                                     class="fa fa-download"></i>Download
                                                                                 now</a>
-                                                                            <a href="{% static 'assets/results/Results_4th.pdf' %}"
+                                                                            <a href="{% static 'assets/results/cse/Results_4th.pdf' %}"
                                                                                 class="btn btn-theme view-pdf"><i
                                                                                     class="fa fa-eye"></i>View
                                                                                 now</a>
@@ -2131,14 +2218,13 @@
                                                                         <div class="col-md-6">
                                                                             <a class="prettyphoto col-md-10 col-sm-10 col-xs-10"
                                                                                 rel="prettyPhoto[gallery]" title=""
-                                                                                href="{% static 'assets/results/4th sem result graph.png' %}"><img
+                                                                                href="{% static 'assets/results/cse/4th sem result graph.png' %}"><img
                                                                                     class="img-responsive img-thumbnail"
-                                                                                    src="{% static 'assets/results/4th sem result graph.png' %}"
+                                                                                    src="{% static 'assets/results/cse/4th sem result graph.png' %}"
                                                                                     alt="" /></a>
                                                                         </div>
                                                                     </div>
                                                                 </section>
-
 
                                                             </article>
                                                             <!--//page-content-->
